@@ -1,0 +1,76 @@
+---
+sidebar_position : 0
+title            : Programare in C++ - Notiuni Generale si Exemplu
+sidebar_label    : Intro
+---
+
+# Introducere in C++ (Cu Exemplu)
+
+**[C++](/programare/cplusplus/)** este un limbaj de programare general orientat pe obiect, creat în anii '80 de către Bjarne Stroustrup la Bell Labs. 
+Este o extensie a limbajului C, cu o sintaxă mai bogată și suport pentru programarea orientată pe obiect, programarea generică și alte caracteristici.
+
+**[C++](/programare/cplusplus/)** este un limbaj de programare compilat, ceea ce înseamnă că codul sursă este tradus în codul mașină nativ pentru a putea fi executat pe calculatorul utilizatorului. 
+Acest lucru îl face un limbaj foarte rapid și eficient, dar și mai dificil de învățat decât limbaje interpretate, cum ar fi Python.
+
+În **C++**, programele sunt scrise într-un editor de text și apoi compilate cu ajutorul unui compilator C++. 
+Există multe compilatoare C++ disponibile, inclusiv GCC, Clang și Microsoft Visual C++, fiecare cu avantajele și dezavantajele sale.
+
+**C++** este un limbaj de programare puternic și complex, cu multe caracteristici avansate, cum ar fi gestionarea manuală a memoriei și operatori supraincarcați. 
+De aceea, este preferat în general de dezvoltatorii de software care lucrează la aplicații complexe sau care necesită performanță maximă, cum ar fi jocurile video sau aplicațiile de procesare de imagini.
+
+În **C++**, programatorii pot utiliza și biblioteci standard precum Standard Template Library (`STL`), care oferă multe clase și funcții utile pentru programarea orientată pe obiect, 
+programarea generică și alte scopuri.
+
+<br />
+
+## Procesarea unui Fisier in C++
+
+Iată un exemplu de cod C++ care încarcă un fișier text și adaugă textul "PROCESAT" la sfârșitul fișierului: 
+
+```cpp
+#include <iostream>
+#include <fstream>
+#include <string>
+
+int main() {
+    // deschidem fisierul pentru citire si scriere
+    std::fstream file("nume_fisier.txt", std::ios::in | std::ios::out);
+    
+    // verificam daca fisierul a fost deschis cu succes
+    if (!file) {
+        std::cerr << "Nu s-a putut deschide fisierul pentru citire si/sau scriere!\n";
+        return 1;
+    }
+    
+    // ne pozitionam la finalul fisierului
+    file.seekp(0, std::ios::end);
+    
+    // adaugam textul "PROCESAT" la finalul fisierului
+    file << "\nPROCESAT";
+    
+    // afisam mesajul de final
+    std::cout << "Fisierul a fost procesat cu succes!\n";
+    
+    // inchidem fisierul
+    file.close();
+    
+    return 0;
+}
+```
+
+Acest program începe prin a deschide un fișier specificat de utilizator pentru citire și scriere utilizând obiectul `fstream`. 
+Verifică dacă fisierul a fost deschis cu succes și se pozitionează la finalul fișierului utilizând funcția `seekp()`. 
+După aceea, adaugă textul "PROCESAT" la sfârșitul fisierului utilizând operatorul `<<` și închide fișierul.
+
+<br />
+
+> **Ai o idee** de program in C++? **Trimite un eMail** la adresa *contact@invat.eu* si noi vom incerca sa il cream pentru tine.
+
+<br />
+
+## Resurse
+
+- 👉 Citeste mai mult pe [blog](https://www.blog.invat.eu/)
+- 👉 Intra in [Comunitatea Invat.eu](https://discord.gg/uh2WWTKt) (`Discord`)  
+- 👉 Afla mai multe despre [Invat.eu](/intro) 
+
