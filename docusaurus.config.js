@@ -13,8 +13,8 @@ const customFields = {
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-    title: 'Free DOCS Starter',
-    tagline: 'Powered by Docusaurus',
+    title: 'DeployPRO DOCS',
+    tagline: 'Deployment Proxy for AWS, GCP, Azure and DO',
     favicon: 'img/favicon.png',
 
     // Set the production url of your site here
