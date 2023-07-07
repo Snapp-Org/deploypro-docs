@@ -13,21 +13,21 @@ const customFields = {
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-    title: 'eLearning Invat.eu',
-    tagline: 'Oferit de Invat.eu',
+    title: 'Free DOCS Starter',
+    tagline: 'Powered by Docusaurus',
     favicon: 'img/favicon.png',
 
     // Set the production url of your site here
-    url: 'https://www.elearning.invat.eu',
+    url: 'https://docusaurus-soft-design.onrender.com/',
     // Set the /<baseUrl>/ pathname under which your site is served
     // For GitHub pages deployment, it is often '/<projectName>/'
     baseUrl: '/',
 
     // GitHub pages deployment config.
     // If you aren't using GitHub pages, you don't need these.
-    organizationName: 'creare-site', // Usually your GitHub org/user name.
-    projectName: 'elearning', // Usually your repo name.
-    trailingSlash: true, // for github pages compatibility
+    organizationName: 'app-generator', // Usually your GitHub org/user name.
+    projectName: 'docusaurus-soft-design', // Usually your repo name.
+    trailingSlash: false, // for github pages compatibility
 
     onBrokenLinks: 'throw',
     onBrokenMarkdownLinks: 'warn',
@@ -57,14 +57,24 @@ const config = {
             /** @type {import('@docusaurus/preset-classic').Options} */
             ({
                 docs: {
-                    routeBasePath: '/',
                     sidebarPath: require.resolve('./sidebars.js'),
                     // Please change this to your repo.
                     // Remove this to remove the "edit this page" links.
                     editUrl:
-                        'https://github.com/creare-site/elearning/tree/main/',
+                        'https://github.com/app-generator/docusaurus-soft-design/tree/main/',
+                    versions: {
+                        current: {
+                            label: `Next 🚀`,
+                        },
+                    },
                 },
-                blog: false,
+                blog: {
+                    showReadingTime: true,
+                    // Please change this to your repo.
+                    // Remove this to remove the "edit this page" links.
+                    editUrl:
+                        'https://github.com/app-generator/docusaurus-soft-design/tree/main/',
+                },
                 theme: {
                     customCss: require.resolve('./src/css/custom.css'),
                 },
@@ -76,25 +86,26 @@ const config = {
         /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
         ({
             // Replace with your project's social card
-            metadata: [{name: 'google-site-verification', content: 'NJ0M5ncVbIhiapFYvdwbpC3Zi9Jj7JXWnB6ZVGaTN1s'}],
             image: 'img/docusaurus-social-card.jpg',
             navbar: {
-                title: 'Invat.eu',
+                title: 'My DOCS',
                 logo: {
                     href: '/',
-                    alt: 'eLearning - Invat.eu',
-                    src: 'img/logo.png',
+                    alt: 'Soft UI Dashboard',
+                    src: 'img/logo-ct.png',
                 },
                 items: [
                     {
                         type: 'doc',
                         docId: 'intro',
                         position: 'left',
-                        label: 'Intro',
+                        label: 'Tutorial',
                     },
+                    { to: '/blog', label: 'Blog', position: 'left' },
+                    { type: 'docsVersionDropdown', position: 'right' },
                     {
-                        href: 'https://www.blog.invat.eu',
-                        label: 'Blog',
+                        href: 'https://github.com/app-generator/docusaurus-soft-design',
+                        label: 'GitHub',
                         position: 'right',
                     },
                 ],
@@ -103,34 +114,46 @@ const config = {
                 style: 'dark',
                 links: [
                     {
-                        title: 'Continut',
+                        title: 'CONTENT',
                         items: [
                             {
                                 label: 'Docs',
-                                to: '/intro',
+                                to: '/docs/intro',
                             },
-                        ],
-                    },
-                    {
-                        title: 'Resurse',
-                        items: [
                             {
                                 label: 'Blog',
-                                href: 'https://www.blog.invat.eu',
+                                to: '/blog',
                             },
                         ],
                     },
                     {
-                        title: 'Contact',
+                        title: 'RESOURCES',
                         items: [
                             {
-                                label: 'Email',
-                                href: '/intro#contact',
+                                label: 'Source Code',
+                                href: 'https://github.com/app-generator/docusaurus-soft-design',
+                            },
+                            {
+                                label: 'Soft UI Design',
+                                href: 'https://bit.ly/soft-design-system',
+                            },
+                        ],
+                    },
+                    {
+                        title: 'SUPPORT',
+                        items: [
+                            {
+                                label: 'AppSeed',
+                                href: 'https://appseed.us/support/',
+                            },
+                            {
+                                label: 'StackOverflow',
+                                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
                             },
                         ],
                     },
                 ],
-                copyright: `&copy; Invat.eu`,
+                copyright: `&copy; ${new Date().getFullYear()} MyCompany`,
             },
             prism: {
                 theme: lightCodeTheme,
