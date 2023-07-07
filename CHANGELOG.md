@@ -1,6 +1,6 @@
 # Change Log
 
-## [0.0.1] 2023-04-28
+## [0.0.1] 2023-07-07
 ### Changes
 
 - ✅ Initial Import
