@@ -11,7 +11,7 @@ This age explains how to optain the `Access` and `Secret KEY` for an AWS account
 
 <br />
 
-## Resurses
+## Resources
 
 - 👉 [Deploy Projects](https://deploypro.dev/) using your own cloud provider
 - 👉 Get [Deployment Support](https://deploypro.dev/support/) from `experts` 

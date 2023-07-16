@@ -1,7 +1,7 @@
 {
     "index_name": "index",
     "sitemap_urls": [
-        "https://docusaurus-soft-design.onrender.com/sitemap.xml"
+        "https://www.docs.deploypro.dev/sitemap.xml"
     ],
     "sitemap_alternate_links": true,
     "selectors": {

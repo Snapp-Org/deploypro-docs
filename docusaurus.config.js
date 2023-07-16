@@ -62,12 +62,7 @@ const config = {
                     // Please change this to your repo.
                     // Remove this to remove the "edit this page" links.
                     editUrl:
-                        'https://github.com/app-generator/docusaurus-soft-design/tree/main/',
-                    versions: {
-                        current: {
-                            label: `Next 🚀`,
-                        },
-                    },
+                        'https://github.com/app-generator/docusaurus-soft-design/tree/main/'
                 },
                 blog: {
                     showReadingTime: true,
@@ -87,25 +82,24 @@ const config = {
         /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
         ({
             // Replace with your project's social card
-            image: 'img/docusaurus-social-card.jpg',
+            image: 'img/social-card.png',
             navbar: {
-                title: 'My DOCS',
+                title: '',
                 logo: {
                     href: '/',
-                    alt: 'Soft UI Dashboard',
-                    src: 'img/logo-ct.png',
+                    alt: 'DeployPRO - Your Deployment Assistant',
+                    src: 'img/logo.png',
                 },
                 items: [
                     {
                         type: 'doc',
                         docId: 'intro',
                         position: 'left',
-                        label: 'Tutorial',
+                        label: 'Docs',
                     },
                     { to: '/blog', label: 'Blog', position: 'left' },
-                    { type: 'docsVersionDropdown', position: 'right' },
                     {
-                        href: 'https://github.com/app-generator/docusaurus-soft-design',
+                        href: 'https://github.com/app-generator/deploypro-docs',
                         label: 'GitHub',
                         position: 'right',
                     },
@@ -115,7 +109,7 @@ const config = {
                 style: 'dark',
                 links: [
                     {
-                        title: 'CONTENT',
+                        title: 'Content',
                         items: [
                             {
                                 label: 'Docs',
@@ -128,33 +122,33 @@ const config = {
                         ],
                     },
                     {
-                        title: 'RESOURCES',
+                        title: 'Services',
                         items: [
                             {
-                                label: 'Source Code',
-                                href: 'https://github.com/app-generator/docusaurus-soft-design',
+                                label: 'Deploy Projects',
+                                href: 'https://deploypro.dev/',
                             },
                             {
-                                label: 'Soft UI Design',
-                                href: 'https://bit.ly/soft-design-system',
+                                label: 'Support',
+                                href: 'https://deploypro.dev/support/',
                             },
                         ],
                     },
                     {
-                        title: 'SUPPORT',
+                        title: 'Resources',
                         items: [
                             {
-                                label: 'AppSeed',
-                                href: 'https://appseed.us/support/',
+                                label: 'Open Issues',
+                                href: 'https://github.com/app-generator/deploypro/issues',
                             },
                             {
-                                label: 'StackOverflow',
-                                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                                label: 'Team',
+                                href: 'https://deploypro.dev/team/',
                             },
                         ],
                     },
                 ],
-                copyright: `&copy; ${new Date().getFullYear()} MyCompany`,
+                copyright: `&copy; ${new Date().getFullYear()} DeployPRO`,
             },
             prism: {
                 theme: lightCodeTheme,
