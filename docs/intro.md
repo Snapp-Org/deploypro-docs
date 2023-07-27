@@ -11,7 +11,7 @@ DeployPro is a revolutionary cloud platform designed to simplify application dep
 
 With DeployPro, you can effortlessly create and manage applications, gaining full control of your development process. Experience the power and flexibility of DeployPro as it leads you to streamlined and hassle-free cloud deployment.
 
-[Screenshoot]
+![Dashboard Overview](./assets/welcome-copy.png)
 
 ## Features
 
@@ -30,6 +30,9 @@ With DeployPro, you can effortlessly create and manage applications, gaining ful
 - [x] Specify Python Version
 - [x] Specify Node Version
 - [x] ENV variables 
+
+## Feedback
+What are the ways to offer feedback?  Please use our [GitHub Issues](https://github.com/app-generator/deploypro/issues).  If you come across anything that appears unclear, kindly inform us, so we can address it appropriately!
 
 <br />
 
