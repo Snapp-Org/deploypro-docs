@@ -17,28 +17,35 @@ You need to log in to your Deploypro Account before connecting to any cloud prov
 ## Connection
 
 1. In the Connection Menu, click `Connect` in the AWS section.
-    ![Connect to AWS](./assets/aws-connect-copy.png)
+
+![DeployPRO - Connect to AWS](https://github.com/app-generator/dummy/assets/51070104/b82c4f15-bfdd-4a74-adfd-0c02c386e2c7)
 
 2. Copy and paste your access key and secrete key from the *.csv file you just downloaded on the form provided.
-    ![AWS Form](./assets/aws-form-copy.png)
 
-    Don't forget to select the nearest server to your place to make the performance work better!
+![DeployPRO - AWS Credentials Form](https://github.com/app-generator/dummy/assets/51070104/2b5aa872-9d0c-456d-9be8-e018abf41b91)
+
+Don't forget to select the nearest server to your place to make the performance work better!
 
 3. Click “Connect” and wait until the process is finished.
-    ![Fill out AWS Form](./assets/aws-paste-copy.png)
+
+![DeployPRO - Fill out AWS Form](https://github.com/app-generator/dummy/assets/51070104/b2e27701-176c-44ff-8453-d1afca4284a4)
 
 4. Upon success, the view will look like the picture below.
-    ![AWS Connected](./assets/aws-connected-copy.png)
+
+![DeployPRO - AWS Service is Connected](https://github.com/app-generator/dummy/assets/51070104/45443c6b-85a9-4341-acd5-45385cbbc814)
 
 ## Create a Server
+
 @todo
 
-## Create a Static App on Deploypro
+## Create a Static App on DeployPRO
+
 @todo
 
 <br />
 
 ## Resources
 
-- 👉 [Deploy Projects](https://deploypro.dev/) using your own cloud provider
-- 👉 Get [Deployment Support](https://deploypro.dev/support/) from `experts` 
+- 👉 [Deploy Projects](https://deploypro.dev/) using your preferred provider: `AWS`, `GCP`, `Azzure`
+- 👉 Get [Deployment Support](https://deploypro.dev/support/) from the team behind this service
+- 👉 Join the [Community](https://discord.gg/qQhjQZhnur) and chat with the team behind `DeployPRO`

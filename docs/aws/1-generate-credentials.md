@@ -52,7 +52,8 @@ This page explains how to optain the `Access` and `Secret KEY` for an AWS accoun
     - Step 3: Retrive access key
         This picture below is how it looks when the `Access Key` and `Secrete Key` is created completely.
 
-        ![AWS Access Key and Secrete Key](./assets/aws-copy.png)
+![AWS Access Key and Secrete Key - DeployPRO Service](https://github.com/app-generator/dummy/assets/51070104/922a0213-1e68-4c13-82b2-a67c84075ebc)
+
 
 6. Download the Access Key and Secret Key CSV file using the `Download .csv file ` button. Ensure you save this file securely, as the Secret Key will not be shown again.
 
@@ -62,5 +63,6 @@ Treat Access Keys and Secret Keys as sensitive information. Avoid sharing them p
 
 ## Resources
 
-- 👉 [Deploy Projects](https://deploypro.dev/) using your own cloud provider
-- 👉 Get [Deployment Support](https://deploypro.dev/support/) from `experts` 
+- 👉 [Deploy Projects](https://deploypro.dev/) using your preferred provider: `AWS`, `GCP`, `Azzure`
+- 👉 Get [Deployment Support](https://deploypro.dev/support/) from the team behind this service
+- 👉 Join the [Community](https://discord.gg/qQhjQZhnur) and chat with the team behind `DeployPRO`

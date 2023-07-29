@@ -11,7 +11,9 @@ DeployPro is a revolutionary cloud platform designed to simplify application dep
 
 With DeployPro, you can effortlessly create and manage applications, gaining full control of your development process. Experience the power and flexibility of DeployPro as it leads you to streamlined and hassle-free cloud deployment.
 
-![Dashboard Overview](./assets/welcome-copy.png)
+![DeployPro - Splash Screen.](https://github.com/app-generator/dummy/assets/51070104/3e44bb40-c425-4548-b580-ac87c027e185)
+
+<br />
 
 ## Features
 
@@ -31,12 +33,17 @@ With DeployPro, you can effortlessly create and manage applications, gaining ful
 - [x] Specify Node Version
 - [x] ENV variables 
 
+<br />
+
 ## Feedback
-What are the ways to offer feedback?  Please use our [GitHub Issues](https://github.com/app-generator/deploypro/issues).  If you come across anything that appears unclear, kindly inform us, so we can address it appropriately!
+
+What are the ways to offer feedback? 
+Please use our [GitHub Issues](https://github.com/app-generator/deploypro/issues).  If you come across anything that appears unclear, kindly inform us, so we can address it appropriately!
 
 <br />
 
 ## Resources
 
-- 👉 [Deploy Projects](https://deploypro.dev/) using your own cloud provider
-- 👉 Get [Deployment Support](https://deploypro.dev/support/) from `experts` 
+- 👉 [Deploy Projects](https://deploypro.dev/) using your preferred provider: `AWS`, `GCP`, `Azzure`
+- 👉 Get [Deployment Support](https://deploypro.dev/support/) from the team behind this service
+- 👉 Join the [Community](https://discord.gg/qQhjQZhnur) and chat with the team behind `DeployPRO`

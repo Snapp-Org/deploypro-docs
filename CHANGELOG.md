@@ -1,5 +1,12 @@
 # Change Log
 
+## [0.0.3] 2023-07-29
+### Changes
+
+- Remove local assets
+  - Use GH storage
+- Added [Community](https://discord.gg/qQhjQZhnur) (Discord)
+
 ## [0.0.2] 2023-07-16
 ### Changes
 
