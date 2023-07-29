@@ -14,11 +14,11 @@ const customFields = {
 /** @type {import('@docusaurus/types').Config} */
 const config = {
     title: 'DeployPRO DOCS',
-    tagline: 'Deployment Proxy for AWS, GCP, Azure and DO',
+    tagline: 'Deployment Automation Tool - Works with AWS, GCP, Azure and DO',
     favicon: 'img/favicon.png',
 
     // Set the production url of your site here
-    url: 'https://docusaurus-soft-design.onrender.com/',
+    url: 'https://www.docs.deploypro.dev/',
     // Set the /<baseUrl>/ pathname under which your site is served
     // For GitHub pages deployment, it is often '/<projectName>/'
     baseUrl: '/',
@@ -26,7 +26,7 @@ const config = {
     // GitHub pages deployment config.
     // If you aren't using GitHub pages, you don't need these.
     organizationName: 'app-generator', // Usually your GitHub org/user name.
-    projectName: 'docusaurus-soft-design', // Usually your repo name.
+    projectName: 'deploypro-docs', // Usually your repo name.
     trailingSlash: false, // for github pages compatibility
 
     onBrokenLinks: 'throw',
@@ -62,14 +62,14 @@ const config = {
                     // Please change this to your repo.
                     // Remove this to remove the "edit this page" links.
                     editUrl:
-                        'https://github.com/app-generator/docusaurus-soft-design/tree/main/'
+                        'https://github.com/app-generator/deploypro-docs/tree/main/'
                 },
                 blog: {
                     showReadingTime: true,
                     // Please change this to your repo.
                     // Remove this to remove the "edit this page" links.
                     editUrl:
-                        'https://github.com/app-generator/docusaurus-soft-design/tree/main/',
+                        'https://github.com/app-generator/deploypro-docs/tree/main/',
                 },
                 theme: {
                     customCss: require.resolve('./src/css/custom.css'),
