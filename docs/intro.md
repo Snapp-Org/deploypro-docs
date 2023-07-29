@@ -3,6 +3,7 @@ sidebar_position : 1
 title            : About DeployPRO
 sidebar_label    : Intro
 slug             : /
+description      : The official documentation of the service. 
 ---
 
 <!-- GOOGLE Stuff -->
@@ -10,7 +11,7 @@ slug             : /
     <meta name="google-site-verification" content="VW84QZUx9lXlONq9YSMvPLpJyY0w-ZSutA89XdGT7xo" />
 </head>
 
-Introducing [DeployPRO](https://deploypro.dev/): **The Simplified Cloud Application Deployment Solution**.
+> Introducing [DeployPRO](https://deploypro.dev/): **The Simplified Cloud Application Deployment Solution**.
 
 **DeployPRO** is a service that aims to simplify the deployment process, empowering businesses to deploy, monitor, and scale applications without the burden of infrastructure complexities. 
 

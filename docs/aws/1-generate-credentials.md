@@ -60,19 +60,26 @@ IAM allows you to securely control access to AWS services and resources in your 
 3. Within the IAM user details, navigate to the `Security credentials` tab. This tab is where you manage various security settings for the selected user.
 4. Under the `Access keys` section, click on the `Create access key` button.
 5. Complete the step!
-    - Step 1: Access key best practices & alternatives
+    - > Step 1: Access key best practices & alternatives
+
         Select `Command Line Interface (CLI)`. Don't forget to tick the confirmation checkbox before clicking "Next".
-    - Step 2: Set description tag - optional
+
+    - > Step 2: Set description tag - optional
+        
         This step is optional, you can directly click "Create Access Key".
-    - Step 3: Retrive access key
+
+    - > Step 3: Retrive access key
+        
         This picture below is how it looks when the `Access Key` and `Secrete Key` is created completely.
 
 ![AWS Access Key and Secrete Key - DeployPRO Service](https://github.com/app-generator/dummy/assets/51070104/922a0213-1e68-4c13-82b2-a67c84075ebc)
 
 
 6. Download the Access Key and Secret Key CSV file using the `Download .csv file ` button. Ensure you save this file securely, as the Secret Key will not be shown again.
-
-Treat Access Keys and Secret Keys as sensitive information. Avoid sharing them publicly or hardcoding them into your applications. Instead, use AWS-recommended practices like environment variables or AWS-specific configuration files to securely manage these credentials.
+  
+  - ⚠️ **Security Alert**
+  
+  Treat Access Keys and Secret Keys as sensitive information. Avoid sharing them publicly or hardcoding them into your applications. Instead, use AWS-recommended practices like environment variables or AWS-specific configuration files to securely manage these credentials.
 
 <br />
 
