@@ -3,6 +3,11 @@ sidebar_position: 1
 slug: /
 ---
 
+<!-- GOOGLE Stuff -->
+<head>
+    <meta name="google-site-verification" content="VW84QZUx9lXlONq9YSMvPLpJyY0w-ZSutA89XdGT7xo" />
+</head>
+
 # Welcome
 
 Introducing DeployPro: **The Simplified Cloud Application Deployment Solution**
