@@ -1,6 +1,6 @@
 # [DeployPRO DOCS](https://www.docs.deploypro.dev/)
 
-The official documentation of DeployPRO, a service that aims to simplify the deployment for a wide range of applications using your preferred cloud provider: AWS, GCP, Azure, DO and more.
+The official documentation of **[DeployPRO](https://deploypro.dev/)**, a service that aims to simplify the deployment for a wide range of applications using your preferred cloud provider: `AWS`, `GCP`, `Azure`, `DO`, and more.
 
 - 👉 [DeployPRO](https://deploypro.dev/) - the `Service`
 - 👉 [DeployPRO](https://www.docs.deploypro.dev/) - `Documentation`
