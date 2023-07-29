@@ -2,9 +2,10 @@
 sidebar_order    : 3
 title            : Create a Static App using AWS Server
 sidebar_label    : Create a Static App
+slug             : /aws/create-static-app
 ---
 
-# Create a Static App with AWS on [DeployPRO](deploypro.dev)
+# Create a Static App with AWS on [DeployPRO](https://deploypro.dev)
 @todo
 
 <br />

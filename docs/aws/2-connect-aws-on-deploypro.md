@@ -5,7 +5,7 @@ sidebar_label    : Connect to AWS
 slug             : /aws/connect
 ---
 
-# AWS - Connecting on [DeployPRO](deploypro.dev)
+# AWS - Connecting on [DeployPRO](https://deploypro.dev)
 
 You need to log in to your DeployPRO Account before connecting to any cloud provider. Log in to your account. If you don’t have one yet, try to [register](https://www.docs.deploypro.dev/app-platform-do/intro).
 
@@ -67,7 +67,7 @@ Now, you can begin creating a server for your application by following these ste
     <br />
 
 3. Review your Server before you click `Create Server`.
-   👉 Click [here](comingsoon) If you like to know our recomendation about the sepcification that will needed for an application.
+   👉 Click [here](https://comingsoon) If you like to know our recomendation about the sepcification that will needed for an application.
   ![DeployPRO - Review Server](https://github.com/app-generator/deploypro-docs/assets/46531367/47ffdc27-3d86-43ce-938f-8d130c5d0115)
   <br />
 
