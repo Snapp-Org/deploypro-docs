@@ -1,6 +1,8 @@
 ---
-sidebar_position: 1
-slug: /
+sidebar_position : 1
+title            : About DeployPRO
+sidebar_label    : Intro
+slug             : /
 ---
 
 <!-- GOOGLE Stuff -->
@@ -8,15 +10,15 @@ slug: /
     <meta name="google-site-verification" content="VW84QZUx9lXlONq9YSMvPLpJyY0w-ZSutA89XdGT7xo" />
 </head>
 
-# Welcome
+Introducing [DeployPRO](https://deploypro.dev/): **The Simplified Cloud Application Deployment Solution**.
 
-Introducing DeployPro: **The Simplified Cloud Application Deployment Solution**
+**DeployPRO** is a service that aims to simplify the deployment process, empowering businesses to deploy, monitor, and scale applications without the burden of infrastructure complexities. 
 
-DeployPro is a revolutionary cloud platform designed to simplify application deployment, empowering businesses to build, deliver, monitor, and scale applications without the burden of infrastructure complexities. As a compelling alternative to Heroku, DeployPro provides customers with the freedom to choose any cloud provider, including GCP, AWS, and Azure. 
+Works with all major cloud providers AWS, GCP, Azure and DO (App platform). 
 
-With DeployPro, you can effortlessly create and manage applications, gaining full control of your development process. Experience the power and flexibility of DeployPro as it leads you to streamlined and hassle-free cloud deployment.
+With [DeployPRO](https://deploypro.dev/), you can effortlessly create and manage applications, gaining full control of your development process. Experience the power and flexibility of DeployPRO as it leads you to streamlined and hassle-free cloud deployment.
 
-![DeployPro - Splash Screen.](https://github.com/app-generator/dummy/assets/51070104/3e44bb40-c425-4548-b580-ac87c027e185)
+![DeployPRO - Splash Screen.](https://github.com/app-generator/dummy/assets/51070104/3e44bb40-c425-4548-b580-ac87c027e185)
 
 <br />
 
@@ -43,6 +45,7 @@ With DeployPro, you can effortlessly create and manage applications, gaining ful
 ## Feedback
 
 What are the ways to offer feedback? 
+
 Please use our [GitHub Issues](https://github.com/app-generator/deploypro/issues).  If you come across anything that appears unclear, kindly inform us, so we can address it appropriately!
 
 <br />

@@ -6,7 +6,7 @@ The official documentation of **[DeployPRO](https://deploypro.dev/)**, a service
 - 👉 [DeployPRO](https://www.docs.deploypro.dev/) - `Documentation`
 - 🚀 [Join the Community](https://discord.gg/qQhjQZhnur) - `Discord`
 
-![DeployPro - Splash Screen.](https://github.com/app-generator/dummy/assets/51070104/3e44bb40-c425-4548-b580-ac87c027e185)
+![DeployPRO - Splash Screen.](https://github.com/app-generator/dummy/assets/51070104/3e44bb40-c425-4548-b580-ac87c027e185)
 
 <br />
 

@@ -9,9 +9,12 @@ sidebar_label    : Generate Credentials
 This page explains how to optain the `Access` and `Secret KEY` for an AWS account and later use them to deploy you GitHub project using `DeployPRO` service.
 
 ## Overview
+
 - Register on the AWS platform
 - Add User in the AWS Identity and Access Management (IAM) Dashboard
 - Create an `Access key` and `Secret Key` on AWS
+
+<br />
 
 ## How to register on AWS?
 
@@ -21,14 +24,24 @@ This page explains how to optain the `Access` and `Secret KEY` for an AWS accoun
 4. For enhanced security, AWS may necessitate a verification code delivered to your designated email address, validating your account ownership. 
 5. Choose a robust and secure password, consisting of alphanumeric characters and special symbols, to safeguard your AWS account.
 6. Complete essential personal and contact details, including your full name, postal address, and phone number, as part of the AWS account registration procedure.
-7. Optionally, submit valid payment particulars, such as credit card details, to enable access to specific AWS services. AWS will exclusively charge you for the actual resources and services you utilize, allowing you to configure billing alerts and limits to manage expenditures effectively.
+7. Optionally, submit valid payment particulars, such as credit card details, to enable access to specific AWS services. 
+  - AWS will exclusively charge you for the actual resources and services you utilize, allowing you to configure billing alerts and limits to manage expenditures effectively.
 8. Carefully review the terms and conditions, along with the data processing agreement, and consent to the stated terms by selecting "Create Account and Continue."
-9. Upon completing the registration process, AWS will conduct a brief review of your submitted information. Once account verification is completed, you will receive an email confirmation, confirming the activation of your AWS account.
+9. Upon completing the registration process, AWS will conduct a brief review of your submitted information. 
+  - Once account verification is completed, you will receive an email confirmation, confirming the activation of your AWS account.
+
+<br />
 
 ## How to create an access key and secret key in AWS?
-`Access keys` consist of an access key ID and a secret access key, which are used to sign programmatic requests that you make to AWS. For better security, AWS recommends using IAM access keys instead of AWS root account access keys. IAM allows you to securely control access to AWS services and resources in your AWS account. For more information about AWS Account and Access Keys, visit https://docs.aws.amazon.com/
+
+`Access keys` consist of an access key ID and a secret access key, which are used to sign programmatic requests that you make to AWS. For better security, AWS recommends using IAM access keys instead of AWS root account access keys. 
+
+IAM allows you to securely control access to AWS services and resources in your AWS account. For more information about AWS Account and Access Keys, visit https://docs.aws.amazon.com/
+
+<br />
 
 ### Add User
+
 1. Access the AWS Management Console by visiting the official [AWS website](https://aws.amazon.com/) and clicking on "Sign in to the Console" in the top-right corner. Enter your AWS account credentials to log in.
 2. In the AWS Management Console, search for "IAM" (Identity and Access Management) in the services search bar, and select `IAM` from the results. This will take you to the IAM dashboard. 
 3. In the IAM dashboard, locate and click on `Users` in the left-hand navigation pane. This will display a list of IAM users in your account.
@@ -37,6 +50,8 @@ This page explains how to optain the `Access` and `Secret KEY` for an AWS accoun
 6. Make the permission options become `Attach policies directly`. This will show you the list of permission policies. 
 7. Search for `AmazonEC2FullAccess` and then tick the checkbox to continue the process.
 8. Make the third step configuration default. So, directly click the “Create user” button.
+
+<br />
 
 ### Create Acces Key and Secret Key
 
