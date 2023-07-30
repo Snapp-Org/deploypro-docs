@@ -6,7 +6,7 @@ sidebar_label    : Generate Credentials
 
 # AWS - Generate Credentials
 
-This page explains how to optain the `Access` and `Secret KEY` for an AWS account and later use them to deploy your application using `DeployPRO` service.
+This page explains how to optain the `Access` and `Secret KEY` for an AWS account and later use them to deploy your application on GitHub repository using `DeployPRO` service.
 
 ## Overview
 
