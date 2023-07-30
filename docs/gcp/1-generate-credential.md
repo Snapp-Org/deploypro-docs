@@ -1,13 +1,14 @@
 ---
-sidebar_order    : 3
-title            : Create a Static App using AWS Server
-sidebar_label    : Create a Static App
+sidebar_order    : 1
+title            : GCP - Generate Credentials
+sidebar_label    : Generate Credentials
 ---
 
-# Create a Static App with AWS on [DeployPRO](https://deploypro.dev/)
-@todo
+# GCP - Generate Credentials
 
-<br />
+This page explains how to optain the `Access` and `Secret KEY` for an GCP account and later use them to deploy your application using `DeployPRO` service.
+
+@todo
 
 ## Resources
 

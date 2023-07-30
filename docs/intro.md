@@ -11,7 +11,7 @@ description      : The official documentation of the service.
     <meta name="google-site-verification" content="VW84QZUx9lXlONq9YSMvPLpJyY0w-ZSutA89XdGT7xo" />
 </head>
 
-> Introducing [DeployPRO](https://deploypro.dev/): **The Simplified Cloud Application Deployment Solution**.
+Introducing [DeployPRO](https://deploypro.dev/): **The Simplified Cloud Application Deployment Solution**.
 
 **DeployPRO** is a service that aims to simplify the deployment process, empowering businesses to deploy, monitor, and scale applications without the burden of infrastructure complexities. 
 
@@ -45,7 +45,7 @@ With [DeployPRO](https://deploypro.dev/), you can effortlessly create and manage
 
 ## Feedback
 
-What are the ways to offer feedback? 
+What are the ways to offer feedback? 📝
 
 Please use our [GitHub Issues](https://github.com/app-generator/deploypro/issues).  If you come across anything that appears unclear, kindly inform us, so we can address it appropriately!
 

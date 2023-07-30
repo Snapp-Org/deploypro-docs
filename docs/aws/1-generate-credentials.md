@@ -6,7 +6,7 @@ sidebar_label    : Generate Credentials
 
 # AWS - Generate Credentials
 
-This page explains how to optain the `Access` and `Secret KEY` for an AWS account and later use them to deploy you GitHub project using `DeployPRO` service.
+This page explains how to optain the `Access` and `Secret KEY` for an AWS account and later use them to deploy your application using `DeployPRO` service.
 
 ## Overview
 
@@ -25,10 +25,10 @@ This page explains how to optain the `Access` and `Secret KEY` for an AWS accoun
 5. Choose a robust and secure password, consisting of alphanumeric characters and special symbols, to safeguard your AWS account.
 6. Complete essential personal and contact details, including your full name, postal address, and phone number, as part of the AWS account registration procedure.
 7. Optionally, submit valid payment particulars, such as credit card details, to enable access to specific AWS services. 
-  - AWS will exclusively charge you for the actual resources and services you utilize, allowing you to configure billing alerts and limits to manage expenditures effectively.
+    - AWS will exclusively charge you for the actual resources and services you utilize, allowing you to configure billing alerts and limits to manage expenditures effectively.
 8. Carefully review the terms and conditions, along with the data processing agreement, and consent to the stated terms by selecting "Create Account and Continue."
 9. Upon completing the registration process, AWS will conduct a brief review of your submitted information. 
-  - Once account verification is completed, you will receive an email confirmation, confirming the activation of your AWS account.
+    - Once account verification is completed, you will receive an email confirmation, confirming the activation of your AWS account.
 
 <br />
 
@@ -60,6 +60,7 @@ IAM allows you to securely control access to AWS services and resources in your 
 3. Within the IAM user details, navigate to the `Security credentials` tab. This tab is where you manage various security settings for the selected user.
 4. Under the `Access keys` section, click on the `Create access key` button.
 5. Complete the step!
+    
     - > Step 1: Access key best practices & alternatives
 
         Select `Command Line Interface (CLI)`. Don't forget to tick the confirmation checkbox before clicking "Next".

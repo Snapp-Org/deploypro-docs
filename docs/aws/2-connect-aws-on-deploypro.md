@@ -47,8 +47,6 @@ You need to connect your [DeployPRO](https://deploypro.dev/) with your cloud pro
 
 ## Servers - Create a Server
 
-> - 👉 Read more about App Platform to understand the basic flow of DeployPRO.
-
 Now, you can begin creating a server for your application by following these steps:
 
 1. Open the Server Menu. If this is your first time connecting a cloud provider on [DeployPRO](https://deploypro.dev/), you will found no list server. What you need to start deploying an application in DeployPRO is by clicking the `+ Create Server` button.
@@ -60,14 +58,13 @@ Now, you can begin creating a server for your application by following these ste
 
   Here are some points you should consider right now:
     - We recommend you to write the server name in camelCase, snake_case, kebab-case or PascalCase.
-    - The Operating System that has been running is Ubuntu. CentOS 7 is on the development.
+    - The Operating System that has been running is Ubuntu. **CentOS 7 is coming soon**.
       > Don't worry, you will not need to operate or set up anything about the Operating System in the future. You just need to select the operating system you used to use. DeployPRO will take care of the rest for YOU!
     - Find the best practice of the specification.
 
     <br />
 
 3. Review your Server before you click `Create Server`.
-   👉 Click [here](https://comingsoon) If you like to know our recomendation about the sepcification that will needed for an application.
   ![DeployPRO - Review Server](https://github.com/app-generator/deploypro-docs/assets/46531367/47ffdc27-3d86-43ce-938f-8d130c5d0115)
   <br />
 

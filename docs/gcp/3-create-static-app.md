@@ -1,10 +1,10 @@
 ---
 sidebar_order    : 3
-title            : Create a Static App using AWS Server
+title            : Create a Static App using GCP Server
 sidebar_label    : Create a Static App
 ---
 
-# Create a Static App with AWS on [DeployPRO](https://deploypro.dev/)
+# Create a Static App with GCP on [DeployPRO](https://deploypro.dev/)
 @todo
 
 <br />
