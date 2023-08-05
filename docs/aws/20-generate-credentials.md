@@ -1,5 +1,4 @@
 ---
-sidebar_order    : 1
 title            : AWS - Generate Credentials
 sidebar_label    : Generate Credentials
 ---
