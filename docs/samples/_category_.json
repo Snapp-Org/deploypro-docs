@@ -1,0 +1,8 @@
+{
+  "label": "Free Samples",
+  "link": {
+    "type": "generated-index",
+    "slug": "/samples",
+    "description": "Free samples to test the service"    
+  }
+}
