@@ -1,20 +1,14 @@
 sm0ke:
   name: Sm0ke 
-  title: Founder @ DeployPRO, Project Manager
-  url: https://github.com/sm0keDev
+  title: Founder & PM @ DeployPRO
+  url: https://www.linkedin.com/in/adi-chirilov/
   image_url: https://github.com/sm0keDev.png
 
 sugeng:
   name: Sugeng Agung Suganda
-  title: Full-Stack & Cloud Engineer
+  title: Full-Stack, Cloud Engineer & TL @ DeployPRO
   url: https://github.com/sgnd
   image_url: https://github.com/sgnd.png
-
-aulia:
-  name: Aulia Romadon
-  title: Technical Writter 
-  url: https://github.com/auliaromadon
-  image_url: https://github.com/auliaromadon.png
 
 nur:
   name: Nur Askiah
@@ -33,3 +27,9 @@ rizky:
   title: Full-Stack Developer (Python, Django)
   url: https://github.com/kimsohyuncans
   image_url: https://github.com/kimsohyuncans.png
+
+aulia:
+  name: Aulia Romadon
+  title: Technical Writter 
+  url: https://github.com/auliaromadon
+  image_url: https://github.com/auliaromadon.png
