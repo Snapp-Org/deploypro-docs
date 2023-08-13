@@ -1,5 +1,5 @@
 ---
-sidebar_position : 1
+sidebar_position : 0
 title            : DeployPRO, The Service
 sidebar_label    : Intro
 slug             : /
@@ -13,7 +13,7 @@ description      : The official documentation of the service.
 
 Introducing [DeployPRO](https://deploypro.dev/): **The Simplified Cloud Application Deployment Solution**. **DeployPRO** is a service that aims to simplify the deployment process, empowering businesses to deploy, monitor, and scale applications without the burden of infrastructure complexities. 
 
-Works with all major cloud providers like **AWS**, **GCP**, **Azure**, and **App Platform** (DO). 
+Works with all major cloud providers like **[AWS](aws/)**, **[GCP](gcp/)**, **[Azure](azure/)**, and **[App Platform](app-platform-do/)** (DO). 
 
 With [DeployPRO](https://deploypro.dev/), you can effortlessly create and manage applications, gaining full control of your development process. 
 Experience the power and flexibility of **DeployPRO** as it leads you to streamlined and hassle-free cloud deployment.

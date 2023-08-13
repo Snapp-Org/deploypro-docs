@@ -142,8 +142,8 @@ const config = {
                                 href: 'https://github.com/app-generator/deploypro/issues',
                             },
                             {
-                                label: 'Team',
-                                href: 'https://deploypro.dev/team/',
+                                label: 'Community (Discord)',
+                                href: 'https://discord.gg/qQhjQZhnur',
                             },
                         ],
                     },
