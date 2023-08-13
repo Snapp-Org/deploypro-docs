@@ -5,9 +5,45 @@ sidebar_label    : Create Server
 
 # Create Server for AWS
 
-@ToDo - General Intro + all steps with images
+Once you've successfully linked your AWS account to DeployPRO, you're ready to initiate the process of setting up a server for your application. Simply follow these instructions:
 
-- Options (free tier, paid options)
+1. Open the Server Menu. If this is your first time connecting a cloud provider on [DeployPRO](https://deploypro.dev/), you will found no list server. What you need to start deploying an application in DeployPRO is by clicking the `+ Create Server` button.
+  ![DeployPRO - Create Server](https://github.com/app-generator/deploypro-docs/assets/46531367/34abb087-e6b6-41c5-8e60-73a1d3e0d895)
+  <br />
+
+2. Next, you will be directed to page so that you can create a server based on your preference. Ensure that you choose the cloud provider correctly. In this AWS topic, select AWS and proceed to fill out the form.
+  ![DeployPRO - Server Preference](https://github.com/app-generator/deploypro-docs/assets/46531367/49821d58-3c43-4e1e-9411-293b936e9f41)
+
+  Here are some points you should consider right now:
+    - We recommend you to write the server name in camelCase, snake_case, kebab-case or PascalCase.
+    - Find the best practice of the specification. 👉 Scroll down for more information
+
+    <br />
+
+3. Review your Server before you click `Create Server`.
+  ![DeployPRO - Review Server](https://github.com/app-generator/deploypro-docs/assets/46531367/077275b3-9ed8-476a-8efd-21e58b5b40af)
+  <br />
+
+4. Your Server is **successfully created🙌** when the status is running.
+  ![DeployPRO - Server Created](https://github.com/app-generator/deploypro-docs/assets/46531367/74b807c5-9a46-4c2b-8639-210550998025)
+  <br />
+
+    Ensure thorough confirmation by clicking on the IPv4 Address. Once the server creation process is accomplished, the resulting appearance will resemble the following:
+    ![Dashboard - DeployPRO](https://github.com/app-generator/deploypro-docs/assets/46531367/1c29d921-b157-4327-8461-5363e501d1eb)
+    <br />
+
+    This is how the server detail when you click the server name.
+    ![DeployPRO - Server Detail](https://github-production-user-asset-6210df.s3.amazonaws.com/46531367/260289267-3e1d06b0-95bb-42b7-837e-f9b2cdc46927.png)
+    <br />
+
+    You have the option to delete your server. However, it's important to note that any **applications housed within the server** will be automatically deleted as well.
+
+## Specifications
+Make sure to choose the appropriate specifications based on your application's requirements. While a server can serve multiple applications, if you're setting up a server specifically for a single application, the choice becomes less critical.
+
+> For example t2.micro (1 VCPU, 1.0 RAM, **Free-Tier**)
+
+The t2.micro instance type on AWS is well-suited for tasks involving **lightweight applications** that do not necessitate extensive computing power or memory resources. It encompasses 1 virtual CPU (vCPU) and 1.0 GB of RAM. Commonly employed scenarios for this instance type include hosting modest-scale websites, facilitating development and testing environments, executing microservices, and managing applications with minimal resource requirements. It is imperative to acknowledge that the t2.micro instance affords burstable performance, allowing it to accommodate short-term spikes in activity. However, sustained high utilization might result in performance constraints attributable to its credit-based allocation model.
 
 <br />
 
