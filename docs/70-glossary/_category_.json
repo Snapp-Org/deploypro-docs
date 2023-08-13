@@ -1,8 +1,8 @@
 {
-  "label": "Glosarry",
+  "label": "Glossary",
   "link": {
     "type": "generated-index",
-    "slug": "/glosarry",
+    "slug": "/glossary",
     "description": "Deployment Terms Explained"    
   }
 }
