@@ -1,11 +1,35 @@
 sm0ke:
   name: Sm0ke 
-  title: Founder @ DeployPRO, Simpllo, AppSeed 
-  url: https://github.com/app-generator
+  title: Founder @ DeployPRO, Project Manager
+  url: https://github.com/sm0keDev
   image_url: https://github.com/sm0keDev.png
+
+sugeng:
+  name: Sugeng Agung Suganda
+  title: Full-Stack & Cloud Engineer
+  url: https://github.com/sgnd
+  image_url: https://github.com/sgnd.png
 
 aulia:
   name: Aulia Romadon
   title: Technical Writter 
   url: https://github.com/auliaromadon
   image_url: https://github.com/auliaromadon.png
+
+nur:
+  name: Nur Askiah
+  title: Full-Stack Developer (Python, Django)
+  url: https://github.com/nuraskiah
+  image_url: https://github.com/nuraskiah.png
+
+dhafitf:
+  name: Dhafit Farenza
+  title: Frontend Developer (JS, Django)
+  url: https://github.com/dhafitf
+  image_url: https://github.com/dhafitf.png
+
+rizky:
+  name: Rizky Adil Hakim
+  title: Full-Stack Developer (Python, Django)
+  url: https://github.com/kimsohyuncans
+  image_url: https://github.com/kimsohyuncans.png
