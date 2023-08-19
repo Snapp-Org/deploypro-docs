@@ -5,7 +5,156 @@ sidebar_label    : Cheat Sheet
 
 # Docker Cheat Sheet
 
-@ToDo
+A Docker cheat sheet can be a handy reference while learning and working with Docker. 
+Here's a comprehensive Docker cheat sheet covering the basic commands and concepts:
+
+## Images and Containers
+
+- **docker pull [image_name:tag]**: Pull an image from Docker Hub.
+- **docker build -t [image_name:tag] [path_to_Dockerfile]**: Build an image from a Dockerfile.
+- **docker images**: List all available images.
+- **docker rmi [image_id]**: Remove an image.
+- **docker run [options] [image_name:tag]**: Run a container from an image.
+  - `-d`: Run in detached mode (in the background).
+  - `-p [host_port]:[container_port]`: Map ports between host and container.
+  - `--name [container_name]`: Specify a name for the container.
+  - `-e [env_variable=value]`: Set environment variables.
+  - `-v [host_path]:[container_path]`: Mount volumes between host and container.
+  - `--rm`: Remove the container when it stops.
+- **docker ps**: List running containers.
+  - `-a`: List all containers (including stopped ones).
+- **docker stop [container_name/ID]**: Stop a running container.
+- **docker start [container_name/ID]**: Start a stopped container.
+- **docker restart [container_name/ID]**: Restart a container.
+
+<br />
+
+## Docker Compose
+
+- **docker-compose up**: Create and start containers defined in the docker-compose.yml file.
+  - `-d`: Run in detached mode.
+- **docker-compose down**: Stop and remove containers defined in the docker-compose.yml file.
+- **docker-compose logs [container_name]**: View logs of a specific container.
+- **docker-compose exec [container_name] [command]**: Execute a command in a running container.
+
+<br />
+
+## Docker Volumes
+
+- **docker volume create [volume_name]**: Create a named volume.
+- **docker volume ls**: List all volumes.
+- **docker volume inspect [volume_name]**: Display detailed information about a volume.
+- **docker run -v [volume_name]:[container_path]**: Mount a volume to a container.
+
+<br />
+
+## Networking
+
+- **docker network create [network_name]**: Create a custom network.
+- **docker network ls**: List all networks.
+- **docker network inspect [network_name]**: Display detailed information about a network.
+- **docker run --network [network_name] [image_name:tag]**: Run a container in a specific network.
+
+<br />
+
+## Other Commands
+
+- **docker ps -aq**: List IDs of all containers (running and stopped).
+- **docker rm [container_name/ID]**: Remove a stopped container.
+- **docker system prune**: Remove all stopped containers, unused networks, and dangling images.
+
+<br />
+
+As you get more comfortable, you can delve into more advanced topics such as Dockerfile best practices, 
+multi-stage builds, Docker Swarm for orchestration, and Kubernetes for container management.
+
+<br />
+
+## Multi-Stage Builds
+
+Multi-stage builds are a Docker feature that allows you to create smaller, more efficient Docker images by using multiple build stages within a single Dockerfile. 
+Each build stage can have its own base image and set of instructions, and only the necessary artifacts are carried forward to the next stage.
+
+> **Benefits**
+
+- `Smaller Images`: Unnecessary build dependencies and intermediate files are discarded, resulting in smaller final images.
+- `Improved Security`: Only the necessary components are included, reducing potential attack vectors.
+- `Simpler Build Process`: Developers can bundle various steps (compilation, testing, etc.) into a single Dockerfile.
+- `Faster Builds`: The build process can be more efficient due to fewer layers and smaller context.
+
+<br />
+
+> **Example**
+
+```Dockerfile
+# Stage 1: Build application
+FROM node:14 AS build
+WORKDIR /app
+COPY package*.json ./
+RUN npm install
+COPY . .
+RUN npm run build
+
+# Stage 2: Production image
+FROM nginx:alpine
+COPY --from=build /app/dist /usr/share/nginx/html
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]
+```
+
+In this example, the first stage builds the application using Node.js, while the second stage uses a minimal Nginx image to serve the built files. 
+The `--from=build` instruction copies files from the first stage into the second stage without carrying over unnecessary build artifacts.
+
+<br />
+
+## Docker Swarm
+
+Docker Swarm is a native orchestration and clustering solution for Docker. It allows you to create and manage a cluster of Docker nodes, turning them into a single virtual Docker engine. 
+Docker Swarm enables you to deploy and manage containers across multiple nodes, providing high availability and scalability.
+
+> **Key Concepts**
+
+- `Node`: A physical or virtual machine in the Docker Swarm cluster.
+- `Service`: A definition of a desired state for a containerized application, specifying which image to use, how many replicas to run, and more.
+- `Task`: An instance of a service running on a node.
+- `Stack`: A collection of services that make up an application, defined using a Compose file.
+- `Manager Node`: Controls the swarm and maintains the desired state.
+- `Worker Node`: Executes tasks assigned by the manager nodes.
+
+<br />
+
+> **Benefits**
+
+- `High Availability`: Services can be replicated across multiple nodes for fault tolerance.
+- `Scalability`: Easily scale services up or down to meet demand.
+- `Service Discovery`: Built-in DNS for service discovery among containers.
+- `Load Balancing`: Traffic to services is automatically load balanced.
+- `Rolling Updates`: Services can be updated with minimal downtime.
+- `Secrets Management`: Securely manage sensitive data like passwords and tokens.
+
+<br />
+
+> **Getting Started**
+
+- `Initialize a Swarm`: Use the docker swarm init command on a manager node.
+- `Deploy Services`: Define and deploy services using the docker service create command.
+- `Scaling`: Scale services up or down using the docker service scale command.
+- `Load Balancing`: Access services through the swarm's load balancer.
+
+```bash
+# Initialize Swarm on manager node
+docker swarm init
+
+# Deploy a service
+docker service create --name web --replicas 3 -p 80:80 nginx:alpine
+
+# Scale the service
+docker service scale web=5
+```
+
+In this example, the **nginx** service is deployed with three replicas. It can be scaled to five replicas for higher availability and load distribution.
+
+`Docker Swarm` provides a simpler and more lightweight alternative to more complex orchestration solutions like Kubernetes, making it a great choice for many use cases.
 
 <br />
 
