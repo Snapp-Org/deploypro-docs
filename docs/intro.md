@@ -57,6 +57,6 @@ If you come across anything that appears unclear, kindly inform us, so we can ad
 
 ## Resources
 
-- 👉 [Deploy Projects](https://deploypro.dev/) using your preferred provider: `AWS`, `GCP`, `Azzure`
+- 👉 [Deploy Projects](https://deploypro.dev/) using your preferred provider: `AWS`, `GCP`, `Azure`
 - 👉 Get [Deployment Support](https://deploypro.dev/support/) from the team behind this service
 - 👉 Join the [Community](https://discord.gg/qQhjQZhnur) and chat with the team behind `DeployPRO`

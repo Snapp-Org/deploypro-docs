@@ -60,6 +60,6 @@ If you'd like to utilize an existing IAM user, you can adjust their permissions 
 
 ## Resources
 
-- 👉 [Deploy Projects](https://deploypro.dev/) using your preferred provider: `AWS`, `GCP`, `Azzure`
+- 👉 [Deploy Projects](https://deploypro.dev/) using your preferred provider: `AWS`, `GCP`, `Azure`
 - 👉 Get [Deployment Support](https://deploypro.dev/support/) from the team behind this service
 - 👉 Join the [Community](https://discord.gg/qQhjQZhnur) and chat with the team behind `DeployPRO`

@@ -49,6 +49,6 @@ The t2.micro instance type on AWS is well-suited for tasks involving **lightweig
 
 ## Resources
 
-- 👉 [Deploy Projects](https://deploypro.dev/) using your preferred provider: `AWS`, `GCP`, `Azzure`
+- 👉 [Deploy Projects](https://deploypro.dev/) using your preferred provider: `AWS`, `GCP`, `Azure`
 - 👉 Get [Deployment Support](https://deploypro.dev/support/) from the team behind this service
 - 👉 Join the [Community](https://discord.gg/qQhjQZhnur) and chat with the team behind `DeployPRO`

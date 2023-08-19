@@ -20,6 +20,7 @@ These services are highly scalable and flexible, allowing users to allocate reso
 - `EC2`: EC2 offers resizable virtual servers, known as instances, allowing users to deploy applications and workloads in a virtualized environment. It provides control over instance types, operating systems, and networking configurations.
 - `Elastic Beanstalk`: Elastic Beanstalk simplifies the deployment and management of web applications and services. It automatically handles infrastructure arranging, scaling, and monitoring, allowing developers to focus on writing code rather than managing the underlying infrastructure.
 - `Lambda`: Lambda is a serverless computing service that lets developers run code in response to specific events without provisioning or managing servers. It's well-suited for executing short-lived functions and microservices, optimizing resource utilization.
+- `EC2 Container Service`: This service facilitates the seamless deployment and control of Docker containers across a cluster of EC2 instances.
 
 <br />
 
@@ -31,6 +32,8 @@ File storage services make it easy to store, find, and share digital files. The 
 - `CloudFront`: CloudFront is a content delivery network (CDN) service that enhances the performance and distribution of web content by caching it at edge locations closer to end users.
 - `Glacier`: Glacier provides long-term archival storage with low-cost options. It's suitable for retaining infrequently accessed data while ensuring data durability/damage.
 - `Snowball`: Snowball is a physical data transport solution that allows for secure and efficient transfer of large datasets to and from AWS using ruggedized devices.
+- `Elastic File Storage (EFS)`: This service offers file storage used in EC2 instances. It connects to numerous EC2 instances, allowing shared access to files.
+- `Storage Gateway`: AWS Storage Gateway is used for securely integrating on-premises IT environments with cloud storage for backup and disaster recovery.
 
 <br />
 
@@ -43,6 +46,7 @@ Storage secures data for easy access. Persistence ensures data remains intact an
 - `DynamoDB`: DynamoDB provides a versatile and scalable NoSQL database solution. It guarantees that data stays accessible and can be retrieved rapidly, adjusting well to different workloads without sacrificing performance.
 - `ElastiCache`: ElastiCache enhances application speed by using in-memory caching. This reduces the need to repeatedly retrieve data from the main database, leading to faster response times.
 - `Redshift`: Redshift provides a powerful data warehousing solution for analyzing large datasets. It optimizes queries and processing, enabling efficient analytics and reporting.
+- `Data Migration Service (DMS)`: This service helps in migrating databases to the cloud easily and securely. It can also be used for converting databases.
 
 <br />
 
@@ -52,6 +56,10 @@ This category focuses on extracting valuable insights from data. The following t
 
 - `Amazon EMR`: EMR makes it easier to work with big sets of data. It helps analyze and manage data on a large scale.
 - `Data Pipeline`: Data Pipeline helps move and organize data between different AWS services. It's like a streamlined way to handle data tasks, making things work smoothly for analysis and management.
+- `AWS Elasticsearch`: This managed service facilitates the rapid and straightforward deployment, operation, and scalability of Elasticsearch. It's tailored for efficient Elasticsearch utilization.
+- `Kinesis`: This tool simplifies the handling of real-time streaming data stored in AWS cloud environments, making it easier to work with and derive insights from such data.
+- `AWS Machine Learning`: This resource provides access to advanced machine learning algorithms, making it easier to create intelligent applications.
+- `QuickSight`: Amazon Web Services QuickSight is a cloud-based business intelligence tool that efficiently uncovers valuable insights within datasets, helping users understand data more effectively.
 
 <br />
 
@@ -61,6 +69,8 @@ This area deals with managing user access and ensuring the protection of resourc
 
 - `IAM`: IAM controls who can access what in AWS. It manages user permissions and keeps things secure.
 - `Directory Services`: Directory Services provide a way to manage users and devices. They help keep everything organized and secure, like a digital directory for access.
+- `AWS Inspector`: This tool offers analytical capabilities for applications hosted on AWS and helps in identifying any security concerns.
+- `AWS Web Application Firewall (WAF)`: Protects web apps against attacks by providing web traffic filters; whilst CloudHSM serves as a Hardware Security Module.
 
 <br />
 
@@ -69,6 +79,12 @@ This area deals with managing user access and ensuring the protection of resourc
 This category revolves around supervising and optimizing AWS resources. The following tool is instrumental in this capacity:
 
 - `CloudWatch`: CloudWatch monitors resources and applications in real time. It provides insights into performance, aiding in efficient management and timely responses to potential issues.
+- `CloudFormation`: This tool helps you build and update various AWS resources smoothly.
+- `CloudTrail`: CloudTrail enhances visibility by recording API calls in your account, giving insight into user activity.
+- `AWS OpsWorks`: OpsWorks offers a DevOps platform to manage applications, regardless of size or complexity, on the AWS cloud.
+- `AWS Config`: AWS Config provides a resource inventory, allowing audits of resource settings and tracking of changes over time. It audits history and notifies about configuration changes in AWS resources. It ensures you can easily monitor changes and maintain a detailed audit history for each resource.
+- `Service Catalog`: This allows organizations to manage approved collections of IT resources.
+- `Trusted Advisor`: Trusted Advisor examines AWS environments to uncover opportunities for cost savings and system performance improvement.
 
 <br />
 
@@ -84,6 +100,6 @@ This section is about aiding developers in building and deploying applications. 
 
 ## Resources
 
-- 👉 [Deploy Projects](https://deploypro.dev/) using your preferred provider: `AWS`, `GCP`, `Azzure`
+- 👉 [Deploy Projects](https://deploypro.dev/) using your preferred provider: `AWS`, `GCP`, `Azure`
 - 👉 Get [Deployment Support](https://deploypro.dev/support/) from the team behind this service
 - 👉 Join the [Community](https://discord.gg/qQhjQZhnur) and chat with the team behind `DeployPRO`
