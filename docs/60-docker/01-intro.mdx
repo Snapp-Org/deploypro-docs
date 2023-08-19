@@ -8,9 +8,76 @@ description      : Introduction to Docker
 
 # Introduction to Docker
 
-@ToDo
+Docker is a platform that allows you to develop, ship, and run applications in containers.
+Containers are lightweight and portable units that package an application and its dependencies together, ensuring consistent behavior across different environments. 
+
+> Here's a basic overview to get you started:
+
+## Installation
+
+First, you need to install Docker on your machine. You can find installation instructions for various operating systems on the Docker website.
 
 <br />
+
+## Docker Images
+
+Docker images are the blueprints for containers. They contain everything needed to run an application, including code, runtime, libraries, and environment variables. 
+Anyone can build new images or use existing ones from Docker Hub, a public repository of images.
+
+- To build an image from a Dockerfile (a script that defines how an image should be created), you can use the docker build command.
+
+- To pull an image from Docker Hub, you can use the docker pull command.
+
+<br />
+
+## Docker Containers:
+
+Containers are instances of Docker images. They run in isolated environments on your host system.
+
+- To run a container from an image, you can use the docker run command.
+- You can specify various options like ports, volumes, environment variables, and more when running containers.
+
+<br />
+
+## Dockerfile
+
+A Dockerfile is a text file that contains instructions for building a Docker image. 
+It defines the base image, environment setup, dependencies installation, and application code.
+
+<br />
+
+## Docker Compose
+
+Docker Compose is a tool for defining and running multi-container Docker applications. It uses a YAML file to define the services, networks, and volumes for your application.
+
+<br />
+
+## Docker Volumes
+
+Docker volumes are used to persist data outside of containers. They allow data to be shared between containers or stored on the host system.
+
+<br />
+
+## Networking
+
+Docker Registry is a place to store and distribute Docker images. Docker Hub is a public registry, but you can also set up your private registry for your organization.
+
+<br />
+
+## Docker Commands
+
+Here are some essential Docker commands:
+
+- `docker ps`: List running containers.
+- `docker images`: List available images.
+- `docker build`: Build an image from a Dockerfile.
+- `docker run`: Run a container from an image.
+- `docker-compose`: Manage multi-container applications.
+
+<br />
+
+Besides the above, Docker is a vast topic with many advanced features. 
+Might be a good idea for a beginner to start with the basics and gradually explore more advanced concepts once the fundamentals are assimilated.
 
 ## Resources
 
