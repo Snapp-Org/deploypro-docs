@@ -3,7 +3,7 @@ title            : Deploy Sample App using AWS Server
 sidebar_label    : Deploy Sample App
 ---
 
-# Deploy Smple App with AWS on [DeployPRO](https://deploypro.dev/)
+# Deploy Sample App with AWS on [DeployPRO](https://deploypro.dev/)
 
 You can deploy multiple apps and install databases on the same server, but ensure that your resources are sufficient.
 
@@ -161,6 +161,6 @@ If you encounter some issue while deploying your application, don't hesitate to 
 
 ## Resources
 
-- 👉 [Deploy Projects](https://deploypro.dev/) using your preferred provider: `AWS`, `GCP`, `Azzure`
+- 👉 [Deploy Projects](https://deploypro.dev/) using your preferred provider: `AWS`, `GCP`, `Azure`
 - 👉 Get [Deployment Support](https://deploypro.dev/support/) from the team behind this service
 - 👉 Join the [Community](https://discord.gg/qQhjQZhnur) and chat with the team behind `DeployPRO`
