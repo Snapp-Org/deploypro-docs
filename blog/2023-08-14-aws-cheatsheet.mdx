@@ -7,36 +7,78 @@ tags    : [aws, cheatsheet, deploypro]
 
 This article is a short introduction and cheatsheet to AWS, a leading and innovative cloud provider. 
 
+AWS provides a wide range of services focused on deployment, storage, scalability, and other related tools for developers and software companies. 
+
 <!--truncate-->
 
-> Topics
 
-- Computing Services: Computing services refer to cloud-based resources that enable users to run applications and perform various computing tasks without the need for on-premises hardware. These services are highly scalable and flexible, allowing users to allocate resources as needed and pay only for what they use. In this context, the following specific computing services are commonly used:
-  - EC2: EC2 offers resizable virtual servers, known as instances, allowing users to deploy applications and workloads in a virtualized environment. It provides control over instance types, operating systems, and networking configurations.
-  - Elastic Beanstalk: Elastic Beanstalk simplifies the deployment and management of web applications and services. It automatically handles infrastructure arranging, scaling, and monitoring, allowing developers to focus on writing code rather than managing the underlying infrastructure.
-  - Lambda: Lambda is a serverless computing service that lets developers run code in response to specific events without provisioning or managing servers. It's well-suited for executing short-lived functions and microservices, optimizing resource utilization.
-- Files Storage: File storage services make it easy to store, find, and share digital files. The following services are frequently employed for various file storage needs:
-  - S3: S3 offers scalable and durable object storage for various data types, including images, videos, and backups. It provides high availability and global accessibility for files through a unique URL.
-  - CloudFront: CloudFront is a content delivery network (CDN) service that enhances the performance and distribution of web content by caching it at edge locations closer to end users.
-  - Glacier: Glacier provides long-term archival storage with low-cost options. It's suitable for retaining infrequently accessed data while ensuring data durability/damage.
-  - Snowball: Snowball is a physical data transport solution that allows for secure and efficient transfer of large datasets to and from AWS using ruggedized devices.
-- DB Storage & Persistence: The arrangement and durability of data in an organized format. Database is structured data storage. Storage secures data for easy access. Persistence ensures data remains intact and available despite disruptions. It's about structuring, securing, and maintaining data for reliable, lasting use.
-  - Relational Database Service: RDS streamlines the management of relational databases, making them easier to use and maintain. It automates routine tasks such as backups, patching, and scaling.
-  - DynamoDB: DynamoDB provides a versatile and scalable NoSQL database solution. It guarantees that data stays accessible and can be retrieved rapidly, adjusting well to different workloads without sacrificing performance.
-  - ElastiCache: ElastiCache enhances application speed by using in-memory caching. This reduces the need to repeatedly retrieve data from the main database, leading to faster response times.
-  - Redshift: Redshift provides a powerful data warehousing solution for analyzing large datasets. It optimizes queries and processing, enabling efficient analytics and reporting.
-- Analytics: This category focuses on extracting valuable insights from data. The following tools aid in this process:
-  - Amazon EMR: EMR makes it easier to work with big sets of data. It helps analyze and manage data on a large scale.
-  - Data Pipeline: Data Pipeline helps move and organize data between different AWS services. It's like a streamlined way to handle data tasks, making things work smoothly for analysis and management.
-- Identity & Security: This area deals with managing user access and ensuring the protection of resources. The following tools are pivotal in this regard:
-  - IAM: IAM controls who can access what in AWS. It manages user permissions and keeps things secure.
-  - Directory Services: Directory Services provide a way to manage users and devices. They help keep everything organized and secure, like a digital directory for access.
-- Management Tools: This category revolves around supervising and optimizing AWS resources. The following tool is instrumental in this capacity:
-  - CloudWatch: CloudWatch monitors resources and applications in real time. It provides insights into performance, aiding in efficient management and timely responses to potential issues.
-- Developer Tools: This section is about aiding developers in building and deploying applications. The following tools are designed for these purposes:
-  - AWS Amplify: Amplify simplifies the process of creating web and mobile apps. It offers tools for both front-end and back-end development workflows.
-  - AWS Code Commit: Code Commit provides a secure platform for hosting Git repositories. It's a safe space for storing and collaborating on code.
-  - AWS Code Deploy: Code Deploy automates the deployment of code to different computing services. It streamlines the process of releasing new updates or features.
+> **Computing Services** 
+
+Computing services refer to cloud-based resources that enable users to run applications and perform various computing tasks without the need for on-premises hardware. 
+These services are highly scalable and flexible, allowing users to allocate resources as needed and pay only for what they use. In this context, the following specific computing services are commonly used:
+
+- `EC2`: EC2 offers resizable virtual servers, known as instances, allowing users to deploy applications and workloads in a virtualized environment. It provides control over instance types, operating systems, and networking configurations.
+- `Elastic Beanstalk`: Elastic Beanstalk simplifies the deployment and management of web applications and services. It automatically handles infrastructure arranging, scaling, and monitoring, allowing developers to focus on writing code rather than managing the underlying infrastructure.
+- `Lambda`: Lambda is a serverless computing service that lets developers run code in response to specific events without provisioning or managing servers. It's well-suited for executing short-lived functions and microservices, optimizing resource utilization.
+
+<br />
+
+> **Files Storage**
+
+File storage services make it easy to store, find, and share digital files. The following services are frequently employed for various file storage needs:
+
+- `S3`: S3 offers scalable and durable object storage for various data types, including images, videos, and backups. It provides high availability and global accessibility for files through a unique URL.
+- `CloudFront`: CloudFront is a content delivery network (CDN) service that enhances the performance and distribution of web content by caching it at edge locations closer to end users.
+- `Glacier`: Glacier provides long-term archival storage with low-cost options. It's suitable for retaining infrequently accessed data while ensuring data durability/damage.
+- `Snowball`: Snowball is a physical data transport solution that allows for secure and efficient transfer of large datasets to and from AWS using ruggedized devices.
+
+<br />
+
+> **DB Storage & Persistence**
+
+The arrangement and durability of data in an organized format. 
+Storage secures data for easy access. Persistence ensures data remains intact and available despite disruptions. It's about structuring, securing, and maintaining data for reliable, lasting use.
+
+- `Relational Database Service`: RDS streamlines the management of relational databases, making them easier to use and maintain. It automates routine tasks such as backups, patching, and scaling.
+- `DynamoDB`: DynamoDB provides a versatile and scalable NoSQL database solution. It guarantees that data stays accessible and can be retrieved rapidly, adjusting well to different workloads without sacrificing performance.
+- `ElastiCache`: ElastiCache enhances application speed by using in-memory caching. This reduces the need to repeatedly retrieve data from the main database, leading to faster response times.
+- `Redshift`: Redshift provides a powerful data warehousing solution for analyzing large datasets. It optimizes queries and processing, enabling efficient analytics and reporting.
+
+<br />
+
+> **Analytics**
+
+This category focuses on extracting valuable insights from data. The following tools aid in this process:
+
+- `Amazon EMR`: EMR makes it easier to work with big sets of data. It helps analyze and manage data on a large scale.
+- `Data Pipeline`: Data Pipeline helps move and organize data between different AWS services. It's like a streamlined way to handle data tasks, making things work smoothly for analysis and management.
+
+<br />
+
+> **Identity & Security**
+
+This area deals with managing user access and ensuring the protection of resources. The following tools are pivotal in this regard:
+
+- `IAM`: IAM controls who can access what in AWS. It manages user permissions and keeps things secure.
+- `Directory Services`: Directory Services provide a way to manage users and devices. They help keep everything organized and secure, like a digital directory for access.
+
+<br />
+
+> **Management Tool**
+
+This category revolves around supervising and optimizing AWS resources. The following tool is instrumental in this capacity:
+
+- `CloudWatch`: CloudWatch monitors resources and applications in real time. It provides insights into performance, aiding in efficient management and timely responses to potential issues.
+
+<br />
+
+> **Developer Tools**
+
+This section is about aiding developers in building and deploying applications. The following tools are designed for these purposes:
+
+- `AWS Amplify`: Amplify simplifies the process of creating web and mobile apps. It offers tools for both front-end and back-end development workflows.
+- `AWS Code Commit`: Code Commit provides a secure platform for hosting Git repositories. It's a safe space for storing and collaborating on code.
+- `AWS Code Deploy`: Code Deploy automates the deployment of code to different computing services. It streamlines the process of releasing new updates or features.
 
 <br />
 
