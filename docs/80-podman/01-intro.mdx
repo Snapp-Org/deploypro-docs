@@ -1,0 +1,101 @@
+---
+sidebar_position : 0
+title            : Podman - Short Introduction 
+sidebar_label    : Intro
+slug             : /podman/intro
+description      : Introduction to Podman
+---
+
+# Introduction to Podman
+
+[Podman](https://podman.io/getting-started/installation) is an open-source containerization tool that allows you to create, manage, and run containers and pods. 
+
+Similar to Docker, Podman provides a user-friendly command-line interface for working with containers, but it differs in its architecture and approach. 
+
+Notably, Podman doesn't require a central daemon process, making it more suited for scenarios where avoiding a central daemon is desired.
+
+## `Podman` Key Concepts
+
+> **Daemonless Architecture**
+
+Unlike Docker, Podman operates without a central daemon, allowing containers and pods to be managed as individual processes. This design enhances security and isolation.
+
+<br />
+
+> **Pods and Containers**
+
+Podman introduces the concept of pods, which are groups of one or more containers that share the same network namespace. Containers within a pod can communicate over localhost, simplifying networking.
+
+<br />
+
+> **Docker Compatibility**
+
+Podman provides a Docker-compatible command-line interface, making it easy for Docker users to transition and utilize their existing knowledge.
+
+<br />
+
+> **Rootless Containers**
+
+Podman supports running containers as unprivileged users, enhancing security by isolating containers from the host system more effectively.
+
+<br />
+
+> **SystemD Integration**
+
+Podman can integrate with SystemD to manage containers as SystemD units, allowing for better integration with system services.
+
+<br />
+
+> **OCI (Open Container Initiative) Compatibility**
+
+Podman adheres to the OCI standards for container image and runtime specifications, ensuring interoperability with other OCI-compliant tools.
+
+<br />
+
+## Usage Scenarios:
+
+- **Development and Testing**: Podman is great for local development and testing of applications within containers without the need for a central daemon.
+- **Rootless Containers**: Podman's support for rootless containers is beneficial when security and isolation are priorities, such as when running containers on shared systems.
+- **Microservices and Pods**: The concept of pods in Podman makes it a good choice for managing multi-container applications, especially those that require close inter-container communication.
+- **Transition from Docker**: Organizations familiar with Docker can transition to Podman with minimal effort due to its Docker-compatible commands.
+
+<br />
+
+## Getting Started
+
+> **Installation**
+
+Podman can be installed on various Linux distributions. Installation instructions are available on the [Podman website](https://podman.io/getting-started/installation)
+
+<br />
+
+> **Basic Commands**
+
+Use commands like `podman run`, `podman pull`, and `podman ps` to create containers, pull images, and manage running containers.
+
+> **Pods** 
+
+Create and manage pods using commands like `podman pod create`, `podman pod ps`, and `podman pod stop`.
+
+> **Images** 
+
+Use `podman images` and `podman rmi` to manage container images.
+
+> **Networking**
+
+Containers in the same pod share the same network namespace, making communication easy.
+
+> **Rootless Containers**
+
+To run containers as unprivileged users, simply use the `--userns=keep-id` flag.
+
+<br />
+
+Podman offers a unique approach to container management with its daemonless architecture and support for pods. 
+It's well-suited for users who want Docker-compatible tools while avoiding the central daemon inherent in Docker.
+
+## Resources
+
+- 👉 [Podman](https://podman.io/getting-started/installation) - Official Documentation
+- 👉 [Deploy Projects](https://deploypro.dev/) using your own cloud provider
+- 👉 Get [Deployment Support](https://deploypro.dev/support/) from `experts` 
