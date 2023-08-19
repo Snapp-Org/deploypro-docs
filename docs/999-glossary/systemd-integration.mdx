@@ -1,0 +1,64 @@
+---
+title            : SystemD Integration
+sidebar_label    : SystemD Integration
+---
+
+# SystemD Integration
+
+SystemD integration in the context of containerization refers to the ability of container management tools, like Docker or Podman, 
+to interact with the SystemD init system that is commonly used in Linux-based operating systems. 
+
+SystemD is responsible for managing system services and processes, and integrating container management tools with SystemD can provide several benefits in terms of service management and integration.
+
+## Integration and benefits
+
+> **SystemD Units for Containers**
+
+Container management tools can create and manage containers as SystemD units. 
+This means that containers are treated as first-class citizens in the SystemD ecosystem, and you can manage them using familiar SystemD commands like `systemctl`.
+
+<br />
+
+> **Better Service Management**
+
+By integrating with SystemD, you can use SystemD's powerful features for service management, such as starting, stopping, enabling, and disabling services. 
+This provides a consistent way to manage both traditional system services and containerized applications.
+
+<br />
+
+> **Integration with System Services**
+
+Containers managed as SystemD units can be orchestrated alongside traditional SystemD-managed services. This allows for more seamless integration of containerized applications with the rest of the system.
+
+<br />
+
+> **Service Dependency Management** 
+
+SystemD provides mechanisms for defining service dependencies, ensuring that containers are started in the correct order based on the services they depend on.
+
+<br />
+
+> **Logging and Monitoring**
+
+SystemD captures and manages the logs of containerized applications, which can then be accessed and managed using SystemD's journaling features.
+
+<br />
+
+> **Consistent Lifecycle Management**
+
+Containers managed as SystemD units follow the same lifecycle management patterns as other SystemD services, making it easier to understand and manage the state of your applications.
+
+<br />
+
+`SystemD Integration` can enhance the manageability, reliability, and integration of containerized applications within a Linux environment. 
+
+It allows you to use the same tools and practices for managing containers as you do for managing other system services. 
+
+Both `Docker and Podman` provide **SystemD Integration** options for running containers as SystemD units, allowing for a smoother integration of containerized applications into the broader system infrastructure.
+
+<br />
+
+## Resources
+
+- 👉 [Deploy Projects](https://deploypro.dev/) using your own cloud provider
+- 👉 Get [Deployment Support](https://deploypro.dev/support/) from `experts` 
