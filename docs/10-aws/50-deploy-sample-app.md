@@ -1,11 +1,11 @@
 ---
-title            : Create a Static App using AWS Server
-sidebar_label    : Create a Static App
+title            : Deploy Sample App using AWS Server
+sidebar_label    : Deploy Sample App
 ---
 
-# Create a Static App with AWS on [DeployPRO](https://deploypro.dev/)
+# Deploy Smple App with AWS on [DeployPRO](https://deploypro.dev/)
 
-You can install multiple apps and databases on the same server, but ensure that your resources are sufficient.
+You can deploy multiple apps and install databases on the same server, but ensure that your resources are sufficient.
 
 For the first try, let's deploy a react app using **DeployPRO** service. Bear in mind, you **must** have `Dockerfile` inside your application in the GitHub Repository.
 
