@@ -5,12 +5,81 @@ sidebar_label    : Cheat Sheet
 
 # Podman Cheat Sheet
 
-@ToDo 
+[Podman](https://podman.io/getting-started/installation) is an open-source containerization tool that allows you to create, manage, and run containers and pods. 
+
+Here is a comprehesive Cheat Sheet that might help anyone to start using Podman. 
+
+## Container Management
+
+- `podman run [options] [image] [command]`: Create and run a new container from an image.
+- `podman ps`: List running containers.
+- `podman ps -a`: List all containers (including stopped ones).
+- `podman exec -it [container] [command]`: Run a command inside a running container.
+
+<br />
+
+## Image Management
+
+- `podman pull [image]`: Pull an image from a registry.
+- `podman images`: List locally available images.
+- `podman rmi [image]`: Remove a locally available image.
+
+<br />
+
+## Pod Management
+
+- `podman pod create`: Create a new pod.
+- `podman pod ps`: List running pods.
+- `podman pod stop [pod]`: Stop a running pod.
+- `podman pod rm [pod]`: Remove a stopped pod.
+
+<br />
+
+## Networking
+
+- `podman network create [network]`: Create a new network.
+- `podman network ls`: List available networks.
+- `podman network rm [network]`: Remove a network.
+
+<br />
+
+## Rootless Containers
+
+- `podman unshare cat /etc/subuid`: Check subuid/subgid mappings.
+- `podman unshare cat /etc/subgid`: Check subuid/subgid mappings.
+- `podman --uidmap [user]:[container] run [image] [command]`: Run a container with specific UID mapping.
+
+<br />
+
+## Build and Create
+
+- `podman build -t [image_name] [path]`: Build a container image using a Dockerfile.
+- `podman create [options] [image] [command]`: Create a new container without starting it.
+- `podman commit [container] [new_image]`: Create a new image from a container's changes.
+
+<br />
+
+## Miscellaneous
+
+- `podman version`: Display the Podman version.
+- `podman info`: Display detailed system information.
+
+<br />
+
+## Help
+
+- `podman --help`: Display general help information.
+- `podman [command] --help`: Display help for a specific command.
+
+<br />
+
+Remember that Podman aims to be Docker-compatible, so many of the commands and options will be familiar if you have experience with Docker. 
+This cheat sheet covers the basics of using Podman for container management, but there are more advanced features and concepts to explore as well.
 
 <br />
 
 ## Resources
 
-- 👉 [Docker Curriculum](https://docker-curriculum.com/) - a comprehensive guide for beginners 
+- 👉 [Podman](https://podman.io/getting-started/installation) - official Documentation
 - 👉 [Deploy Projects](https://deploypro.dev/) using your own cloud provider
 - 👉 Get [Deployment Support](https://deploypro.dev/support/) from `experts` 

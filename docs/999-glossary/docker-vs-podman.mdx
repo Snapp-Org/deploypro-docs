@@ -5,11 +5,92 @@ sidebar_label    : Docker vs Podman
 
 # Docker vs Podman
 
-@ToDo 
+This article provides the pros, cons and key differences between **Docker** and **Podman**. 
+
+## [Docker](https://www.docker.com/)
+
+Docker is a platform that allows you to develop, ship, and run applications in containers. Containers package applications and their dependencies, ensuring consistent behavior across different environments.
+
+> **Pros**
+
+- `Isolation`: Containers offer process-level isolation, enabling applications to run independently with their own environment.
+- `Consistency`: Containers ensure consistent behavior between development and production environments.
+- `Portability`: Containers can run on any system that supports Docker, regardless of underlying infrastructure.
+- `Fast Startup`: Containers start quickly due to their lightweight nature.
+- `Resource Efficiency`: Containers share the host OS kernel, consuming fewer resources compared to VMs.
+- `Version Control`: Container images can be versioned, facilitating collaboration and tracking changes.
+
+
+> **Cons**
+
+- `Limited Orchestration`: While Docker provides basic orchestration features, it's not as advanced as dedicated orchestration tools like Kubernetes.
+- `Single Host`: Docker is primarily designed for managing containers on a single host.
+
+<br />
+
+## [Podman](https://podman.io/)
+
+Podman is an open-source containerization tool that provides Docker-compatible commands for managing containers and pods. It operates without a central daemon, enhancing security and isolation.
+
+> **Pros** 
+
+- `Daemonless Architecture`: Podman doesn't require a central daemon, which reduces security risks and allows for more isolated operations.
+- `Pods`: Podman introduces the concept of pods, allowing for multiple containers to share network namespaces, enabling more complex setups.
+- `Rootless Containers`: Podman supports running containers as unprivileged users, enhancing security.
+- `Docker Compatibility`: Podman's Docker-compatible CLI makes it easy to transition from Docker.
+- `No Privileged Access`: Podman doesn't require privileged access to run containers.
+- `SystemD Integration`: Podman can integrate with SystemD, enabling better integration with system services.
+
+> **Cons**
+
+- `Limited Ecosystem`: While Podman aims to be Docker-compatible, the ecosystem and community are still developing compared to Docker's mature ecosystem.
+- `Learning Curve`: Despite its compatibility, some differences exist, which might require adaptation.
+
+<br />
+
+## Key Differences
+
+> **Daemon Architecture**
+
+- `Docker`: Requires a central daemon to manage containers and images.
+- `Podman`: Operates without a central daemon, enhancing security and enabling more isolated operations.
+
+> **Pods**
+
+- `Docker`: Doesn't have native support for pods, focusing on single-container setups.
+- `Podman`: Introduces pods, which are groups of containers that share network namespaces, enabling more complex networking setups.
+
+> **Rootless Containers:**
+
+- `Docker`: Doesn't provide the same level of native support for running containers as unprivileged users.
+- `Podman`: Supports rootless containers, enhancing security by isolating containers from the host system more effectively.
+
+> **SystemD Integration**
+
+- `Docker`: Doesn't have built-in SystemD integration.
+- `Podman`: Can integrate with SystemD, providing better integration with system services.
+
+> **Compatibility**
+
+- `Docker`: Uses Docker CLI and Docker-compatible images.
+- `Podman`: Provides Docker-compatible commands but introduces some differences.
+
+> **Ecosystem**
+
+- `Docker`: Has a mature ecosystem with extensive tools, images, and resources.
+- `Podman`: Offers a growing ecosystem but may not be as extensive as Docker's.
+
+<br />
+
+Both **Docker and Podman** offer powerful containerization capabilities, and the choice between them depends on factors such as security requirements, familiarity with the tools, and the need for a central daemon. 
+
+`Podman`'s daemonless architecture and support for pods make it a strong contender for scenarios where these features are important.
 
 <br />
 
 ## Resources
 
+- 👉 [Docker](https://www.docker.com/) - official website
+- 👉 [Podman](https://podman.io/) - official website
 - 👉 [Deploy Projects](https://deploypro.dev/) using your own cloud provider
 - 👉 Get [Deployment Support](https://deploypro.dev/support/) from `experts` 

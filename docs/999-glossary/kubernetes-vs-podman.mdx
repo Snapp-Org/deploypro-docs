@@ -5,11 +5,95 @@ sidebar_label    : Kubernetes vs Podman
 
 # Kubernetes vs Podman
 
-@ToDo 
+This article provides the pros, cons and key differences between **Kubernetes** and **Podman**. 
 
 <br />
 
+## [Kubernetes](https://kubernetes.io/)
+
+Kubernetes is an open-source container orchestration platform that automates the deployment, scaling, and management of containerized applications.
+It provides features for load balancing, scaling, rolling updates, and self-healing.
+
+> **Pros** 
+
+- `Orchestration`: Kubernetes offers powerful orchestration capabilities, allowing the management of complex applications across clusters of machines.
+- `Auto Scaling`: Kubernetes can automatically scale applications based on demand, improving resource utilization.
+- `High Availability`: Kubernetes ensures high availability by distributing containers across multiple nodes and restarting failed containers.
+- `Self-Healing`: Kubernetes automatically replaces failed containers, maintaining desired state.
+- `Service Discovery`: Built-in DNS for service discovery facilitates communication between services.
+- `Ecosystem`: A rich ecosystem of tools and plugins is available for extending Kubernetes' functionality.
+
+> **Cons**
+
+- `Complexity`: Kubernetes has a steeper learning curve due to its wide range of features and concepts.
+- `Resource Overhead`: Kubernetes requires additional resources for its control plane and management components.
+- `Initial Setup`: Setting up a Kubernetes cluster can be complex, especially for beginners.
+
+<br />
+
+## [Podman](https://podman.io/)
+
+Podman is an open-source containerization tool that provides Docker-compatible commands for managing containers and pods. It operates without a central daemon, enhancing security and isolation.
+
+> **Pros** 
+
+- `Daemonless Architecture`: Podman doesn't require a central daemon, which reduces security risks and allows for more isolated operations.
+- `Pods`: Podman introduces the concept of pods, allowing for multiple containers to share network namespaces, enabling more complex setups.
+- `Rootless Containers`: Podman supports running containers as unprivileged users, enhancing security.
+- `Docker Compatibility`: Podman's Docker-compatible CLI makes it easy to transition from Docker.
+- `No Privileged Access`: Podman doesn't require privileged access to run containers.
+- `SystemD Integration`: Podman can integrate with SystemD, enabling better integration with system services.
+
+> **Cons**
+
+- `Limited Ecosystem`: While Podman aims to be Docker-compatible, the ecosystem and community are still developing compared to Docker's mature ecosystem.
+- `Learning Curve`: Despite its compatibility, some differences exist, which might require adaptation.
+
+<br />
+
+## Key Differences
+
+> **Scope** 
+
+- `Kubernetes`: Primarily focuses on container orchestration for complex applications across clusters.
+- `Podman`: Primarily focuses on individual hosts and pods, with simpler orchestration.
+
+> **Orchestration**
+
+- `Kubernetes`: Offers advanced orchestration features for managing and scaling applications in distributed environments.
+- `Podman`: Provides more basic orchestration for managing containers on individual hosts.
+
+> **Pods**
+
+- `Kubernetes`: Uses pods to group containers and provide network isolation.
+- `Podman`: Introduces pods as well, but they are used more for enhanced networking.
+
+> **Rootless Containers**
+
+- `Kubernetes`: Doesn't provide built-in support for rootless containers.
+- `Podman`: Supports running containers as unprivileged users for improved security.
+
+> **Compatibility** 
+
+- `Kubernetes`: Uses its own API and configuration model.
+- `Podman`: Offers Docker-compatible commands and images, facilitating a transition from Docker.
+
+> **Scalability**
+
+- `Kubernetes`: Offers robust scaling and load balancing capabilities.
+- `Podman`: Is better suited for smaller-scale setups and individual hosts.
+
+<br />
+
+Both **Kubernetes and Podman** are valuable tools, but they address different needs. 
+
+`Kubernetes` excels in orchestrating complex, distributed applications, while `Podman` focuses on providing a Docker-compatible interface for managing containers and pods, particularly on individual hosts. 
+
+The choice depends on the complexity of your applications and your orchestration requirements.
+
 ## Resources
 
+- 👉 [Kubernetes](https://kubernetes.io/) - official website
+- 👉 [Podman](https://podman.io/) - official website
 - 👉 [Deploy Projects](https://deploypro.dev/) using your own cloud provider
 - 👉 Get [Deployment Support](https://deploypro.dev/support/) from `experts` 
