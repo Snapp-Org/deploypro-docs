@@ -1,0 +1,110 @@
+---
+title            : Kubernetes Cheat Sheet
+sidebar_label    : Cheat Sheet
+---
+
+# Kubernetes Cheat Sheet
+
+
+Kubernetes, often abbreviated as K8s, is an open-source container orchestration platform that automates the deployment, scaling, and management of containerized applications.
+
+Here's a comprehensive Kubernetes cheat sheet covering essential commands and concepts to help you navigate and manage Kubernetes clusters:
+
+## Cluster Management
+
+- `kubectl version`: Display client and server versions.
+- `kubectl cluster-info`: Display cluster information.
+
+<br />
+
+## Pods and Deployments
+
+- `kubectl get pods`: List all pods.
+- `kubectl describe pod [pod_name]`: Display detailed information about a pod.
+- `kubectl create deployment [deployment_name] --image=[image_name:tag]`: Create a deployment.
+- `kubectl get deployments`: List all deployments.
+- `kubectl scale deployment [deployment_name] --replicas=[number]`: Scale a deployment.
+- `kubectl delete deployment [deployment_name]`: Delete a deployment.
+
+<br />
+
+## Services and Networking
+
+- `kubectl expose deployment [deployment_name] --type=LoadBalancer --port=[port]`: Expose a deployment as a LoadBalancer service.
+- `kubectl get services`: List all services.
+- `kubectl describe service [service_name]`: Display detailed information about a service.
+
+<br />
+
+## ReplicaSets
+
+- `kubectl get replicasets`: List all ReplicaSets.
+- `kubectl describe replicaset [replicaset_name]`: Display detailed information about a ReplicaSet.
+
+<br />
+
+## ConfigMaps and Secrets
+
+- `kubectl create configmap [configmap_name] --from-file=[path/to/config/files]`: Create a ConfigMap.
+- `kubectl get configmaps`: List all ConfigMaps.
+- `kubectl create secret generic [secret_name] --from-literal=[key=value]`: Create a Secret.
+- `kubectl get secrets`: List all Secrets.
+
+<br />
+
+## Namespaces
+
+- `kubectl create namespace [namespace_name]`: Create a namespace.
+- `kubectl get namespaces`: List all namespaces.
+
+<br />
+
+## Logs and Debugging
+
+- `kubectl logs [pod_name]`: View logs from a pod.
+- `kubectl exec -it [pod_name] -- [command]`: Execute a command in a pod.
+- `kubectl describe [resource_type] [resource_name]`: Display detailed information about a resource.
+
+<br />
+
+## Rollouts and Updates
+
+- `kubectl rollout status deployment [deployment_name]`: Check the status of a deployment rollout.
+- `kubectl rollout pause/resume deployment [deployment_name]`: Pause/resume a deployment rollout.
+- `kubectl set image deployment [deployment_name] [container_name]=[new_image:tag]`: Update a container image.
+- `kubectl rollout undo deployment [deployment_name]`: Roll back a deployment to the previous version.
+
+<br />
+
+## Scaling and Autoscaling
+
+- `kubectl autoscale deployment [deployment_name] --min=[min_replicas] --max=[max_replicas] --cpu-percent=[target_cpu_percent]`: Configure autoscaling for a deployment.
+
+<br />
+
+## Deleting Resources
+
+- `kubectl delete pod [pod_name]`: Delete a pod.
+- `kubectl delete service [service_name]`: Delete a service.
+
+<br />
+
+## Context and Switching
+
+- `kubectl config get-contexts`: List available contexts (clusters).
+- `kubectl config use-context [context_name]`: Switch to a different context.
+
+<br />
+
+## Get Help
+
+- `kubectl --help`: Get help about kubectl commands and options.
+- `kubectl [command] --help`: Get help about a specific kubectl command.
+
+<br />
+
+## Resources
+
+- 👉 [Docker Curriculum](https://docker-curriculum.com/) - a comprehensive guide for beginners 
+- 👉 [Deploy Projects](https://deploypro.dev/) using your own cloud provider
+- 👉 Get [Deployment Support](https://deploypro.dev/support/) from `experts` 

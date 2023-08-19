@@ -1,0 +1,101 @@
+---
+sidebar_position : 0
+title            : Kubernetes - Short Introduction 
+sidebar_label    : Intro
+slug             : /kubernetes/intro
+description      : Introduction to Kubernetes
+---
+
+# Introduction to Kubernetes
+
+Kubernetes, often abbreviated as K8s, is an open-source container orchestration platform that automates the deployment, scaling, and management of containerized applications. 
+It was originally developed by Google and is now maintained by the Cloud Native Computing Foundation (CNCF). 
+
+Kubernetes provides a powerful and flexible way to manage containerized applications in various environments, including on-premises data centers, public clouds, and hybrid setups.
+
+## `K8s` Key Concepts
+
+> **Pod**
+
+The smallest deployable unit in Kubernetes. A pod can contain one or more containers that share the same network and storage resources.
+
+<br />
+
+> **Service**
+
+A Kubernetes service provides an abstraction layer to expose a set of pods as a network service. Services allow for load balancing and DNS-based service discovery.
+
+<br />
+
+> **ReplicaSet**
+
+A ReplicaSet ensures a specified number of pod replicas are running at all times. It's used to maintain the desired level of availability and scalability.
+
+<br />
+
+> **Deployment**
+
+A higher-level abstraction that manages ReplicaSets and allows you to declaratively manage the desired state of your application.
+
+<br />
+
+> **Namespace**
+
+A way to create virtual clusters within a physical cluster, allowing teams to manage their resources independently.
+
+<br />
+
+> **Node**
+
+A physical or virtual machine that runs containers. Nodes form the foundation of the Kubernetes cluster.
+
+<br />
+
+> **Cluster**
+
+A set of nodes that form a single Kubernetes environment. Clusters can span multiple physical or virtual machines.
+
+<br />
+
+> **Container**
+
+A lightweight, standalone, and executable software package that includes everything needed to run an application, including the code, runtime, libraries, and environment variables.
+
+<br />
+
+> **Master Node**
+
+The control plane of the Kubernetes cluster, responsible for managing and coordinating the cluster's components.
+
+<br />
+
+> **Worker Node**
+
+The node where containers are deployed and run. It communicates with the master node to manage workloads.
+
+<br />
+
+> **Controller**
+
+A Kubernetes component that ensures that a desired state is maintained in the cluster. Deployments, ReplicaSets, and more are examples of controllers.
+
+<br />
+
+> **ConfigMap and Secret**
+
+Kubernetes resources for storing configuration data and sensitive information separately from application code.
+
+<br />
+
+Kubernetes provides a range of features for automating tasks, such as scaling applications based on demand, rolling updates with zero downtime, managing storage, handling networking, and monitoring application health. 
+It also allows for the dynamic allocation of resources and can be extended through APIs and third-party plugins.
+
+Kubernetes is a complex platform that requires understanding its architecture, components, and various resources. As such, there is a learning curve associated with it. 
+However, the benefits it offers in terms of scalability, reliability, and maintainability of applications in production environments make it a widely adopted technology in the container ecosystem.
+
+<br />
+
+## Resources
+
+- 👉 [Deploy Projects](https://deploypro.dev/) using your own cloud provider
+- 👉 Get [Deployment Support](https://deploypro.dev/support/) from `experts` 

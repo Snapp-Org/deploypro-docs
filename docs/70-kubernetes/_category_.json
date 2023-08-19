@@ -1,0 +1,8 @@
+{
+  "label": "Kubernetes",
+  "link": {
+    "type": "generated-index",
+    "slug": "/kubernetes",
+    "description": "All about Kubernetes"    
+  }
+}
