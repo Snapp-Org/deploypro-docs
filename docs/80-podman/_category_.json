@@ -3,6 +3,6 @@
   "link": {
     "type": "generated-index",
     "slug": "/podman",
-    "description": "All about Podman"    
+    "description": "Podman is an open-source containerization tool that allows you to create, manage, and run containers and pods, quite similar to Docker."    
   }
 }

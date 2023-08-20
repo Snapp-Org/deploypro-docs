@@ -3,6 +3,6 @@
   "link": {
     "type": "generated-index",
     "slug": "/kubernetes",
-    "description": "All about Kubernetes"    
+    "description": "Kubernetes, often abbreviated as K8s, is an open-source container orchestration platform that automates the deployment, scaling, and management of containerized applications."    
   }
 }

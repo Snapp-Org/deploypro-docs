@@ -1,0 +1,74 @@
+---
+title            : Podman & Django
+sidebar_label    : Podman & Django
+---
+
+# Podman & Django
+
+This page explains **how to add Podman to Django**. 
+
+You can use Podman to containerize a Django application in a similar way to using Docker. Here's a step-by-step guide on how to add Podman to a Django starter project:
+
+**1. Install Podman:**
+Before you begin, make sure you have Podman installed on your machine. You can usually install it using your operating system's package manager or by following instructions from the official Podman website.
+
+**2. Create a Django Starter Project:**
+Create a basic Django starter project with your desired directory structure, including the Django app code, templates, static files, and any other components your app needs.
+
+**3. Create a Podman Container:**
+To create a Podman container for your Django app, you can use a Podman image that's compatible with Django and Python. You can use the official Python image as a base and install Django and other dependencies within it.
+
+Here's an example `Podfile` for a Django app using Podman:
+
+```Dockerfile
+# Use the official Python image as the base image
+FROM python:3.8
+
+# Set the working directory inside the container
+WORKDIR /app
+
+# Copy the requirements file to the container
+COPY requirements.txt requirements.txt
+
+# Install dependencies
+RUN pip install -r requirements.txt
+
+# Copy the rest of the application code to the container
+COPY . .
+
+# Specify the command to run your Django app
+CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+```
+
+**4. Build and Run the Podman Container:**
+Once you have your `Podfile` (equivalent to a `Dockerfile`) and Django project ready, you can build and run the Podman container using the following commands:
+
+```bash
+# Build the Podman container image
+podman build -t django-app .
+
+# Run the Podman container
+podman run -p 8000:8000 django-app
+```
+
+Here, `-p 8000:8000` maps port 8000 from your host machine to port 8000 inside the container.
+
+**5. Access Your Django App:**
+Your Django app should be accessible at `http://localhost:8000` in your web browser.
+
+**Additional Tips:**
+
+- Just like with Docker, you can use environment variables to pass configuration settings to your Podman container using the `-e` flag.
+- Podman supports similar networking and storage features as Docker, so you can manage container networking, volumes, and more.
+- The commands for working with Podman are similar to Docker, but they use the `podman` keyword instead of `docker`.
+
+Remember that while the basic concepts of working with Podman are similar to Docker, there might be some differences in specific commands and behavior. 
+
+Be sure to consult the Podman documentation for more detailed information about using Podman effectively with your Django application.
+
+<br />
+
+## Resources
+
+- 👉 [Deploy Projects](https://deploypro.dev/) using your own cloud provider
+- 👉 Get [Deployment Support](https://deploypro.dev/support/) from `experts` 

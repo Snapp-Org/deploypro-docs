@@ -3,6 +3,6 @@
   "link": {
     "type": "generated-index",
     "slug": "/docker",
-    "description": "All about Docker"    
+    "description": "Docker is a platform that allows you to develop, ship, and run applications in containers, lightweight and portable units that package an application and its dependencies together, ensuring consistent behavior across different environments."
   }
 }

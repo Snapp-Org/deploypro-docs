@@ -1,0 +1,77 @@
+---
+title            : Podman & NextJS
+sidebar_label    : Podman & NextJS
+---
+
+# Podman & NextJS
+
+This page explains **how to add Podman to NextJS**. 
+
+Dockerizing a Next.js application with Podman follows a similar process to using Docker. Here's a step-by-step guide on how to add Podman to a Next.js starter project:
+
+**1. Install Podman:**
+Before you begin, make sure you have Podman installed on your machine. You can usually install it using your operating system's package manager or by following instructions from the official Podman website.
+
+**2. Create a Next.js Starter Project:**
+Create a basic Next.js starter project with your desired directory structure, pages, components, and other components your app needs.
+
+**3. Create a Podman Container:**
+To create a Podman container for your Next.js app, you can use a Podman image that's compatible with Node.js and Next.js. You can use the official Node.js image as a base and install Next.js and other dependencies within it.
+
+Here's an example `Podfile` for a Next.js app using Podman:
+
+```Dockerfile
+# Use the official Node.js image as the base image
+FROM node:14
+
+# Set the working directory inside the container
+WORKDIR /app
+
+# Copy package.json and package-lock.json files to the container
+COPY package*.json ./
+
+# Install project dependencies
+RUN npm install
+
+# Copy the rest of the application code to the container
+COPY . .
+
+# Build the Next.js application
+RUN npm run build
+
+# Specify the command to start the Next.js app
+CMD ["npm", "start"]
+```
+
+**4. Build and Run the Podman Container:**
+Once you have your `Podfile` (equivalent to a `Dockerfile`) and Next.js project ready, you can build and run the Podman container using the following commands:
+
+```bash
+# Build the Podman container image
+podman build -t nextjs-app .
+
+# Run the Podman container
+podman run -p 3000:3000 nextjs-app
+```
+
+Here, `-p 3000:3000` maps port 3000 from your host machine to port 3000 inside the container.
+
+**5. Access Your Next.js App:**
+Your Next.js app should be accessible at `http://localhost:3000` in your web browser.
+
+**Additional Tips:**
+
+- Just like with Docker, you can use environment variables to pass configuration settings to your Podman container using the `-e` flag.
+- Podman supports similar networking and storage features as Docker, so you can manage container networking, volumes, and more.
+- The commands for working with Podman are similar to Docker, but they use the `podman` keyword instead of `docker`.
+
+Remember that while the basic concepts of working with Podman are similar to Docker, there might be some differences in specific commands and behavior. 
+
+Be sure to consult the Podman documentation for more detailed information about using Podman effectively with your Next.js application.
+
+<br />
+
+## Resources
+
+- 👉 [Deploy Projects](https://deploypro.dev/) using your own cloud provider
+- 👉 Get [Deployment Support](https://deploypro.dev/support/) from `experts` 

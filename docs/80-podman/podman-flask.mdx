@@ -1,0 +1,74 @@
+---
+title            : Podman & Flask
+sidebar_label    : Podman & Flask
+---
+
+# Podman & Flask
+
+This page explains **how to add Podman to Flask**. 
+
+Podman is an alternative containerization tool similar to Docker, but with some differences in terms of architecture and features. If you want to use Podman to containerize a Flask application, the process is similar to using Docker. Here's a step-by-step guide on how to add Podman to a Flask starter project:
+
+**1. Install Podman:**
+Before you begin, make sure you have Podman installed on your machine. You can usually install it using your operating system's package manager or by following instructions from the official Podman website.
+
+**2. Create a Flask Starter Project:**
+Create a basic Flask starter project with your desired directory structure, including the Flask app code, templates, static files, and any other components your app needs.
+
+**3. Create a Podman Container:**
+To create a Podman container for your Flask app, you can use a Podman image that's compatible with Flask and Python. You can use the official Python image as a base and install Flask and other dependencies within it.
+
+Here's an example `Podfile` for a Flask app using Podman:
+
+```Dockerfile
+# Use the official Python image as the base image
+FROM python:3.8
+
+# Set the working directory inside the container
+WORKDIR /app
+
+# Copy the requirements file to the container
+COPY requirements.txt requirements.txt
+
+# Install dependencies
+RUN pip install -r requirements.txt
+
+# Copy the rest of the application code to the container
+COPY . .
+
+# Specify the command to run your Flask app
+CMD ["python", "app.py"]
+```
+
+**4. Build and Run the Podman Container:**
+Once you have your `Podfile` (equivalent to a `Dockerfile`) and Flask project ready, you can build and run the Podman container using the following commands:
+
+```bash
+# Build the Podman container image
+podman build -t flask-app .
+
+# Run the Podman container
+podman run -p 5000:5000 flask-app
+```
+
+Here, `-p 5000:5000` maps port 5000 from your host machine to port 5000 inside the container.
+
+**5. Access Your Flask App:**
+Your Flask app should be accessible at `http://localhost:5000` in your web browser.
+
+**Additional Tips:**
+
+- Just like with Docker, you can use environment variables to pass configuration settings to your Podman container using the `-e` flag.
+- Podman supports similar networking and storage features as Docker, so you can manage container networking, volumes, and more.
+- The commands for working with Podman are similar to Docker, but they use the `podman` keyword instead of `docker`.
+
+Remember that while the basic concepts of working with Podman are similar to Docker, there might be some differences in specific commands and behavior.
+
+Be sure to consult the Podman documentation for more detailed information about using Podman effectively with your Flask application.
+
+<br />
+
+## Resources
+
+- 👉 [Deploy Projects](https://deploypro.dev/) using your own cloud provider
+- 👉 Get [Deployment Support](https://deploypro.dev/support/) from `experts` 

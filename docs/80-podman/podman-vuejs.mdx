@@ -1,0 +1,74 @@
+---
+title            : Podman & VueJS
+sidebar_label    : Podman & VueJS
+---
+
+# Podman & VueJS
+
+This page explains **how to add Podman to VueJS**. 
+
+Here's how you can add Podman to a Vue.js application and containerize it:
+
+**1. Install Podman:**
+Before you begin, make sure you have Podman installed on your machine. You can usually install it using your operating system's package manager or by following instructions from the official Podman website.
+
+**2. Create a Vue.js Starter Project:**
+Create a basic Vue.js project with your desired directory structure, components, and your Vue.js application code.
+
+**3. Create a Podman Container:**
+To create a Podman container for your Vue.js app, you can use a Podman image that's compatible with Node.js. You can use the official Node.js image as a base and copy your application code into the container.
+
+Here's an example `Podfile` for a Vue.js app using Podman:
+
+```Dockerfile
+# Use the official Node.js image as the base image
+FROM node:14
+
+# Set the working directory inside the container
+WORKDIR /app
+
+# Copy package.json and package-lock.json files to the container
+COPY package*.json ./
+
+# Install project dependencies
+RUN npm install
+
+# Copy the rest of the application code to the container
+COPY . .
+
+# Specify the command to start the Vue.js app
+CMD ["npm", "run", "serve"]
+```
+
+**4. Build and Run the Podman Container:**
+Once you have your `Podfile` (equivalent to a `Dockerfile`) and Vue.js project ready, you can build and run the Podman container using the following commands:
+
+```bash
+# Build the Podman container image
+podman build -t vue-app .
+
+# Run the Podman container
+podman run -p 8080:8080 vue-app
+```
+
+Here, `-p 8080:8080` maps port 8080 from your host machine to port 8080 inside the container.
+
+**5. Access Your Vue.js App:**
+Your Vue.js app should be accessible at `http://localhost:8080` in your web browser.
+
+**Additional Tips:**
+
+- Just like with Docker, you can use environment variables to pass configuration settings to your Podman container using the `-e` flag.
+- Podman supports similar networking and storage features as Docker, so you can manage container networking, volumes, and more.
+- The commands for working with Podman are similar to Docker, but they use the `podman` keyword instead of `docker`.
+
+Remember that while the basic concepts of working with Podman are similar to Docker, there might be some differences in specific commands and behavior. 
+
+Be sure to consult the Podman documentation for more detailed information about using Podman effectively with your Vue.js application.
+
+<br />
+
+## Resources
+
+- 👉 [Deploy Projects](https://deploypro.dev/) using your own cloud provider
+- 👉 Get [Deployment Support](https://deploypro.dev/support/) from `experts` 
