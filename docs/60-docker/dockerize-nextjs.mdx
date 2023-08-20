@@ -1,0 +1,79 @@
+---
+title            : Dockerize NextJS
+sidebar_label    : Dockerize NextJS
+---
+
+# Dockerize NextJS
+
+This page explains **how to Dockerize a simple NextJS** project. 
+
+Dockerizing a Next.js application is quite similar to Dockerizing a Node.js application, with a few additional steps to consider due to Next.js's server-side rendering capabilities. 
+
+Here's how you can Dockerize a Next.js application:
+
+**1. Install Docker:**
+Make sure you have Docker installed on your machine. You can download Docker Desktop for Windows or Mac, or install Docker Engine on Linux.
+
+**2. Create a Dockerfile:**
+Create a file named `Dockerfile` in your Next.js project directory. This file will contain instructions for building your Docker image.
+
+Here's an example of a `Dockerfile` for a Next.js application:
+
+```Dockerfile
+# Use the official Node.js image as the base image
+FROM node:14
+
+# Set the working directory inside the container
+WORKDIR /app
+
+# Copy package.json and package-lock.json files to the container
+COPY package*.json ./
+
+# Install project dependencies
+RUN npm install
+
+# Copy the rest of the application code to the container
+COPY . .
+
+# Build the Next.js application
+RUN npm run build
+
+# Specify the command to run the application in production mode
+CMD ["npm", "start"]
+```
+
+**3. Build the Docker Image:**
+Open a terminal and navigate to your project directory containing the `Dockerfile` and run the following command to build the Docker image:
+
+```bash
+docker build -t nextjs-app .
+```
+
+Here, `nextjs-app` is the name you're giving to your Docker image, and `.` indicates the current directory as the build context.
+
+**4. Run the Docker Container:**
+After building the image, you can run a container from it using the following command:
+
+```bash
+docker run -p 3000:3000 nextjs-app
+```
+
+Here, `-p 3000:3000` maps port 3000 from your host machine to port 3000 inside the container.
+
+**5. Access Your Next.js App:**
+Your Next.js app should now be accessible at `http://localhost:3000` in your web browser.
+
+**Additional Tips:**
+
+- If your Next.js app requires environment variables, you can pass them to the Docker container using the `-e` flag when running the `docker run` command.
+- Make sure that your `package.json` contains a valid `start` script that launches your Next.js application.
+- If you're working with a full-stack application or if your Next.js app interacts with other services, consider using Docker Compose to manage multiple services together.
+
+Dockerizing your Next.js application allows you to package your app and its dependencies together, making it easier to deploy and manage across different environments.
+
+<br />
+
+## Resources
+
+- 👉 [Deploy Projects](https://deploypro.dev/) using your own cloud provider
+- 👉 Get [Deployment Support](https://deploypro.dev/support/) from `experts` 

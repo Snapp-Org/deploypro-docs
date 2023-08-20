@@ -1,0 +1,80 @@
+---
+title            : Dockerize Flask
+sidebar_label    : Dockerize Flask
+---
+
+# Dockerize Flask
+
+This page explains **how to Dockerize a simple Flask** project. 
+
+Dockerizing a Flask project involves creating a Docker container to encapsulate your Flask application, its dependencies, and the necessary environment settings. 
+This makes it easier to ensure consistent deployments across different environments. Here's a step-by-step guide on how to Dockerize a Flask project:
+
+**1. Install Docker:**
+Make sure you have Docker installed on your machine. You can download Docker Desktop for Windows or Mac, or install Docker Engine on Linux.
+
+**2. Create a Dockerfile:**
+Create a file named `Dockerfile` in your Flask project directory. This file will contain instructions for building your Docker image.
+
+Here's a basic example of a `Dockerfile` for a Flask project:
+
+```Dockerfile
+# Use the official Python image as the base image
+FROM python:3.8
+
+# Set the working directory inside the container
+WORKDIR /app
+
+# Copy the requirements file to the container
+COPY requirements.txt requirements.txt
+
+# Install dependencies
+RUN pip install -r requirements.txt
+
+# Copy the rest of the application code to the container
+COPY . .
+
+# Specify the command to run your Flask app
+CMD ["python", "app.py"]
+```
+
+**3. Create a requirements.txt:**
+Create a `requirements.txt` file in your project directory containing your Flask application's dependencies. This file is used to install the required Python packages inside the Docker container.
+
+**4. Build the Docker Image:**
+Open a terminal and navigate to your project directory containing the `Dockerfile` and run the following command to build the Docker image:
+
+```bash
+docker build -t flask-app .
+```
+
+Here, `flask-app` is the name you're giving to your Docker image, and `.` indicates the current directory as the build context.
+
+**5. Run the Docker Container:**
+After building the image, you can run a container from it using the following command:
+
+```bash
+docker run -p 5000:5000 flask-app
+```
+
+Here, `-p 5000:5000` maps port 5000 from your host machine to port 5000 inside the container.
+
+**6. Access Your Flask App:**
+Your Flask app should now be accessible at `http://localhost:5000` in your web browser.
+
+**Additional Tips:**
+
+- If your Flask app uses environment variables, you can pass them to the Docker container using the `-e` flag when running the `docker run` command.
+- If your app requires additional setup steps, you can include them in the `Dockerfile`. For example, you might need to set up a database connection or populate initial data.
+- If you're using Docker Compose for more complex setups, you can define your application's services, networks, and volumes in a `docker-compose.yml` file.
+
+Remember that this is a basic example to get you started. Depending on the complexity of your Flask project and its dependencies, you might need to adjust the Dockerfile and configuration accordingly.
+
+Dockerizing your Flask project can streamline the deployment process and make it easier to manage dependencies and configurations across different environments.
+
+<br />
+
+## Resources
+
+- 👉 [Deploy Projects](https://deploypro.dev/) using your own cloud provider
+- 👉 Get [Deployment Support](https://deploypro.dev/support/) from `experts` 

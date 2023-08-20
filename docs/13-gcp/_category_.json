@@ -3,6 +3,6 @@
   "link": {
     "type": "generated-index",
     "slug": "/gcp",
-    "description": "GCP Information"    
+    "description": "Google Cloud Platform (GCP) offers a platform-as-a-service (PaaS) solution called Google App Engine that allows you to build, deploy, and manage web applications and APIs with ease."    
   }
 }

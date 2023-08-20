@@ -1,0 +1,74 @@
+---
+title            : Dockerize VueJS
+sidebar_label    : Dockerize VueJS
+---
+
+# Dockerize VueJS
+
+This page explains **how to Dockerize VueJS**. 
+
+Dockerizing a Vue.js application is quite similar to Dockerizing React and other frontend applications. Here's a step-by-step guide on how to Dockerize a Vue.js application:
+
+**1. Install Docker:**
+Make sure you have Docker installed on your machine. You can download Docker Desktop for Windows or Mac, or install Docker Engine on Linux.
+
+**2. Create a Dockerfile:**
+Create a file named `Dockerfile` in your Vue.js project directory. This file will contain instructions for building your Docker image.
+
+Here's an example of a `Dockerfile` for a Vue.js application:
+
+```Dockerfile
+# Use the official Node.js image as the base image
+FROM node:14
+
+# Set the working directory inside the container
+WORKDIR /app
+
+# Copy package.json and package-lock.json files to the container
+COPY package*.json ./
+
+# Install project dependencies
+RUN npm install
+
+# Copy the rest of the application code to the container
+COPY . .
+
+# Specify the command to start the Vue.js app
+CMD ["npm", "run", "serve"]
+```
+
+**3. Build the Docker Image:**
+Open a terminal and navigate to your project directory containing the `Dockerfile` and run the following command to build the Docker image:
+
+```bash
+docker build -t vue-app .
+```
+
+Here, `vue-app` is the name you're giving to your Docker image, and `.` indicates the current directory as the build context.
+
+**4. Run the Docker Container:**
+After building the image, you can run a container from it using the following command:
+
+```bash
+docker run -p 8080:8080 vue-app
+```
+
+Here, `-p 8080:8080` maps port 8080 from your host machine to port 8080 inside the container.
+
+**5. Access Your Vue.js App:**
+Your Vue.js app should now be accessible at `http://localhost:8080` in your web browser.
+
+**Additional Tips:**
+
+- If your Vue.js app requires environment variables, you can pass them to the Docker container using the `-e` flag when running the `docker run` command.
+- Make sure that your `package.json` contains a valid `serve` script that launches your Vue.js app.
+
+Dockerizing your Vue.js application can help ensure consistent deployments and provide an isolated environment for your app's dependencies. 
+It simplifies the process of sharing and deploying your Vue.js projects across different environments.
+
+<br />
+
+## Resources
+
+- 👉 [Deploy Projects](https://deploypro.dev/) using your own cloud provider
+- 👉 Get [Deployment Support](https://deploypro.dev/support/) from `experts` 

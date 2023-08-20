@@ -1,0 +1,75 @@
+---
+title            : Dockerize React
+sidebar_label    : Dockerize React
+---
+
+# Dockerize React
+
+This page explains **how to Dockerize React**. 
+
+Dockerizing a React application is straightforward. Here's a step-by-step guide on how to Dockerize a React application:
+
+**1. Install Docker:**
+Ensure that Docker is installed on your machine. You can download Docker Desktop for Windows or Mac, or install Docker Engine on Linux.
+
+**2. Create a Dockerfile:**
+Create a file named `Dockerfile` in your React project directory. This file will contain instructions for building your Docker image.
+
+Here's an example of a `Dockerfile` for a React application:
+
+```Dockerfile
+# Use the official Node.js image as the base image
+FROM node:14
+
+# Set the working directory inside the container
+WORKDIR /app
+
+# Copy package.json and package-lock.json files to the container
+COPY package*.json ./
+
+# Install project dependencies
+RUN npm install
+
+# Copy the rest of the application code to the container
+COPY . .
+
+# Specify the command to start the React app
+CMD ["npm", "start"]
+```
+
+**3. Build the Docker Image:**
+Open a terminal and navigate to your project directory containing the `Dockerfile` and run the following command to build the Docker image:
+
+```bash
+docker build -t react-app .
+```
+
+Here, `react-app` is the name you're giving to your Docker image, and `.` indicates the current directory as the build context.
+
+**4. Run the Docker Container:**
+After building the image, you can run a container from it using the following command:
+
+```bash
+docker run -p 3000:3000 react-app
+```
+
+Here, `-p 3000:3000` maps port 3000 from your host machine to port 3000 inside the container.
+
+**5. Access Your React App:**
+Your React app should now be accessible at `http://localhost:3000` in your web browser.
+
+**Additional Tips:**
+
+- If your React app requires environment variables, you can pass them to the Docker container using the `-e` flag when running the `docker run` command.
+- Make sure that your `package.json` contains a valid `start` script that launches your React app.
+
+Dockerizing your React application can help ensure consistent deployments and provide an isolated environment for your app's dependencies. 
+
+It's particularly useful when you need to share your application with others or deploy it to different environments.
+
+<br />
+
+## Resources
+
+- 👉 [Deploy Projects](https://deploypro.dev/) using your own cloud provider
+- 👉 Get [Deployment Support](https://deploypro.dev/support/) from `experts` 

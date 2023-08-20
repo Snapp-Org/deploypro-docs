@@ -1,0 +1,78 @@
+---
+title            : Dockerize NodeJS
+sidebar_label    : Dockerize NodeJS
+---
+
+# Dockerize NodeJS
+
+This page explains **how to Dockerize a simple NodeJS** project. 
+
+Dockerizing a Node.js application is quite a common task that helps anyone create a consistent and portable environment for Node.js projects. 
+
+Here's a step-by-step guide on how to Dockerize a Node.js application:
+
+**1. Install Docker:**
+Make sure you have Docker installed on your machine. You can download Docker Desktop for Windows or Mac, or install Docker Engine on Linux.
+
+**2. Create a Dockerfile:**
+Create a file named `Dockerfile` in your Node.js project directory. This file will contain instructions for building your Docker image.
+
+Here's a basic example of a `Dockerfile` for a Node.js application:
+
+```Dockerfile
+# Use the official Node.js image as the base image
+FROM node:14
+
+# Set the working directory inside the container
+WORKDIR /app
+
+# Copy the package.json and package-lock.json files to the container
+COPY package*.json ./
+
+# Install project dependencies
+RUN npm install
+
+# Copy the rest of the application code to the container
+COPY . .
+
+# Specify the command to run your Node.js app
+CMD ["node", "app.js"]
+```
+
+**3. Build the Docker Image:**
+Open a terminal and navigate to your project directory containing the `Dockerfile` and run the following command to build the Docker image:
+
+```bash
+docker build -t nodejs-app .
+```
+
+Here, `nodejs-app` is the name you're giving to your Docker image, and `.` indicates the current directory as the build context.
+
+**4. Run the Docker Container:**
+After building the image, you can run a container from it using the following command:
+
+```bash
+docker run -p 3000:3000 nodejs-app
+```
+
+Here, `-p 3000:3000` maps port 3000 from your host machine to port 3000 inside the container.
+
+**5. Access Your Node.js App:**
+Your Node.js app should now be accessible at `http://localhost:3000` in your web browser.
+
+**Additional Tips:**
+
+- If your Node.js app requires environment variables, you can pass them to the Docker container using the `-e` flag when running the `docker run` command.
+- If your app requires additional setup, you can include those steps in the `Dockerfile`. For example, if you need to build frontend assets, you can add the necessary build commands.
+- If you're working with a full-stack application that includes a database, you might want to use Docker Compose to manage multiple services (e.g., Node.js app and database) together.
+
+This is a basic example to get you started with Dockerizing a Node.js application. Depending on your project's complexity and specific requirements, you might need to adjust the Dockerfile and configuration accordingly.
+
+Dockerizing your Node.js applications can provide consistency and ease of deployment across different environments.
+
+<br />
+
+## Resources
+
+- 👉 [Deploy Projects](https://deploypro.dev/) using your own cloud provider
+- 👉 Get [Deployment Support](https://deploypro.dev/support/) from `experts` 
