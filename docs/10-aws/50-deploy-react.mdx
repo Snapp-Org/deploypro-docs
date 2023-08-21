@@ -5,11 +5,63 @@ sidebar_label    : Deploy React
 
 # Deploy React on AWS 
 
-This page explains how to **deploy React on AWS** (Amazon Web Services) using `DeployPRO`.
+This page explains how to **deploy React on AWS** (Amazon Web Services) using `DeployPRO`. 👉 Check our react sample app [here](https://github.com/app-generator/deploypro-react). You may fork it for your sample!
 
-@ToDO
+> Bear in mind, you **must** have `Dockerfile` inside your application in the GitHub Repository.
 
 <br />
+
+## Get Started
+
+1. In the `Application` Menu, click on `+ Create App`.
+2. Fill out the form by providing the Application name and Environment Variable if needed. Here is some information you need to consider:
+
+    > General
+
+    - `Server` ( Select any server you have created on DeployPRO )
+    - `Type`:
+        - Deploy from source code ( Used for deploying any application from your GitHub Repository )
+        - MySQL ( Used for creating a database for your application )
+        - PostgresSQL ( Used for creating a database for your application )
+
+    > Detail
+
+    - `Repo` ( Select the repository you are going to deploy )
+    - `Dockerfile Path` ( Right now, DeployPRO still needs your manual input for the location of your `dockerfile` inside the repository )
+    - `Container Port` ( Please manually input the port form your `dockerfile` )
+    - `Domain` ( Provide any domain name for your application. We also support `Custom Domain`!)
+
+    > Environment Variable
+
+    - Fill out `Key` and `Value` in case you need to add some variable.
+
+<br />
+
+3. Click on `Create Application` button and wait for the status to change to `running`. To monitor the status change, you can use the `refresh` button.
+![DeployPRO - Application created](https://github.com/app-generator/deploypro-docs/assets/46531367/6dab439f-ff99-4ec5-8697-39eeb87a8f57)
+<br />
+
+4. Once the application is successfully deployed, you can proceed to visit the domain.
+![React Domain - DeployPRO](https://github.com/app-generator/deploypro-docs/assets/46531367/7141d006-093d-478c-a7b4-2c788b425704)
+<br />
+
+5. This is an **optional step** to perform a double-check by navigating to the `Actions` tab in your GitHub repository. Make sure the icon color of workflow run is `green`. This will allow you to confirm whether your application has been successfully deployed. For a detailed status update on the `build_image` and `deploy` process, directly select the workflow.
+    ![GitHub Actions - DeployPRO](https://github.com/app-generator/deploypro-docs/assets/46531367/f2beb697-e643-4ff9-8eaf-3494d2f5be7b)
+    <br />
+
+    On your repository, you will get new module from the deployment proces.
+    ![New Module - DeployPRO](https://github.com/app-generator/deploypro-docs/assets/46531367/30df6e00-ed93-4ea2-b725-6b8fc3b010a1)
+    <br />
+
+    The detailed view of your application resembles the image provided below. You have the flexibility to either make edits or option for deletion of the application.
+
+    ![Application Detail - DeployPRO](https://github.com/app-generator/deploypro-docs/assets/46531367/8c595aaf-4720-4c35-a9a9-67c9a135e30f)
+
+    <br />
+
+If you encounter some issue while deploying your application, don't hesitate to [inform us](https://discord.gg/qQhjQZhnur)! 😉
+
+<br /> 
 
 ## Resources
 
