@@ -5,11 +5,63 @@ sidebar_label    : Deploy NextJS
 
 # Deploy NextJS on AWS 
 
-This page explains how to **deploy NextJS on AWS** (Amazon Web Services) using `DeployPRO`.
+This page explains how to **deploy NextJS on AWS** (Amazon Web Services) using `DeployPRO`. 👉 Check our NextJS sample app [here](https://github.com/app-generator/deploypro-nextjs). You may fork it for your sample!
 
-@ToDO
+> Bear in mind, you **must** have `Dockerfile` inside your application in the GitHub Repository.
 
 <br />
+
+## Get Started
+
+1. In the `Application` Menu, click on `+ Create App`.
+2. Fill out the form by providing the Application name and Environment Variable if needed. Here is some information you need to consider:
+
+    > General
+
+    - `Server` ( Select any server you have created on DeployPRO )
+    - `Type`:
+        - Deploy from source code ( Used for deploying any application from your GitHub Repository )
+        - MySQL ( Used for creating a database for your application )
+        - PostgresSQL ( Used for creating a database for your application )
+
+    > Detail
+
+    - `Repo` ( Select the repository you are going to deploy )
+    - `Dockerfile Path` ( Right now, DeployPRO still needs your manual input for the location of your `dockerfile` inside the repository )
+    - `Container Port` ( Please manually input the port form your `dockerfile` )
+    - `Domain` ( Provide any domain name for your application. We also support `Custom Domain`!)
+
+    > Environment Variable
+
+    - Fill out `Key` and `Value` in case you need to add some variable.
+
+<br />
+
+3. Click on `Create Application` button and wait for the status to change to `running`. To monitor the status change, you can use the `refresh` button.
+![DeployPRO - Application created](https://github.com/app-generator/deploypro-docs/assets/46531367/7c6f6112-ed14-4e64-b66c-686349b6cfbe)
+<br />
+
+4. Once the application is successfully deployed, you can proceed to visit the domain.
+![NextJS Domain - DeployPRO](https://github.com/app-generator/deploypro-docs/assets/46531367/5c940eba-9595-4bcc-ba2d-6c3c168fc787)
+<br />
+
+5. This is an **optional step** to perform a double-check by navigating to the `Actions` tab in your GitHub repository. Make sure the icon color of workflow run is `green`. This will allow you to confirm whether your application has been successfully deployed. For a detailed status update on the `build_image` and `deploy` process, directly select the workflow.
+    ![GitHub Actions - DeployPRO](https://github.com/app-generator/deploypro-docs/assets/46531367/624473fc-9ab5-4cec-86fc-20daf7ce27b7)
+    <br />
+
+    On your repository, you will get new module from the deployment proces.
+    ![New Module - DeployPRO](https://github.com/app-generator/deploypro-docs/assets/46531367/74d924cd-0d49-4d0b-ab45-f82a0d29ec5a)
+    <br />
+
+    The detailed view of your application resembles the image provided below. You have the flexibility to either make edits or option for deletion of the application.
+
+    ![Application Detail - DeployPRO](https://github.com/app-generator/deploypro-docs/assets/46531367/43822b0c-7710-4af3-923b-fbc6f1b83039)
+
+    <br />
+
+If you encounter some issue while deploying your application, don't hesitate to [inform us](https://discord.gg/qQhjQZhnur)! 😉
+
+<br /> 
 
 ## Resources
 
