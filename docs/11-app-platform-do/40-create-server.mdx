@@ -7,13 +7,13 @@ sidebar_label    : Create Server
 
 Once you've successfully linked your App Platform (DO) account to DeployPRO, you're ready to initiate the process of setting up a server for your application. Simply follow these instructions:
 
-1. Open the Server Menu. If this is your first time connecting a cloud provider on [DeployPRO](https://deploypro.dev/), you will found no list server. What you need to start deploying an application in DeployPRO is by clicking the `+ Create Server` button.
+1. Open the Server Menu. If this is your first time connecting a cloud provider on [DeployPRO](https://deploypro.dev/), you will found no list server. What you need to start deploying an application in DeployPRO is by clicking the + Create Server button.
   ![DeployPRO - Create Server](https://github.com/app-generator/deploypro-docs/assets/46531367/34abb087-e6b6-41c5-8e60-73a1d3e0d895)
   <br />
 
 2. Next, you will be directed to page so that you can create a server based on your preference. Ensure that you choose the cloud provider correctly. In this App Platform (DO) topic, select DigitalOcean and proceed to fill out the form.
   
-  ![DeployPRO - Server Preference]
+  ![DeployPRO - Server Preference](https://github.com/app-generator/deploypro-docs/assets/46531367/e589ea29-b718-4977-957a-e86708aba28e)
 
   Here are some points you should consider right now:
     - We recommend you to write the server name in camelCase, snake_case, kebab-case or PascalCase.
@@ -23,37 +23,47 @@ Once you've successfully linked your App Platform (DO) account to DeployPRO, you
 
 <br />
 
-3. Review your Server before you click `Create Server`.
+3. Review your Server before you click Create Server.
   
-  ![DeployPRO - Review Server]
+  ![DeployPRO - Review Server](https://github.com/app-generator/deploypro-docs/assets/46531367/c0016a59-9d3a-483e-9ada-fa42a0a0ee55)
   <br />
 
-4. Your Server is **successfully created🙌** when the status is running.
+4. Your Server is successfully created🙌 when the status is running.
 
-  ![DeployPRO - Server Created]
+  ![DeployPRO - Server Created](https://github.com/app-generator/deploypro-docs/assets/46531367/8fbfdf25-4f34-46ca-adbd-ae771b3c43ae)
   <br />
 
     Ensure thorough confirmation by clicking on the IPv4 Address. Once the server creation process is accomplished, the resulting appearance will resemble the following:
     
-    ![Dashboard - DeployPRO]
+    ![Dashboard - DeployPRO](https://github.com/app-generator/deploypro-docs/assets/46531367/f8627cbb-26df-470e-8707-681c5aac5b4c)
     <br />
 
     This is how the server detail when you click the server name.
     
-    ![DeployPRO - Server Detail]
+    ![DeployPRO - Server Detail](https://github.com/app-generator/deploypro-docs/assets/46531367/021e4b26-63eb-46a6-a564-79810ca3a47d)
     <br />
 
 ## Information
 
 1. You can deploy multiple apps and install databases on the same server, but ensure that your resources are sufficient.
-2. You have the option to delete your server. However, it's important to note that any **applications housed within the server** will be automatically deleted as well.
+2. You have the option to delete your server. However, it's important to note that any applications housed within the server will be automatically deleted as well.
 
 ## Specifications
-@ToDO
+Make sure to choose the appropriate specifications based on your application's requirements. While a server can serve multiple applications, if you're setting up a server specifically for a single application, the choice becomes less critical.
+
+> For example s-1vcpu-1gb
+
+The DigitalOcean s-1vcpu-1gb specification is for a Basic Droplet with 1 vCPU (virtual CPU), 1 GB of RAM, and a 25 GB SSD. It is a general-purpose droplet that is suitable for a variety of workloads, such as:
+- Personal websites and blogs
+- Small business applications
+- Development environments
+- Testing and staging environments
+- Content delivery networks (CDNs)
+
 <br />
 
 ## Resources
 
-- 👉 [Deploy Projects](https://deploypro.dev/) using your preferred provider: `AWS`, `GCP`, `Azure`
+- 👉 [Deploy Projects](https://deploypro.dev/) using your preferred provider: AWS, GCP, Azure
 - 👉 Get [Deployment Support](https://deploypro.dev/support/) from the team behind this service
-- 👉 Join the [Community](https://discord.gg/qQhjQZhnur) and chat with the team behind `DeployPRO`
+- 👉 Join the [Community](https://discord.gg/qQhjQZhnur) and chat with the team behind DeployPRO
