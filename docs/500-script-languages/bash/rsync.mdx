@@ -1,0 +1,84 @@
+---
+title            : Rsync - Short Introduction
+sidebar_label    : Rsync
+---
+
+# Rsync 
+
+Using the `rsync` command in `Bash`, you can synchronize the contents of a directory between two locations, either locally or across different machines over a network. Here's the basic syntax and some examples:
+
+> **Synta**
+
+```bash
+rsync [options] source_directory destination
+```
+
+> **Examples**
+
+1. **Local Sync:**
+
+   To synchronize a directory named "source" to a directory named "destination" locally:
+
+   ```bash
+   rsync -av source/ destination/
+   ```
+
+   - `-a`: Archive mode, preserving file permissions, ownership, timestamps, etc.
+   - `-v`: Verbose mode, showing details of the synchronization process.
+
+2. **Remote Sync:**
+
+   To synchronize a local directory to a remote machine over SSH:
+
+   ```bash
+   rsync -av source/ user@remote_host:destination/
+   ```
+
+   - Replace `user` with the remote machine's username.
+   - Replace `remote_host` with the IP address or hostname of the remote machine.
+   - Ensure you have SSH access to the remote machine and the necessary permissions.
+
+3. **Excluding Files:**
+
+   You can exclude specific files or patterns using the `--exclude` option. For example, excluding all `.txt` files:
+
+   ```bash
+   rsync -av --exclude '*.txt' source/ destination/
+   ```
+
+4. **Progress Information:**
+
+   To see progress information during synchronization, you can use the `--progress` option:
+
+   ```bash
+   rsync -av --progress source/ destination/
+   ```
+
+5. **Dry Run (Preview):**
+
+   To see what changes would be made without actually executing the synchronization, use the `--dry-run` option:
+
+   ```bash
+   rsync -av --dry-run source/ destination/
+   ```
+
+6. **Deleting Extraneous Files:**
+
+   By default, `rsync` does not delete files in the destination that are not in the source. To delete extraneous files in the destination, use the `--delete` option:
+
+   ```bash
+   rsync -av --delete source/ destination/
+   ```
+
+<br />
+
+These examples cover some of the common use cases for `rsync`. The command offers many more options and functionalities for more complex synchronization scenarios. 
+Always refer to the `rsync` documentation (`man rsync`) for a complete list of options and their explanations.
+
+<br />
+
+## Resources
+
+- 👉 [Bash CheatSheet](https://devhints.io/bash)
+- 👉 [Deploy Projects](https://deploypro.dev/) using your own cloud provider
+- 👉 Get [Deployment Support](https://deploypro.dev/support/) from `experts` 

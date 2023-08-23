@@ -1,0 +1,97 @@
+---
+title            : Lynx
+sidebar_label    : Lynx
+---
+
+# Lynx
+
+`lynx` is a text-based web browser that allows users to browse the internet and view web pages from the command line in Unix-like operating systems. 
+It's a versatile tool for accessing information from websites without requiring a graphical user interface. 
+While it doesn't render images or complex layouts like modern graphical browsers, it's useful for quick access to text-based content, checking links, and accessing web resources in a terminal environment.
+
+## **Basic Usage**
+
+```
+lynx [options] [URL]
+```
+
+## **Common Options**
+
+- `-accept_all_cookies`: Automatically accept all cookies.
+- `-cookies`: Enable cookie support.
+- `-force_html`: Treat non-HTML files as HTML.
+- `-nolist`: Disable display of HTML lists.
+- `-dump`: Output page content as plain text.
+- `-source`: View page source.
+- `-bookmark`: Create bookmarks.
+- `-auth`: Provide HTTP authentication credentials.
+- `-help` or `--help`: Display help information.
+
+## **Examples**
+
+1. **Viewing a Web Page:**
+   ```bash
+   lynx https://www.example.com
+   ```
+   This opens the `example.com` website in `lynx`.
+
+2. **Viewing Page Source:**
+   ```bash
+   lynx -source https://www.example.com
+   ```
+   This displays the HTML source code of the `example.com` website.
+
+3. **Browsing with Navigation:**
+   - Use arrow keys to navigate.
+   - Press `Enter` to follow links.
+   - Press `Q` to quit `lynx`.
+
+4. **Viewing Plain Text Version:**
+   ```bash
+   lynx -dump https://www.example.com
+   ```
+   This outputs the text-based content of the `example.com` website.
+
+5. **Creating Bookmarks:**
+   ```bash
+   lynx -bookmark https://www.example.com
+   ```
+   This opens the `example.com` website and allows you to add a bookmark.
+
+6. **Accepting All Cookies:**
+   ```bash
+   lynx -accept_all_cookies https://www.example.com
+   ```
+   This opens the website and automatically accepts all cookies.
+
+## **Advanced Usage**
+
+- `lynx` supports navigation through forms, submitting data, viewing images with external viewers, and more.
+- `lynx.cfg` is the configuration file that controls `lynx` behavior. It can be customized to alter settings.
+
+## **Use Cases**
+
+- Quick access to text-based content without a graphical browser.
+- Checking website links for validity.
+- Reading articles or documentation from the command line.
+- Accessing web resources on servers without GUI interfaces.
+
+## **Limitations**
+
+- `lynx` doesn't render modern web page layouts, CSS styles, or JavaScript functionality.
+- It's most effective for browsing text-heavy websites.
+
+<br />
+
+## **Conclusion**
+
+`lynx` is particularly useful for users who prefer the command line or those working on remote servers. 
+While it lacks the visual sophistication of graphical browsers, it's a lightweight and efficient way to access information from the web.
+
+<br />
+
+## Resources
+
+- 👉 [Bash CheatSheet](https://devhints.io/bash)
+- 👉 [Deploy Projects](https://deploypro.dev/) using your own cloud provider
+- 👉 Get [Deployment Support](https://deploypro.dev/support/) from `experts` 

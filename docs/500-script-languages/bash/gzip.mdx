@@ -1,0 +1,82 @@
+---
+title            : Gzip
+sidebar_label    : Gzip
+---
+
+# Gzip
+
+`gzip` is a command-line utility used to compress and decompress files in Unix-like operating systems. It is named after the "GNU zip" project, which aims to provide a free and efficient replacement for the older `compress` utility.
+
+## **Basic Syntax**
+
+```
+gzip [options] file
+```
+
+## **Common Options**
+
+- `-c`: Write output to standard output, allowing redirection.
+- `-d` or `--decompress`: Decompress the compressed file.
+- `-v` or `--verbose`: Display more information during compression or decompression.
+- `-r` or `--recursive`: Recursively compress or decompress directories.
+- `-k` or `--keep`: Keep the original file after compression.
+- `-t` or `--test`: Test the integrity of the compressed file.
+
+## **Examples**
+
+1. **Compressing a File:**
+   ```bash
+   gzip file.txt
+   ```
+   This compresses `file.txt` and creates a compressed file named `file.txt.gz`.
+
+2. **Decompressing a File:**
+   ```bash
+   gzip -d file.txt.gz
+   ```
+   This decompresses the file `file.txt.gz` and restores the original `file.txt`.
+
+3. **Compressing Multiple Files:**
+   ```bash
+   gzip file1.txt file2.txt
+   ```
+   This compresses both `file1.txt` and `file2.txt`, creating compressed files `file1.txt.gz` and `file2.txt.gz`.
+
+4. **Recursively Compressing a Directory:**
+   ```bash
+   gzip -r directory/
+   ```
+   This recursively compresses all files in the `directory` and its subdirectories.
+
+5. **Decompressing with Output to Standard Output:**
+   ```bash
+   gzip -dc file.txt.gz > output.txt
+   ```
+   This decompresses `file.txt.gz` and redirects the decompressed content to `output.txt`.
+
+6. **Testing Compressed Files:**
+   ```bash
+   gzip -t file.txt.gz
+   ```
+   This tests the integrity of `file.txt.gz` without decompressing it.
+
+## **Advanced Options**
+
+- `--fast`: Use faster but less effective compression.
+- `--best`: Use slower but more effective compression.
+- `--rsyncable`: Create a compressible file that can be efficiently synced using `rsync`.
+
+<br />
+
+## **Conclusion**
+
+`gzip` is commonly used to compress individual files and is often used in combination with other tools and utilities. 
+It produces files with the `.gz` extension, and these compressed files can save disk space and accelerate data transfer when distributing or storing files.
+
+<br />
+
+## Resources
+
+- 👉 [Bash CheatSheet](https://devhints.io/bash)
+- 👉 [Deploy Projects](https://deploypro.dev/) using your own cloud provider
+- 👉 Get [Deployment Support](https://deploypro.dev/support/) from `experts` 

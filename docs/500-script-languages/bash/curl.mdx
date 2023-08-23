@@ -1,0 +1,108 @@
+---
+title            : cURL
+sidebar_label    : cURL
+---
+
+# cURL
+
+`curl` (short for "Client URL") is a command-line tool and library for transferring data with URLs. 
+It supports various protocols, including HTTP, HTTPS, FTP, FTPS, SCP, SFTP, LDAP, and more. `curl` is widely used to interact with web services, download files, 
+and perform data transfers from the command line in Unix-like operating systems.
+
+## **Basic Syntax**
+
+```
+curl [options] [URL]
+```
+
+## **Common Options**
+
+- `-O` or `--remote-name`: Save the downloaded file with the remote file name.
+- `-o` or `--output`: Specify the output file name.
+- `-L` or `--location`: Follow redirects.
+- `-I` or `--head`: Fetch only the headers.
+- `-s` or `--silent`: Silent mode (no progress meter or error messages).
+- `-A` or `--user-agent`: Set the user agent string.
+- `-X` or `--request`: Specify HTTP request method.
+- `-d` or `--data`: HTTP POST data.
+- `-H` or `--header`: Add custom headers.
+- `-u` or `--user`: HTTP authentication credentials.
+- `-k` or `--insecure`: Allow connections to SSL sites without certificates.
+
+## **Examples**
+
+1. **Downloading a File:**
+   ```bash
+   curl -O https://www.example.com/file.txt
+   ```
+   This downloads `file.txt` from `example.com` and saves it with the same name.
+
+2. **Downloading with Custom Output Name:**
+   ```bash
+   curl -o output.txt https://www.example.com/file.txt
+   ```
+   This downloads `file.txt` from `example.com` and saves it as `output.txt`.
+
+3. **Following Redirects:**
+   ```bash
+   curl -L https://www.example.com
+   ```
+   This follows redirects and fetches the content from the final URL.
+
+4. **Fetching Only Headers:**
+   ```bash
+   curl -I https://www.example.com
+   ```
+   This fetches only the headers of the web page.
+
+5. **Sending POST Data:**
+   ```bash
+   curl -X POST -d "key=value" https://www.example.com/post_endpoint
+   ```
+   This sends POST data to the specified endpoint.
+
+6. **Adding Custom Headers:**
+   ```bash
+   curl -H "Authorization: Bearer TOKEN" https://api.example.com/resource
+   ```
+   This adds a custom authorization header to the request.
+
+7. **HTTP Authentication:**
+   ```bash
+   curl -u username:password https://www.example.com/protected
+   ```
+   This performs HTTP basic authentication with the provided credentials.
+
+8. **Ignoring SSL Certificate Verification:**
+   ```bash
+   curl -k https://www.example.com
+   ```
+   This allows connecting to an SSL site without verifying the certificate.
+
+## **Advanced Usage**
+
+- `curl` supports a wide range of options and can be used to upload files, send custom HTTP headers, handle cookies, and perform more advanced HTTP interactions.
+- `curl` is also available as a library and can be integrated into scripts and applications.
+
+## **Use Cases**
+
+- Downloading files from the internet.
+- Interacting with RESTful APIs.
+- Testing web services and APIs.
+- Debugging network issues.
+- Automating tasks involving data transfer.
+
+<br />
+
+## **Conclusion**
+
+`curl` is a powerful and flexible tool for interacting with web resources from the command line. 
+Its wide range of features and support for various protocols make it a valuable tool for both casual users and developers.
+
+<br />
+
+## Resources
+
+- 👉 [Bash CheatSheet](https://devhints.io/bash)
+- 👉 [Deploy Projects](https://deploypro.dev/) using your own cloud provider
+- 👉 Get [Deployment Support](https://deploypro.dev/support/) from `experts` 

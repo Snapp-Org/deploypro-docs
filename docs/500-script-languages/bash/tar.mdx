@@ -1,0 +1,86 @@
+---
+title            : Tar
+sidebar_label    : Tar
+---
+
+# Tar
+
+`tar` stands for "tape archive," and it's a command-line utility used in Unix-like operating systems to create and manipulate archive files. 
+Archive files are used to group multiple files and directories together into a single file, making it easier to manage and transfer collections of data.
+
+## **Basic Syntax**
+
+```
+tar [options] archive_file files_or_directories
+```
+
+## **Common Options**
+
+- `-c`: Create a new archive.
+- `-x`: Extract files from an archive.
+- `-v`: Verbose mode (show progress and details).
+- `-f`: Specify the archive file's name.
+- `-z`: Compress the archive using gzip.
+- `-j`: Compress the archive using bzip2.
+- `-t`: List the contents of an archive.
+- `-C`: Specify a directory to change to before performing operations.
+
+## **Examples**
+
+1. **Creating an Archive:**
+   ```bash
+   tar -cvf archive.tar file1.txt dir/
+   ```
+   This creates an archive named `archive.tar` containing `file1.txt` and the contents of the `dir` directory.
+
+2. **Extracting an Archive:**
+   ```bash
+   tar -xvf archive.tar
+   ```
+   This extracts the contents of `archive.tar` to the current directory.
+
+3. **Creating a Compressed Archive:**
+   ```bash
+   tar -czvf archive.tar.gz dir/
+   ```
+   This creates a compressed archive named `archive.tar.gz` containing the contents of the `dir` directory using gzip compression.
+
+4. **Extracting a Compressed Archive:**
+   ```bash
+   tar -xzvf archive.tar.gz
+   ```
+   This extracts the contents of the compressed archive `archive.tar.gz` to the current directory.
+
+5. **Listing Archive Contents:**
+   ```bash
+   tar -tvf archive.tar
+   ```
+   This lists the contents of `archive.tar`.
+
+6. **Extracting to a Specific Directory:**
+   ```bash
+   tar -xvf archive.tar -C /path/to/destination
+   ```
+   This extracts the contents of `archive.tar` to the specified destination directory.
+
+## **Advanced Options**
+
+- `-u`: Update an archive with new or modified files.
+- `--exclude`: Exclude specific files or directories from the archive.
+- `--wildcards`: Use wildcards to include/exclude files.
+- `--anchored`: Use patterns that match from the beginning of filenames.
+
+<br />
+
+## **Conclusion**
+
+`tar` is a versatile tool used for archiving, backup, distribution, and more. 
+It can be combined with other commands and utilities to achieve various tasks, such as creating incremental backups, archiving directories, and transferring data between systems.
+
+<br />
+
+## Resources
+
+- 👉 [Bash CheatSheet](https://devhints.io/bash)
+- 👉 [Deploy Projects](https://deploypro.dev/) using your own cloud provider
+- 👉 Get [Deployment Support](https://deploypro.dev/support/) from `experts` 

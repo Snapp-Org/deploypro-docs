@@ -1,0 +1,90 @@
+---
+title            : Wget
+sidebar_label    : Wget
+---
+
+# Wget
+
+`wget` is a command-line utility used for downloading files from the internet. 
+It supports various protocols, including HTTP, HTTPS, FTP, and FTPS. `wget` is commonly used to retrieve files and web content from the command line in Unix-like operating systems.
+
+## **Basic Syntax**
+
+```
+wget [options] [URL]
+```
+
+## **Common Options**
+
+- `-O` or `--output-document`: Specify the output file name.
+- `-P` or `--directory-prefix`: Specify the directory to save the downloaded file.
+- `-r` or `--recursive`: Download recursively (follow links).
+- `-N` or `--timestamping`: Download only newer files.
+- `-c` or `--continue`: Resume a partially downloaded file.
+- `-q` or `--quiet`: Quiet mode (suppress output).
+- `-U` or `--user-agent`: Set the user agent string.
+- `-h` or `--help`: Display help information.
+
+## **Examples**
+
+1. **Downloading a File:**
+   ```bash
+   wget https://www.example.com/file.txt
+   ```
+   This downloads `file.txt` from `example.com`.
+
+2. **Downloading with Custom Output Name:**
+   ```bash
+   wget -O output.txt https://www.example.com/file.txt
+   ```
+   This downloads `file.txt` from `example.com` and saves it as `output.txt`.
+
+3. **Downloading to a Specific Directory:**
+   ```bash
+   wget -P /path/to/directory https://www.example.com/file.txt
+   ```
+   This downloads `file.txt` to the specified directory.
+
+4. **Recursively Downloading a Website:**
+   ```bash
+   wget -r https://www.example.com
+   ```
+   This downloads the entire `example.com` website and its linked content.
+
+5. **Resuming a Partial Download:**
+   ```bash
+   wget -c https://www.example.com/largefile.zip
+   ```
+   This resumes downloading `largefile.zip` if it was interrupted or partially downloaded.
+
+6. **Downloading Only Newer Files:**
+   ```bash
+   wget -N https://www.example.com/updates.tar.gz
+   ```
+   This downloads `updates.tar.gz` only if it's newer than the existing local copy.
+
+## **Advanced Usage**
+
+- `wget` supports advanced features like downloading through proxy servers, setting bandwidth limits, and using cookies.
+
+## **Use Cases**
+
+- Downloading files from the internet.
+- Mirroring websites for offline viewing.
+- Batch downloading multiple files.
+- Automated downloading as part of scripts.
+
+<br />
+
+## **Conclusion**
+
+`wget` is a reliable tool for downloading files and web content from the command line. 
+Its simplicity and range of features make it a preferred choice for tasks that involve fetching resources over the internet.
+
+<br />
+
+## Resources
+
+- 👉 [Bash CheatSheet](https://devhints.io/bash)
+- 👉 [Deploy Projects](https://deploypro.dev/) using your own cloud provider
+- 👉 Get [Deployment Support](https://deploypro.dev/support/) from `experts` 
