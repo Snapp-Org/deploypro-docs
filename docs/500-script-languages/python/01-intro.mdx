@@ -1,0 +1,120 @@
+---
+sidebar_position : 0
+title            : Python - Short Introduction
+sidebar_label    : Index
+---
+
+# Python - Short Introduction
+
+This page is a comprehensive guide to **Python Scripting** with some applied samples related to cloud programming. 
+
+## **What is Python**
+
+Python is a versatile, high-level programming language known for its readability and simplicity. 
+It's widely used for various applications, including web development, data analysis, scientific computing, automation, and more.
+
+**Getting Started: Running Python Code**
+1. Install Python: Download and install Python from the official website (https://www.python.org/downloads/).
+2. Open a terminal or command prompt.
+3. Type `python` or `python3` (depending on your system) to start the Python interpreter.
+4. You'll see the Python prompt (`>>>`) where you can type and run Python code.
+
+## **Basic Concepts**
+
+- **Variables:** Store data using variables.
+  ```python
+  name = "John"
+  age = 25
+  ```
+- **Print:** Display output using `print()` function.
+  ```python
+  print("Hello, " + name)
+  ```
+
+**Data Types:**
+- **Strings:** Text data enclosed in quotes (`'` or `"`).
+- **Numbers:** Integers and floating-point numbers.
+- **Lists:** Ordered collections of items.
+- **Dictionaries:** Key-value pairs.
+- **Booleans:** `True` or `False` values.
+
+**Conditional Statements:**
+Use `if`, `elif`, and `else` for conditional execution.
+```python
+if age < 18:
+    print("You're a minor.")
+else:
+    print("You're an adult.")
+```
+
+**Loops:**
+- **`for` Loop:** Iterate over a sequence.
+  ```python
+  fruits = ["apple", "banana", "orange"]
+  for fruit in fruits:
+      print("I like", fruit)
+  ```
+- **`while` Loop:** Execute code while a condition is true.
+  ```python
+  count = 1
+  while count <= 5:
+      print("Count:", count)
+      count += 1
+  ```
+
+**Functions:**
+Define and use functions to encapsulate code.
+```python
+def greet(name):
+    print("Hello,", name + "!")
+greet("Alice")
+```
+
+## **Scripting**
+
+- Create a new file with a `.py` extension, e.g., `myscript.py`.
+- Write your Python code in the script file.
+
+**Running Scripts:**
+1. Open a terminal or command prompt.
+2. Navigate to the directory containing your script.
+3. Run the script: `python myscript.py` or `python3 myscript.py`.
+
+## **Examples**
+
+1. **Hello World:**
+   ```python
+   print("Hello, World!")
+   ```
+
+2. **Simple Calculator:**
+   ```python
+   num1 = float(input("Enter first number: "))
+   num2 = float(input("Enter second number: "))
+   sum = num1 + num2
+   print("Sum:", sum)
+   ```
+
+3. **File Backup Script:**
+   ```python
+   import shutil
+   import os
+   source_dir = "/path/to/source"
+   backup_dir = "/path/to/backup"
+   timestamp = datetime.datetime.now().strftime("%Y%m%d%H%M%S")
+   backup_file = f"backup_{timestamp}.tar.gz"
+   shutil.make_archive(os.path.join(backup_dir, backup_file), "gztar", source_dir)
+   print(f"Backup saved as {backup_file}")
+   ```
+
+<br />
+
+As you progress in Python, you can explore more advanced topics such as object-oriented programming, file handling, libraries, frameworks, and more. 
+Python's extensive community and rich ecosystem of libraries make it a fantastic language to learn and apply to a wide range of projects.
+
+<br />
+
+## Resources
+
+- 👉 [Deploy Projects](https://deploypro.dev/) using your own cloud provider
+- 👉 Get [Deployment Support](https://deploypro.dev/support/) from `experts` 
