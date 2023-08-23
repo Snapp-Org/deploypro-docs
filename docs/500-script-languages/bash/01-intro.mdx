@@ -1,0 +1,183 @@
+---
+sidebar_position : 0
+title            : Bash - Short Introduction
+sidebar_label    : Index
+---
+
+# Bash - Short Introduction
+
+This page is a comprehensive guide to **Bash Scripting** with some applied samples related to cloud programming. 
+We'll cover the basics of Bash scripting, and then provide examples of how Bash can be used in cloud programming scenarios.
+
+## **What is Bash?**
+
+Bash, short for "Bourne Again Shell," is a command-line interface and scripting language used in Unix-like operating systems. 
+It provides a way to interact with the operating system by running commands, and it also supports writing scripts to automate tasks.
+
+## **Getting Started**
+
+1. Open a terminal on your system. This is where you'll interact with Bash.
+2. Type a command and press Enter to execute it. For example, `ls` lists files in the current directory.
+3. Arguments can be added after the command, like `ls -l` to list files in long format.
+
+> **Basic Commands:**
+
+- `ls`: List files and directories in the current location.
+- `cd`: Change directory.
+- `pwd`: Print the current working directory.
+- `mkdir`: Create a new directory.
+- `touch`: Create an empty file.
+- `cp`: Copy files or directories.
+- `mv`: Move or rename files or directories.
+- `rm`: Remove files or directories (use with caution).
+
+## **Variables**
+
+Bash uses variables to store and manipulate data.
+
+```bash
+name="John"
+echo "Hello, $name!"
+```
+
+> **Input and Output:**
+
+- `echo`: Print text to the screen.
+- `read`: Read input from the user.
+
+```bash
+echo "What's your name?"
+read name
+echo "Hello, $name!"
+```
+
+> **Conditional Statements:**
+
+Bash supports `if` statements for conditional execution.
+
+```bash
+age=25
+if [ "$age" -lt 18 ]; then
+    echo "You're a minor."
+else
+    echo "You're an adult."
+fi
+```
+
+> **Loops:**
+
+- `for`: Iterate over a list of values.
+```bash
+for fruit in apple banana orange; do
+    echo "I like $fruit."
+done
+```
+- `while`: Execute commands while a condition is true.
+```bash
+count=1
+while [ $count -le 5 ]; do
+    echo "Count: $count"
+    ((count++))
+done
+```
+
+## **Functions**
+
+Define and use functions to encapsulate code.
+```bash
+greet() {
+    echo "Hello, $1!"
+}
+greet "Alice"
+```
+
+## **Scripting**
+
+- Create a new file with `.sh` extension, e.g., `myscript.sh`.
+- Add the shebang line `#!/bin/bash` at the top to specify the interpreter.
+- Write your Bash commands in the script file.
+
+> **Running Scripts:**
+
+1. Make the script executable: `chmod +x myscript.sh`.
+2. Run the script: `./myscript.sh`.
+
+> **Examples:**
+
+1. **Hello World:**
+   ```bash
+   #!/bin/bash
+   echo "Hello, World!"
+   ```
+
+2. **Simple Calculator:**
+   ```bash
+   #!/bin/bash
+   read -p "Enter first number: " num1
+   read -p "Enter second number: " num2
+   sum=$((num1 + num2))
+   echo "Sum: $sum"
+   ```
+
+3. **File Backup Script:**
+   ```bash
+   #!/bin/bash
+   source_dir="/path/to/source"
+   backup_dir="/path/to/backup"
+   timestamp=$(date +"%Y%m%d%H%M%S")
+   backup_file="backup_$timestamp.tar.gz"
+   tar -czvf "$backup_dir/$backup_file" "$source_dir"
+   echo "Backup saved as $backup_file"
+   ```
+
+<br />
+
+## Applied Samples in `Cloud Programming`
+
+> **Automation and Scripted Provisioning:**
+
+- Use Bash scripts to automate the creation of virtual machines, storage resources, and networking components on cloud platforms like AWS, Azure, or GCP.
+
+> **Deploying Applications:**
+
+- Bash scripts can automate the deployment of applications to cloud environments. For example, deploying a web application to a virtual machine using `scp` (secure copy) and then starting it.
+
+> **Managing Infrastructure as Code:**
+
+- Use Bash to write scripts that interact with Infrastructure as Code (IaC) tools like Terraform or CloudFormation. For example, you can use Bash to apply or destroy infrastructure configurations.
+
+> **Interacting with Cloud APIs:**
+
+- Bash scripts can interact with cloud provider APIs using tools like `curl` to manage resources, list instances, or trigger actions programmatically.
+
+> **Backup and Restore:**
+
+- Bash scripts can automate backup and restore operations for cloud-based databases, files, and other resources.
+
+> **Log Retrieval and Analysis:**
+
+- Use Bash scripts to retrieve logs and perform basic analysis to identify issues in cloud-based applications.
+
+> **Monitoring and Alerts:**
+
+- Bash scripts can run scheduled tasks to monitor cloud resources and send alerts or notifications if certain conditions are met.
+
+> **Container Operations:**
+
+- Bash scripts can be used to automate container operations, such as building and deploying Docker images in a cloud environment.
+
+> **Cleaning Up Resources:**
+
+- Bash scripts can help automate resource cleanup after tests or deployments, ensuring you don't incur unnecessary costs.
+
+<br />
+
+Remember that this is just a basic introduction to Bash scripting. 
+As you become more comfortable with Bash, you can explore more advanced topics like string manipulation, arrays, error handling, and integration with other tools and languages.
+
+<br />
+
+## Resources
+
+- 👉 [Deploy Projects](https://deploypro.dev/) using your own cloud provider
+- 👉 Get [Deployment Support](https://deploypro.dev/support/) from `experts` 

@@ -1,0 +1,8 @@
+{
+  "label": "Bash",
+  "link": {
+    "type": "generated-index",
+    "slug": "/script-languages/bash",
+    "description": "Bash, a popular command-line shell and scripting language used in Unix-like operating systems."    
+  }
+}
