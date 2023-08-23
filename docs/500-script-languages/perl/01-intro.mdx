@@ -1,0 +1,142 @@
+---
+sidebar_position : 0
+title            : Perl - Short Introduction
+sidebar_label    : Index
+---
+
+# Perl - Short Introduction
+
+This page is a comprehensive guide to **Perl Scripting** with some applied samples related to cloud programming. 
+
+Certainly! Here's a comprehensive introduction to Perl programming for beginners:
+
+## **What is Perl**
+
+Perl is a versatile and powerful scripting language known for its text manipulation capabilities and its use in system administration, web development, and more. It emphasizes practicality and ease of use.
+
+**Getting Started: Running Perl Code**
+1. Check if Perl is installed on your system by running `perl -v` in the terminal.
+2. Open a text editor and create a new file with a `.pl` extension, e.g., `myscript.pl`.
+3. Write your Perl code in the script file.
+4. Open a terminal and navigate to the directory containing your script.
+5. Run the script: `perl myscript.pl`.
+
+## **Basic Concepts**
+
+- **Print:** Display output using `print` function.
+  ```perl
+  print "Hello, World!\n";
+  ```
+
+> **Variables**
+
+- Perl uses sigils to indicate variable types: `$` for scalars, `@` for arrays, and `%` for hashes.
+  ```perl
+  $name = "John";
+  @fruits = ("apple", "banana", "orange");
+  %person = ("name", "Alice", "age", 30);
+  ```
+
+> **Scalar Data Types**
+
+- **Strings:** Enclosed in single or double quotes.
+- **Numbers:** Integers and floating-point numbers.
+- **Booleans:** Represented as `1` for true and `0` for false.
+
+**Arrays:**
+- Ordered collections of scalars.
+```perl
+@numbers = (1, 2, 3);
+print "Second number: $numbers[1]\n";
+```
+
+> **Hashes**
+
+- Key-value pairs.
+```perl
+%person = ("name", "Bob", "age", 25);
+print "Name: $person{'name'}\n";
+```
+
+> **Conditional Statements**
+
+Use `if`, `elsif`, and `else` for conditional execution.
+```perl
+if ($age < 18) {
+    print "You're a minor.\n";
+} else {
+    print "You're an adult.\n";
+}
+```
+
+> **Loops**
+
+- **`for` Loop:** Iterate over a list.
+```perl
+@fruits = ("apple", "banana", "orange");
+foreach $fruit (@fruits) {
+    print "I like $fruit.\n";
+}
+```
+
+> **Functions**
+
+Define and use subroutines to encapsulate code.
+```perl
+sub greet {
+    my ($name) = @_;
+    print "Hello, $name!\n";
+}
+greet("Eve");
+```
+
+## **Scripting**
+
+- Create a new file with a `.pl` extension, e.g., `myscript.pl`.
+- Write your Perl code in the script file.
+
+**Running Scripts:**
+1. Make the script executable: `chmod +x myscript.pl`.
+2. Run the script: `./myscript.pl`.
+
+
+## **Examples**
+
+1. **Hello World:**
+   ```perl
+   print "Hello, World!\n";
+   ```
+
+2. **Simple Calculator:**
+   ```perl
+   print "Enter first number: ";
+   $num1 = <STDIN>;
+   print "Enter second number: ";
+   $num2 = <STDIN>;
+   $sum = $num1 + $num2;
+   print "Sum: $sum\n";
+   ```
+
+3. **File Backup Script:**
+   ```perl
+   use File::Copy;
+   $source_dir = "/path/to/source";
+   $backup_dir = "/path/to/backup";
+   $timestamp = `date +"%Y%m%d%H%M%S"`;
+   $backup_file = "backup_$timestamp.tar.gz";
+   copy("$source_dir", "$backup_dir/$backup_file");
+   print "Backup saved as $backup_file\n";
+   ```
+
+<br />
+
+`Perl` is known for its text processing and regular expression capabilities, making it a popular choice for tasks like log parsing, text manipulation, and automation. 
+As you continue learning `Perl`, you can explore more advanced topics like object-oriented programming, modules, and interacting with external libraries.
+
+<br />
+
+## Resources
+
+- 👉 [Perl CheatSheet](https://perldoc.perl.org/perlcheat) 
+- 👉 [Deploy Projects](https://deploypro.dev/) using your own cloud provider
+- 👉 Get [Deployment Support](https://deploypro.dev/support/) from `experts` 
