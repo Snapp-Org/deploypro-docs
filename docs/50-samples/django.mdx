@@ -1,0 +1,57 @@
+---
+title            : DeployPRO - Django Sample 
+sidebar_label    : Django
+---
+
+# DeployPRO - Django Sample
+
+This free sample can be used to test the deployment for a simple `Django` project. 
+
+> 👉 [DeployPRO Django Sample](https://github.com/app-generator/deploypro-django) - source code
+
+<br />
+
+## How to use it
+
+This Django sample is provided with [Docker](https://github.com/app-generator/deploypro-django/blob/main/Dockerfile) support, the only input expected by DeployPRO service. 
+
+```Dockerfile
+FROM python:3.9-slim-buster
+WORKDIR /app
+COPY ./requirements.txt /app
+RUN pip install -r requirements.txt
+COPY . .
+
+# Start Server
+EXPOSE 5000
+CMD ["gunicorn", "--config", "gunicorn-cfg.py", "core.wsgi"]
+```
+
+The above `Dockerfile` does the following: 
+
+- Pull the Image for Python, version 3.9
+- Install the dependencies 
+- Expose the port 5000
+- Starts the project via `Gunicorn` WSGI Server 
+
+This setup can be tested in a local workstation by cloning the [sources](https://github.com/app-generator/deploypro-django) from GitHub and type:
+
+```bash
+$ docker-compose up --build
+```
+
+In order to have a succesfull deployment, `DeployPRO` needs to know:
+
+- the path to the Dockerfile
+  - for this sample is `./Dockerfile`
+- the external port
+  - for this sample is `5000` (`EXPOSE` directive)
+
+Once the above input is provided by the user, DeployPRO should operate the deployment without issues. 
+
+<br />
+
+## Resources
+
+- 👉 [Deploy Projects](https://deploypro.dev/) using your own cloud provider
+- 👉 Get [Deployment Support](https://deploypro.dev/support/) from `experts` 

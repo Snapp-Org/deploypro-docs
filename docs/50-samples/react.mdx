@@ -1,0 +1,65 @@
+---
+title            : DeployPRO - React Sample 
+sidebar_label    : React
+---
+
+# DeployPRO - React Sample
+
+This free sample can be used to test the deployment for a simple `React` project. 
+
+> 👉 [DeployPRO React Sample](https://github.com/app-generator/deploypro-react) - source code
+
+<br />
+
+## How to use it
+
+This React sample is provided with [Docker](https://github.com/app-generator/deploypro-react/blob/main/Dockerfile) support, the only input expected by DeployPRO service. 
+
+```Dockerfile
+FROM node:18-alpine
+# Add a work directory
+WORKDIR /app
+# Cache and Install dependencies
+COPY package.json .
+COPY yarn.lock .
+RUN yarn install
+# Copy app files
+COPY . .
+
+RUN yarn build
+
+# Expose port
+EXPOSE 5000
+
+# Start the app
+CMD [ "npx", "serve", "-l", "5000", "-s", "build"]
+```
+
+The above `Dockerfile` does the following: 
+
+- Pull the Image for NodeJS, version 18
+- Install the dependencies 
+- Expose the port 5000
+- Starts the project  
+
+This setup can be tested in a local workstation by cloning the [sources](https://github.com/app-generator/deploypro-react) from GitHub and type:
+
+```bash
+$ docker-compose up --build
+```
+
+In order to have a succesfull deployment, `DeployPRO` needs to know:
+
+- the path to the Dockerfile
+  - for this sample is `./Dockerfile`
+- the external port
+  - for this sample is `5000` (`EXPOSE` directive)
+
+Once the above input is provided by the user, DeployPRO should operate the deployment without issues. 
+
+<br />
+
+## Resources
+
+- 👉 [Deploy Projects](https://deploypro.dev/) using your own cloud provider
+- 👉 Get [Deployment Support](https://deploypro.dev/support/) from `experts` 
