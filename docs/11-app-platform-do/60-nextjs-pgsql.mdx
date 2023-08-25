@@ -1,6 +1,6 @@
 ---
 title            : Setting Up a Database for a NextJS App on DigitalOcean App Platform
-sidebar_label    : Setup Database
+sidebar_label    : Deploy App with a PostgreSQL
 ---
 
 # Setting Up a Database for a NextJS App on App Platform (DO)
@@ -13,14 +13,14 @@ This page explains how to **set up a database on DigitalOcean App Platform for a
 
 <br />
 
-## Get Started
+## Set Up Database
 
 1. In the `Application Menu`, click on `+ Create App`.
 2. Fill out the form. Here is some information you need to consider:
 
     > General
 
-    - `Name`: Provide a name for your application.
+    - `Name`: Provide a name for your database application.
     - `Server`: Select your App Platform (DO) server.
     - `Type`: Choose `PostgresSQL` to set up a PostgreSQL Database.
 
@@ -35,34 +35,97 @@ This page explains how to **set up a database on DigitalOcean App Platform for a
 
 3. Click on `Create Application` button and wait for the status to change to running. To monitor the status change, you can use the `refresh button`.
 
-    ![DeployPRO - Application created](https://github.com/auliaromadon/sample-django/assets/46531367/7f1cd56b-9f8f-483c-bfff-a2b3e5ed6a50)
+    ![DeployPRO - Application created](https://github.com/app-generator/deploypro-docs/assets/46531367/1e0dd169-ece8-4caa-9b81-051dd89f7ea3)
+
+<br />
+
+4. Once the application is running, you can begin creating a database within it. Navigate to the `App details` by clicking the App name and click the `Create database` button.
+
+    ![Create Database - DeployPRO](https://github.com/app-generator/deploypro-docs/assets/46531367/4f99f428-f682-432f-a177-603bc7408af9)
+
+<br />
+
+5. Next, you need to provide a name for the database. For this example, since the database is intended for a Next.js project, you can name it `nextjs-project`. After that, click the `Add Database` button.
+
+    ![Modal Database - DeployPRO](https://github.com/app-generator/deploypro-docs/assets/46531367/e822b877-5987-40e7-a284-0878e08f1e0f)
+
+    <br />
+
+    This is how it appears after you've created a database.
+
+    ![Database Created - DeployPRO](https://github.com/app-generator/deploypro-docs/assets/46531367/e9b41a09-19ce-46ef-9d02-4fa941cd1257)
+
+
+## Deploy Project with a Database
+
+To deploy the project, you'll follow the same steps as usual. To add a database within the application, simply **include a key and its corresponding value** in the environment variables. The format for the key and value is as follows:
+
+```env
+POSTGRES_PRISMA_URL="postgresql://USER:PASSWORD@HOST:PORT/DATABASE?schema=sample"
+```
+
+Here's how you can fill in the values:
+
+- `USER`: Use the username you created for database access.
+- `PASSWORD`: Use the password you created for database access credentials.
+- `HOST`: Enter the name of your database application.
+- `PORT`: Enter the container port of the database you created.
+- `DATABASE`: Specify the name of the database within your database application.
+
+<br />
+
+![Database Value - DeployPRO](https://github.com/app-generator/deploypro-docs/assets/46531367/83594775-fbff-415f-a447-ebcb7aba7b2d)
+
+<br />
+
+### Get started
+
+1. In the `Application Menu`, click on `+ Create App`.
+2. Fill out the form by providing the Application name and Environment Variable if needed. Here is some information you need to consider:
+
+    > General
+
+    - `Server` : Select your App Platform (DO) server
+    - `Type`: Deploy from source code
+
+    <br />
+
+    > Detail
+
+    - `Repo` ( Select the repository you are going to deploy )
+    - `Dockerfile Path` ( Right now, DeployPRO still needs your manual input for the location of your dockerfile inside the repository )
+    - `Container Port` ( Please manually input the port form your dockerfile )
+    - `Domain` ( Provide any domain name for your application. We also support Custom Domain!)
+
+    <br />
+
+    > Environment Variable
+
+    - Fill out Key and Value in case you need to add some variable.
+    - Add the the following key and it's corresponding value:
+    
+    ```env
+    POSTGRES_PRISMA_URL="postgresql://USER:PASSWORD@HOST:PORT/DATABASE?schema=sample"
+    ```
+
+<br />
+
+3. Click on `Create Application` button and wait for the status to change to running. To monitor the status change, you can use the `refresh button`.
+
+    ![DeployPRO - Application created](https://github.com/app-generator/deploypro-docs/assets/46531367/dd58cc7b-05e9-46f7-ba4d-bdf186072237)
 
 <br />
 
 4. Once the application is successfully deployed, you can proceed to visit the domain.
 
-    ![Domain - DeployPRO](https://github.com/auliaromadon/sample-django/assets/46531367/32c5455e-59dc-488f-861c-55aa5feb87bd)
+    Since the application includes a database, you can experiment by posting or creating data. Afterward, reload the domain, and the application will retrieve the data stored within the database.
+
+    ![Domain - DeployPRO](https://github.com/app-generator/deploypro-docs/assets/46531367/4a760a99-4d89-4be8-97d4-76be14422bce)
 
 <br />
 
-5. This is an optional step to perform a double-check by navigating to the `Actions` tab in your GitHub repository. Make sure the icon color of workflow run is `green`. This will allow you to confirm whether your application has been successfully deployed. For a detailed status update on the `build_image` and `deploy` process, directly select the workflow.
 
-    ![GitHub Actions - DeployPRO](https://github.com/auliaromadon/sample-django/assets/46531367/9f06e52f-5f99-46bf-b3e4-f64492d4099f)
 
-    <br />
-
-    On your repository, you will get new module from the deployment proces.
-
-    ![New Module - DeployPRO](https://github.com/auliaromadon/sample-django/assets/46531367/05522911-0543-4f64-b44b-7e7a4113c0f6)
-
-    <br />
-
-    The detailed view of your application resembles the image provided below. You have the flexibility to either make edits or option for deletion of the application.
-
-    ![Application Detail - DeployPRO](https://github.com/auliaromadon/sample-django/assets/46531367/0cd33a27-dcef-455d-9167-874fb3ada5c6)
-
-    <br />
-    
 If you encounter some issue while deploying your application, don't hesitate to [inform us](https://discord.gg/qQhjQZhnur)! 😉
 
 <br />
