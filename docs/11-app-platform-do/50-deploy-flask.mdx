@@ -24,12 +24,16 @@ This page explains how to **deploy Flask on App Platform** (Digital Ocean) using
         - MySQL ( Used for creating a database for your application )
         - PostgresSQL ( Used for creating a database for your application )
 
+    <br />
+
     > Detail
 
     - `Repo` ( Select the repository you are going to deploy )
     - `Dockerfile Path` ( Right now, DeployPRO still needs your manual input for the location of your dockerfile inside the repository )
     - `Container Port` ( Please manually input the port form your dockerfile )
     - `Domain` ( Provide any domain name for your application. We also support Custom Domain!)
+
+    <br />
 
     > Environment Variable
 
@@ -38,19 +42,27 @@ This page explains how to **deploy Flask on App Platform** (Digital Ocean) using
 <br />
 
 3. Click on `Create Application` button and wait for the status to change to running. To monitor the status change, you can use the `refresh button`.
-![DeployPRO - Application created](https://github.com/auliaromadon/sample-django/assets/46531367/9cc4ff50-c829-4e18-be40-a239b225a160)
+
+    ![DeployPRO - Application created](https://github.com/auliaromadon/sample-django/assets/46531367/9cc4ff50-c829-4e18-be40-a239b225a160)
+
 <br />
 
 4. Once the application is successfully deployed, you can proceed to visit the domain.
-![Domain - DeployPRO](https://github.com/auliaromadon/sample-django/assets/46531367/e6849f6d-1f93-43bd-947c-e3e0cbffc3d3)
+
+    ![Domain - DeployPRO](https://github.com/auliaromadon/sample-django/assets/46531367/e6849f6d-1f93-43bd-947c-e3e0cbffc3d3)
+
 <br />
 
 5. This is an optional step to perform a double-check by navigating to the `Actions` tab in your GitHub repository. Make sure the icon color of workflow run is `green`. This will allow you to confirm whether your application has been successfully deployed. For a detailed status update on the `build_image` and `deploy` process, directly select the workflow.
+
     ![GitHub Actions - DeployPRO](https://github.com/auliaromadon/sample-django/assets/46531367/60bc7eb9-ab06-4f53-bd69-fec31d338cd0)
+
     <br />
 
     On your repository, you will get new module from the deployment proces.
+
     ![New Module - DeployPRO](https://github.com/auliaromadon/sample-django/assets/46531367/23cf64a0-0408-4507-99b9-9cea80ce2e4a)
+
     <br />
 
     The detailed view of your application resembles the image provided below. You have the flexibility to either make edits or option for deletion of the application.

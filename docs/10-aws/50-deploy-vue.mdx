@@ -24,6 +24,8 @@ This page explains how to **deploy VueJS on AWS** (Amazon Web Services) using `D
         - MySQL ( Used for creating a database for your application )
         - PostgresSQL ( Used for creating a database for your application )
 
+    <br />
+
     > Detail
 
     - `Repo` ( Select the repository you are going to deploy )
@@ -31,6 +33,8 @@ This page explains how to **deploy VueJS on AWS** (Amazon Web Services) using `D
     - `Container Port` ( Please manually input the port form your `dockerfile` )
     - `Domain` ( Provide any domain name for your application. We also support `Custom Domain`!)
 
+    <br />
+    
     > Environment Variable
 
     - Fill out `Key` and `Value` in case you need to add some variable.
@@ -38,19 +42,27 @@ This page explains how to **deploy VueJS on AWS** (Amazon Web Services) using `D
 <br />
 
 3. Click on `Create Application` button and wait for the status to change to `running`. To monitor the status change, you can use the `refresh` button.
-![DeployPRO - Application created](https://github.com/app-generator/deploypro-docs/assets/46531367/7932a386-c989-4ee1-a0b4-8a4e9025b4d2)
+
+    ![DeployPRO - Application created](https://github.com/app-generator/deploypro-docs/assets/46531367/7932a386-c989-4ee1-a0b4-8a4e9025b4d2)
+
 <br />
 
 4. Once the application is successfully deployed, you can proceed to visit the domain.
-![VueJS Domain - DeployPRO](https://github.com/app-generator/deploypro-docs/assets/46531367/24cffb6b-d574-49e5-a4d6-175bbebc9fa8)
+    
+    ![VueJS Domain - DeployPRO](https://github.com/app-generator/deploypro-docs/assets/46531367/24cffb6b-d574-49e5-a4d6-175bbebc9fa8)
+
 <br />
 
 5. This is an **optional step** to perform a double-check by navigating to the `Actions` tab in your GitHub repository. Make sure the icon color of workflow run is `green`. This will allow you to confirm whether your application has been successfully deployed. For a detailed status update on the `build_image` and `deploy` process, directly select the workflow.
+
     ![GitHub Actions - DeployPRO](https://github.com/app-generator/deploypro-docs/assets/46531367/0fe16ffa-60e0-4c0d-989d-ad9268bcf6cd)
+
     <br />
 
     On your repository, you will get new module from the deployment proces.
+
     ![New Module - DeployPRO](https://github.com/app-generator/deploypro-docs/assets/46531367/8bcd1538-11a4-454e-b3ec-b89a80ad20de)
+
     <br />
 
     The detailed view of your application resembles the image provided below. You have the flexibility to either make edits or option for deletion of the application.

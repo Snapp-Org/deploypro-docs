@@ -1,0 +1,66 @@
+---
+title            : Setting Up a Database for a NextJS App on DigitalOcean App Platform
+sidebar_label    : Setup Database
+---
+
+# Setting Up a Database for a NextJS App on App Platform (DO)
+
+This page explains how to **set up a database on DigitalOcean App Platform for a NextJS App**  using `DeployPRO`. Also, it's important to understand that you can create multiple databases within your application using either the `PostgreSQL` or `MySQL` types.
+
+> Make sure to include the Dockerfile in your application's GitHub repository.
+
+👉  Take a look at the sample app [here](https://github.com/app-generator/deploypro-nextjs-pgsql). Feel free to make a copy of it for your reference.
+
+<br />
+
+## Get Started
+
+1. In the `Application Menu`, click on `+ Create App`.
+2. Fill out the form. Here is some information you need to consider:
+
+    > General
+
+    - `Name`: Provide a name for your application.
+    - `Server`: Select your App Platform (DO) server.
+    - `Type`: Choose `PostgresSQL` to set up a PostgreSQL Database.
+
+    <br />
+
+    > Database
+
+    - `Username`: Set your username for database access.
+    - `Password`: Assign a password for database access credentials.
+
+<br />
+
+3. Click on `Create Application` button and wait for the status to change to running. To monitor the status change, you can use the `refresh button`.
+![DeployPRO - Application created](https://github.com/auliaromadon/sample-django/assets/46531367/7f1cd56b-9f8f-483c-bfff-a2b3e5ed6a50)
+<br />
+
+4. Once the application is successfully deployed, you can proceed to visit the domain.
+![Domain - DeployPRO](https://github.com/auliaromadon/sample-django/assets/46531367/32c5455e-59dc-488f-861c-55aa5feb87bd)
+<br />
+
+5. This is an optional step to perform a double-check by navigating to the `Actions` tab in your GitHub repository. Make sure the icon color of workflow run is `green`. This will allow you to confirm whether your application has been successfully deployed. For a detailed status update on the `build_image` and `deploy` process, directly select the workflow.
+    ![GitHub Actions - DeployPRO](https://github.com/auliaromadon/sample-django/assets/46531367/9f06e52f-5f99-46bf-b3e4-f64492d4099f)
+    <br />
+
+    On your repository, you will get new module from the deployment proces.
+    ![New Module - DeployPRO](https://github.com/auliaromadon/sample-django/assets/46531367/05522911-0543-4f64-b44b-7e7a4113c0f6)
+    <br />
+
+    The detailed view of your application resembles the image provided below. You have the flexibility to either make edits or option for deletion of the application.
+
+    ![Application Detail - DeployPRO](https://github.com/auliaromadon/sample-django/assets/46531367/0cd33a27-dcef-455d-9167-874fb3ada5c6)
+
+    <br />
+    
+If you encounter some issue while deploying your application, don't hesitate to [inform us](https://discord.gg/qQhjQZhnur)! 😉
+
+<br />
+
+## Resources
+
+- 👉 [Deploy Projects](https://deploypro.dev/) using your preferred provider: `AWS`, `GCP`, `Azure`
+- 👉 Get [Deployment Support](https://deploypro.dev/support/) from the team behind this service
+- 👉 Join the [Community](https://discord.gg/qQhjQZhnur) and chat with the team behind `DeployPRO`
