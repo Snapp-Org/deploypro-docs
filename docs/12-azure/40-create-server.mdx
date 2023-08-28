@@ -5,7 +5,62 @@ sidebar_label    : Create Server
 
 # Create Server for Azure
 
-@ToDO
+Once you've successfully linked your Microsoft Azure account to DeployPRO, you're ready to initiate the process of setting up a server for your application. Simply follow these instructions:
+
+1. Open the `Server Menu`. If this is your first time connecting a cloud provider on [DeployPRO](https://deploypro.dev/), you will found no list server. What you need to start deploying an application in DeployPRO is by clicking the `+ Create Server` button.
+  
+  ![DeployPRO - Create Server](https://github.com/app-generator/deploypro-docs/assets/46531367/34abb087-e6b6-41c5-8e60-73a1d3e0d895)
+  
+  <br />
+
+2. Next, you will be directed to page so that you can create a server based on your preference. Ensure that you choose the cloud provider correctly. In this Microsoft Azure topic, select Azure and proceed to fill out the form.
+  
+  ![DeployPRO - Server Preference](https://github.com/app-generator/deploypro-docs/assets/46531367/bb727b8d-1d71-4d89-b9cd-bb7f030a5e5a)
+
+  Here are some points you should consider right now:
+    - We recommend you to write the server name in camelCase, snake_case, kebab-case or PascalCase.
+    - Find the best practice of the specification. 👉 Scroll down for more information
+
+  <br />
+  
+  > 🌐 Don't forget to select the nearest server to your place to make the performance work better!
+
+<br />
+
+3. Review your Server before you click `Create Server`.
+  
+  ![DeployPRO - Review Server](https://github.com/app-generator/deploypro-docs/assets/46531367/96285ec7-c225-4984-991f-9fc4590511a7)
+  <br />
+
+4. Your Server is **successfully created🙌** when the status is running.
+
+  ![DeployPRO - Server Created](https://github.com/app-generator/deploypro-docs/assets/46531367/e1535209-241a-4600-9e5d-9729899b3da4)
+  <br />
+
+    Ensure thorough confirmation by clicking on the `IPv4 Address`. Once the server creation process is accomplished, the resulting appearance will resemble the following:
+    
+    ![Dashboard - DeployPRO](https://github.com/app-generator/deploypro-docs/assets/46531367/100ff50d-cd8f-4d57-b2a5-a798d55a9220)
+    <br />
+
+    This is how the server detail when you click the server name.
+    
+    ![DeployPRO - Server Detail](https://github.com/app-generator/deploypro-docs/assets/46531367/a0bf795c-2671-452f-a93b-1766f3a1a1c2)
+    <br />
+
+## Information
+
+1. You can deploy multiple apps and install databases on the same server, but ensure that your resources are sufficient.
+2. You have the option to delete your server. However, it's important to note that any applications housed within the server will be automatically deleted as well.
+
+## Specifications
+Make sure to choose the appropriate specifications based on your application's requirements. While a server can serve multiple applications, if you're setting up a server specifically for a single application, the choice becomes less critical.
+
+> For example Standard_B1ls (vcpu 1, memory 0.5, disks 2)
+
+The `Standard_B1ls` virtual machine specification within Azure is tailored for tasks that demand minimal computing resources and are well-suited for lightweight applications. This configuration comprises 1 virtual CPU (vCPU), 0.5 GB of RAM, and 2 disks. It finds relevance in various scenarios including:
+- Basic Web Presence
+- Demonstrations and Showcases
+- Learning and Experimentation
 
 <br />
 
