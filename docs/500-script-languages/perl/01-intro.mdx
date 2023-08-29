@@ -24,14 +24,14 @@ Perl is a versatile and powerful scripting language known for its text manipulat
 ## **Basic Concepts**
 
 - **Print:** Display output using `print` function.
-  ```perl
+  ```bash
   print "Hello, World!\n";
   ```
 
 > **Variables**
 
 - Perl uses sigils to indicate variable types: `$` for scalars, `@` for arrays, and `%` for hashes.
-  ```perl
+  ```bash
   $name = "John";
   @fruits = ("apple", "banana", "orange");
   %person = ("name", "Alice", "age", 30);
@@ -45,7 +45,7 @@ Perl is a versatile and powerful scripting language known for its text manipulat
 
 **Arrays:**
 - Ordered collections of scalars.
-```perl
+```bash
 @numbers = (1, 2, 3);
 print "Second number: $numbers[1]\n";
 ```
@@ -53,7 +53,7 @@ print "Second number: $numbers[1]\n";
 > **Hashes**
 
 - Key-value pairs.
-```perl
+```bash
 %person = ("name", "Bob", "age", 25);
 print "Name: $person{'name'}\n";
 ```
@@ -61,7 +61,7 @@ print "Name: $person{'name'}\n";
 > **Conditional Statements**
 
 Use `if`, `elsif`, and `else` for conditional execution.
-```perl
+```bash
 if ($age < 18) {
     print "You're a minor.\n";
 } else {
@@ -72,7 +72,7 @@ if ($age < 18) {
 > **Loops**
 
 - **`for` Loop:** Iterate over a list.
-```perl
+```bash
 @fruits = ("apple", "banana", "orange");
 foreach $fruit (@fruits) {
     print "I like $fruit.\n";
@@ -82,7 +82,7 @@ foreach $fruit (@fruits) {
 > **Functions**
 
 Define and use subroutines to encapsulate code.
-```perl
+```bash
 sub greet {
     my ($name) = @_;
     print "Hello, $name!\n";
@@ -103,12 +103,12 @@ greet("Eve");
 ## **Examples**
 
 1. **Hello World:**
-   ```perl
+   ```bash
    print "Hello, World!\n";
    ```
 
 2. **Simple Calculator:**
-   ```perl
+   ```bash
    print "Enter first number: ";
    $num1 = <STDIN>;
    print "Enter second number: ";
@@ -118,7 +118,7 @@ greet("Eve");
    ```
 
 3. **File Backup Script:**
-   ```perl
+   ```bash
    use File::Copy;
    $source_dir = "/path/to/source";
    $backup_dir = "/path/to/backup";
