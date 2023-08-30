@@ -5,9 +5,73 @@ sidebar_label    : Deploy Flask
 
 # Deploy Flask on Azure 
 
-This page explains how to **deploy Flask on Azure** (Amazon Web Services) using `DeployPRO`.
+This page explains how to **deploy Flask on Azure** using `DeployPRO`. 👉 Check our Flask sample app [here](https://github.com/app-generator/deploypro-flask). You may fork it for your sample!
 
-@ToDO
+> Make sure to include the Dockerfile in your application's GitHub repository.
+
+<br />
+
+## Get Started
+
+1. In the `Application Menu`, click on `+ Create App`.
+2. Fill out the form by providing the Application name and Environment Variable if needed. Here is some information you need to consider:
+
+    > General
+
+    - `Server` ( Select any server you have created on DeployPRO )
+    - `Type`:
+        - Deploy from source code ( Used for deploying any application from your GitHub Repository )
+        - MySQL ( Used for creating a database for your application )
+        - PostgresSQL ( Used for creating a database for your application )
+
+    <br />
+
+    > Detail
+
+    - `Repo` ( Select the repository you are going to deploy )
+    - `Dockerfile Path` ( Right now, DeployPRO still needs your manual input for the location of your dockerfile inside the repository )
+    - `Container Port` ( Please manually input the port form your dockerfile )
+    - `Domain` ( Provide any domain name for your application. We also support Custom Domain!)
+
+    <br />
+
+    > Environment Variable
+
+    - Fill out Key and Value in case you need to add some variable.
+
+<br />
+
+3. Click on `Create Application` button and wait for the status to change to running. To monitor the status change, you can use the `refresh button`.
+
+    ![DeployPRO - Application created](https://github.com/app-generator/deploypro-docs/assets/46531367/215204cb-4b0f-4fdd-b12e-fbe38559733a)
+
+<br />
+
+4. Once the application is successfully deployed, you can proceed to visit the domain.
+
+    ![Domain - DeployPRO](https://github.com/auliaromadon/sample-django/assets/46531367/e6849f6d-1f93-43bd-947c-e3e0cbffc3d3)
+
+<br />
+
+5. This is an optional step to perform a double-check by navigating to the `Actions` tab in your GitHub repository. Make sure the icon color of workflow run is `green`. This will allow you to confirm whether your application has been successfully deployed. For a detailed status update on the `build_image` and `deploy` process, directly select the workflow.
+
+    ![GitHub Actions - DeployPRO](https://github.com/app-generator/deploypro-docs/assets/46531367/8ebe709a-a549-4b40-8ebf-4a58536b5a83)
+
+    <br />
+
+    On your repository, you will get new module from the deployment process.
+
+    ![New Module - DeployPRO](https://github.com/app-generator/deploypro-docs/assets/46531367/97ff55cc-3d57-4aef-ab34-bf5d09e8af58)
+
+    <br />
+
+    The detailed view of your application resembles the image provided below. You have the flexibility to either make edits or option for deletion of the application.
+
+    ![Application Detail - DeployPRO](https://github.com/app-generator/deploypro-docs/assets/46531367/73a48614-3e32-43d9-8d90-f22d38c8f217)
+
+    <br />
+    
+If you encounter some issue while deploying your application, don't hesitate to [inform us](https://discord.gg/qQhjQZhnur)! 😉
 
 <br />
 
