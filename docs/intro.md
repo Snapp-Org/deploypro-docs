@@ -110,7 +110,7 @@ The server state can be also checked on DeployPRO.
 
 <br />
 
-### [Deploy Django](](https://github.com/app-generator/sample-rocket-django-aws))
+### [Deploy Django on AWS](https://github.com/app-generator/sample-rocket-django-aws)
 
 In this phase, the user needs to provide:
 
@@ -118,6 +118,7 @@ In this phase, the user needs to provide:
 - app name 
 - path to the [Dockerfile](https://github.com/app-generator/sample-rocket-django-aws/blob/main/Dockerfile)
 - the PORT exposed in Docker (execution entry point)
+  - For this project the is `PORT=5005`
 - the `DeployPRO` subdomain 
 
 ![DeployPRO - AWS & Django, App information](https://user-images.githubusercontent.com/51854817/263670396-d5a7f163-e637-4289-a7a2-2359825ef941.jpg)
