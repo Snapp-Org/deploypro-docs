@@ -1,49 +1,107 @@
 ---
 sidebar_position : 1
-title            : AWS Cloud provider - Short Introduction 
-sidebar_label    : Intro
+title            : AWS & DeployPRO - How to use it together 
+sidebar_label    : AWS & DeployPRO
 slug             : /aws/intro
-description      : Short, but comprehensive introduction to AWS.
+description      : Learn how to deploy projects on AWS using DeployPRO
 ---
 
-# AWS - Short Introduction 
+# Deploy projects on AWS using DeployPRO
 
-AWS is a leading cloud computing platform that offers a wide range of services to help individuals and businesses build and manage their applications and infrastructure in the cloud. 
-AWS services cover computing power, storage, databases, networking, analytics, machine learning, security, and more.
+This page explains how to deploy software projects on AWS using [DeployPRO](https://deploypro.dev/), a service that aims to simplify the deployment process. 
 
-Here's a **brief introduction to AWS (Amazon Web Services)**:
+Amazon Web Services (AWS) is like a vast digital playground for businesses and individuals, created by Amazon.com. It's all about taking the power of the cloud and putting it at your fingertips.
 
-<br />
-
-## Amazon EC2
-
-This service provides scalable virtual servers, known as instances, that you can use to run applications. 
-EC2 instances can be tailored to your specific requirements in terms of computing power, memory, and storage.
+At its core, AWS provides you with virtual servers known as Amazon EC2 instances. These servers can be as tiny as a single virtual machine or as robust as a cluster of high-performance machines. 
+You can use these servers to run your applications, websites, and pretty much anything else you can think of.
 
 <br />
 
-## Amazon S3
+## How to Integrate with DeployPRO
 
-S3 is a scalable object storage service that allows you to store and retrieve data, such as files and images, in the cloud. 
-It's designed for durability, availability, and scalability.
+AWS can be easily integrated with DeployPRO by adding the requested credentials (connection page). 
+
+![DeployPRO & AWS - Connection & Credentials Page.](https://user-images.githubusercontent.com/51854817/263670354-2b1dd20b-4874-49f7-a97a-44f8703bb27d.jpg)
+
+Once the integration is validated (green button) the user is able to manage any number of VPS servers (create/delete) on the remote (cloud) provider. 
+
+![DeployPRO & AWS - Connection Validated](https://user-images.githubusercontent.com/51070104/263734577-6c32142f-0d88-4d52-8680-1bcc725c376b.png)
+
+Regarding the apps/server management DeployPRO automatizes the following via a simple and intuitive UI
+
+- Enhance the created servers with the most recommended packages (Docker included)
+- Automatic CI/CD flow for the deployed apps
+- Stable & production-ready Nginx configuration for all managed apps
+- SSL via CertBot 
 
 <br />
 
-## Amazon RDS (Relational Database Service)
+## Deploy Sample REPO on AWS 
 
-RDS makes it easy to set up, operate, and scale relational databases in the cloud. It supports various database engines such as MySQL, PostgreSQL, SQL Server, and Oracle.
+To cover in fulll the concept, this section explain how to deploy on AWS an [open-source Django Project](https://github.com/app-generator/sample-rocket-django-aws) hosted on GitHub. 
 
-<br />
-
-## Amazon DynamoDB
-
-This is a fully managed NoSQL database service that provides fast and predictable performance with seamless scalability.
+The type of the project (Python/Django) used in this demonstration can be replaced with [NodeJS](/samples/nodejs), [React](/samples/react), [Vue](/samples/vue), [NextJS](/samples/nextjs) 
+or with any other project that has valid `Dockerfile`.  
 
 <br />
 
-## Amazon Lambda
+### Create VPS Server 
 
-Lambda allows you to run code without provisioning or managing servers. It's often used for event-driven programming and building serverless applications.
+Before deploying the project, a deployment server needs to be created. This operation takes aprox. 5 minutes. 
+
+![DeployPRO - Create AWS Server](https://user-images.githubusercontent.com/51854817/263670373-dd12a0da-48b9-4954-8440-3768bdd97083.jpg)
+
+<br />
+
+Once created, we can access the default page and also check out the details in our AWS account: 
+
+![DeployPRO - AWS Server, the default page.](https://user-images.githubusercontent.com/51854817/263670388-5f9d2579-2112-4f12-afe8-e19017c9ee8b.jpg)
+
+<br />
+
+> Server Information (AWS) 
+
+![DeployPRO - New AWS Server (on AWS)](https://user-images.githubusercontent.com/51854817/263670337-91e8bb53-59c3-4256-b25b-76b178c68f1c.jpg)
+
+<br />
+
+The server state can be also checked on DeployPRO. 
+
+![DeployPRO - New AWS Server (on DeployPRO)](https://user-images.githubusercontent.com/51070104/264061233-a464745e-d89e-4cb5-b6c8-7f6e6dffc406.png)
+
+<br />
+
+### Deploy Django
+
+In this phase, the user needs to provide:
+
+- The repository 
+- App name 
+- Path to the `Dockerfile` (usually `./Dockerfile`) 
+- the PORT exposed in Docker (execution entry point)
+- the `DeployPRO` subdomain 
+
+![DeployPRO - AWS & Django, App information](https://user-images.githubusercontent.com/51854817/263670396-d5a7f163-e637-4289-a7a2-2359825ef941.jpg)
+
+<br />
+
+![DeployPRO - AWS & Django, App information in Full](https://user-images.githubusercontent.com/51854817/263670408-e3494989-0e24-4acb-98ea-1b99ded04900.jpg)
+
+Once the operation is confirmed, DeployPRO will analyze the input and update the repository with all the necessary scripts for the LIVE deployment. 
+
+![DeployPRO - Deploy Django on AWS, via GitHub Action.](https://user-images.githubusercontent.com/51070104/263740098-12517c63-b809-4615-b8b1-b2d45f6fa6d9.png)
+
+<br />
+
+![DeployPRO - Deploy Django on AWS (GitHub Action) CI-CD flow completed.](https://user-images.githubusercontent.com/51070104/263740916-c63215b1-a476-4377-81f6-78da3e17de74.png)
+
+<br />
+
+## Access the APP (browser)
+
+At this point, the Django App should be fully deployed on AWS, with an active CI/CD flow: 
+
+![DeployPRO - Django Starter fully deployed on AWS (CI/CD flow active)](https://user-images.githubusercontent.com/51854817/263670401-214ac050-69c2-472d-96f4-b914dc464e6f.jpg)
 
 <br />
 
