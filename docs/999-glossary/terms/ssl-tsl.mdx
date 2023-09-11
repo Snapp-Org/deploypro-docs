@@ -1,0 +1,95 @@
+---
+title            : SSL/TSL
+sidebar_label    : SSL/TSL
+---
+
+# SSL/TSL
+
+SSL (Secure Sockets Layer) and TLS (Transport Layer Security) are cryptographic protocols used to secure data transmission over computer networks, including the internet. 
+They provide a secure, encrypted communication channel between a client (such as a web browser) and a server (such as a website's server). 
+
+Here's an **overview of SSL/TLS** and their importance:
+
+## **SSL vs. TLS**
+
+- **SSL** was the original protocol developed by Netscape in the 1990s. TLS is its successor, and the terms SSL and TLS are often used interchangeably, but TLS is the more modern and secure version.
+- **TLS** includes various improvements and security enhancements over SSL, and it's the protocol used today for securing web communications.
+
+<br />
+
+## **Encryption**
+
+`SSL/TLS` protocols use encryption algorithms to protect the confidentiality and integrity of data during transmission. This means that even if intercepted by malicious actors, the data remains confidential.
+
+<br />
+
+## **Authentication**
+
+`SSL/TLS` provides a way for the client and server to authenticate each other to ensure they are communicating with the intended parties. This is typically done using digital certificates.
+
+<br />
+
+## **Digital Certificates**
+
+Digital certificates are issued by Certificate Authorities (CAs) and are used to verify the identity of the server. 
+They contain information about the server, including its public key. The client uses the server's digital certificate to encrypt data and establish a secure connection.
+
+<br />
+
+## **Handshake Protocol**
+
+`SSL/TLS` includes a handshake protocol that occurs at the beginning of the communication session. 
+During the handshake, the client and server exchange information and establish cryptographic parameters for the session.
+
+<br />
+
+## **Ciphers and Algorithms**
+
+`SSL/TLS` supports various encryption ciphers and algorithms, and the specific ones used depend on the negotiated parameters during the handshake. 
+This includes symmetric encryption for data transmission and asymmetric encryption for key exchange and authentication.
+
+<br />
+
+## **Versions**
+
+`SSL/TLS` has different versions, such as SSL 3.0, TLS 1.0, TLS 1.1, TLS 1.2, TLS 1.3, and more. Newer versions typically include security improvements and stronger encryption.
+
+<br />
+
+## **Use Cases**:
+
+`SSL/TLS` is commonly used to secure various internet communications, including HTTPS for secure web browsing, secure email (SMTP, IMAP, POP3), virtual private networks (VPNs), and more.
+
+<br />
+
+## **HTTPS**:
+
+HTTPS (Hypertext Transfer Protocol Secure) is the secure version of HTTP, and it uses `SSL/TLS` to encrypt data between a web browser and a web server. 
+HTTPS is indicated in a website's URL by "https://" and is essential for securing sensitive data transmission, such as online transactions and login credentials.
+
+<br />
+
+## **Trust and Security**:
+
+Trust in `SSL/TLS` security relies on a web browser's trust in the root CAs. Browsers come pre-installed with a list of trusted CAs. 
+When a website presents a valid digital certificate issued by a trusted CA, the browser indicates a secure connection.
+
+<br />
+
+## **Security Updates**
+
+It's crucial to keep **SSL/TLS** implementations and digital certificates up to date to address vulnerabilities and ensure strong security. 
+This includes regular updates to the protocol version and ciphers used.
+
+<br />
+
+`In summary`, SSL/TLS is a critical technology for ensuring data privacy and security on the internet. It plays a fundamental role in protecting sensitive information and preventing data breaches during online communication. 
+Organizations, especially those involved in e-commerce and online services, must implement SSL/TLS to safeguard their users' data.
+
+<br />
+
+## Resources
+
+- 👉 [Deploy Projects](https://deploypro.dev/) using your preferred provider: `AWS`, `DigitalOcean`, `Azure`, and GCP (soon)
+- 👉 Get [Deployment Support](https://deploypro.dev/support/) from the team behind this service
+- 👉 Join the [Community](https://discord.gg/qQhjQZhnur) and chat with the team behind `DeployPRO`
