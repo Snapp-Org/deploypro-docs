@@ -11,10 +11,10 @@ description      : The official documentation of the service.
     <meta name="google-site-verification" content="VW84QZUx9lXlONq9YSMvPLpJyY0w-ZSutA89XdGT7xo" />
 </head>
 
-Introducing [DeployPRO](https://deploypro.dev/): **The Simplified Cloud Application Deployment Solution**. **DeployPRO** is a service that aims to simplify the deployment process, 
+Introducing [DeployPRO](https://deploypro.dev/), a product that aims to simplify the deployment process, 
 empowering businesses to deploy, monitor, and scale applications without the burden of infrastructure complexities. 
 
-Works with all major cloud providers like **[AWS](aws/)**, **[Azure](azure/)**, **[App Platform](app-platform-do/)** (DO), and **GCP** (soon). 
+Works with all major cloud providers like **[AWS](aws/intro)**, **[Azure](azure/intro)**, **[App Platform](app-platform-do/intro)** (DO), and **GCP** (soon). 
 
 With [DeployPRO](https://deploypro.dev/), you can effortlessly create and manage applications, gaining full control of your development process. 
 Experience the power and flexibility of **DeployPRO** as it leads you to streamlined and hassle-free cloud deployment.
@@ -25,9 +25,9 @@ Experience the power and flexibility of **DeployPRO** as it leads you to streaml
 
 ## ✅ How it Works 
 
-Once the users are authenticated with their GitHub account, the first step is to connect at least one Cloud Provider. 
+Once the users are [authenticated](https://deploypro.dev/signin/) using their **GitHub** account, the first step is to connect at least one Cloud Provider. 
 
-With one of **[AWS](aws/)**, **[Azure](azure/)**, or **[App Platform](app-platform-do/)** activated, the users are able to create VPS servers and trigger deployments for every GitHub repository with a Dockerfile. 
+With one of **[AWS](aws/intro)**, **[Azure](azure/intro)**, or **[App Platform](app-platform-do/intro)** activated, the users are able to create VPS servers and trigger deployments for every GitHub repository with a Dockerfile. 
 
 The current version of `DeployPRO` requires a **Dockerized** project in order to have a successful deployment, and it is also essential to mention that `only Dokerfiles are supported` ( using docker-compose.yml won't work).
 
