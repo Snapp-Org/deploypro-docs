@@ -1,0 +1,320 @@
+---
+slug    : using-bash-and-python
+authors : [sm0ke]
+tags    : [bash, python, system-programming]
+---
+# Using Bash and Python Together
+
+Using Bash and Python together to automate tasks on a Linux system is a powerful combination. Bash is the default shell in most Linux distributions, and Python is a versatile scripting language.
+
+<!--truncate-->
+
+Here's a step-by-step guide on how to get started with using them together for automation:
+
+## **Install Python**
+
+Most Linux distributions come with Python preinstalled. You can check the installed Python version by running:
+
+```
+python --version
+```
+
+If Python is not installed or you want to use a specific version, you can install it using your distribution's package manager. For example, on Ubuntu:
+
+```
+sudo apt-get update
+sudo apt-get install python3
+```
+
+<br />
+
+## ✅ **Write Python Scripts**
+  
+Create Python scripts to perform specific tasks or automation. Python is a versatile language for various automation needs, from file manipulation to web scraping. 
+You can use Python's built-in libraries or install additional packages as needed.
+
+Here's a **simple example of a Python** script that prints "Hello, World!" to the terminal:
+
+```python
+#!/usr/bin/env python3
+
+print("Hello, World!")
+```
+
+> **Make Scripts Executable**:
+
+To run **Python** scripts as executable files from the command line, you need to make them executable. You can do this using the `chmod` command. For example:
+
+```
+chmod +x myscript.py
+```
+
+<br />
+
+## ✅ **Use Bash for Script Execution**
+
+You can use Bash to call and execute your Python scripts. For instance:
+
+```
+#!/bin/bash
+
+python3 myscript.py
+```
+
+## ✅ **Pass Command-Line Arguments**
+
+You can pass command-line arguments to your Python script from Bash. These arguments can be used to customize the behavior of your script. 
+In Python, you can access these arguments using the `sys.argv` list from the `sys` module. For example:
+
+```python
+#!/usr/bin/env python3
+import sys
+
+if len(sys.argv) > 1:
+    print("Hello, " + sys.argv[1] + "!")
+else:
+    print("Hello, World!")
+```
+
+When calling this script from Bash, you can provide a name as an argument: `./myscript.py Alice` will print "Hello, Alice!"
+
+<br />
+
+## ✅ **Automate Common Tasks**
+
+Identify tasks you want to automate on your Linux system. These tasks can range from file operations, backups, system maintenance, and more.
+
+Write Python scripts that perform these tasks, and use Bash scripts to schedule them with tools like `cron` for regular execution.
+
+<br />
+
+## ✅ **Error Handling and Logging**
+  
+Implement error handling and logging in your Python scripts to capture and handle exceptions gracefully. This ensures that you can troubleshoot issues and monitor the automation process effectively.
+
+<br />
+
+## ✅ **Security Considerations**
+
+Be mindful of security when automating tasks. Avoid storing sensitive information like passwords in plain text within your scripts. Instead, use secure methods like environment variables or encrypted files.
+
+<br />
+
+## ✅ **Testing and Debugging**
+
+Test your scripts thoroughly in a safe environment before deploying them for production use. Use debugging tools available in both Bash and Python to troubleshoot issues.
+
+<br />
+
+## ✅ More Advanced Samples 
+
+Here are a few more advanced examples of using Bash and Python together for automation on a Linux system:
+
+### **Automated Backup Script**
+
+This script combines Bash and Python to create an automated backup system. It identifies files to back up, compresses them, adds a timestamp, and stores them in a specified backup directory.
+
+```bash
+#!/bin/bash
+
+# Define backup directory and create it if it doesn't exist
+backup_dir="/path/to/backup"
+mkdir -p $backup_dir
+
+# Create a timestamp for the backup
+timestamp=$(date +%Y%m%d%H%M%S)
+
+# Define directories to back up
+source_dir="/path/to/source"
+
+# Archive and compress the source directory
+tar -czf $backup_dir/backup_$timestamp.tar.gz -C $source_dir .
+
+# Optionally, remove old backups to save space
+find $backup_dir -type f -mtime +7 -exec rm {} \;
+```
+
+<br />
+
+### **Automated System Monitoring Script**
+
+This script uses Bash to collect system information and Python to send notifications. 
+It periodically checks system metrics like CPU usage, memory usage, and disk space and sends an email notification if any metrics exceed predefined thresholds.
+
+```bash
+#!/bin/bash
+
+# Define threshold values
+max_cpu_usage=80
+max_memory_usage=90
+min_disk_space=10
+
+# Get system metrics
+cpu_usage=$(top -b -n 1 | awk '/%Cpu/{print $2}')
+memory_usage=$(free -m | awk '/Mem/{printf("%.2f", $3/$2*100)}')
+disk_space=$(df -h / | awk '/\//{print $5}' | sed 's/%//')
+
+# Check and send notifications if thresholds are exceeded
+if (( $(echo "$cpu_usage > $max_cpu_usage" | bc -l) )); then
+    python3 send_notification.py "High CPU Usage Alert: $cpu_usage%"
+fi
+
+if (( $(echo "$memory_usage > $max_memory_usage" | bc -l) )); then
+    python3 send_notification.py "High Memory Usage Alert: $memory_usage%"
+fi
+
+if (( $(echo "$disk_space < $min_disk_space" | bc -l) )); then
+    python3 send_notification.py "Low Disk Space Alert: $disk_space%"
+fi
+```
+
+In this script, `send_notification.py` is a Python script that sends email or other types of notifications using libraries like `smtplib`.
+
+<br />
+
+### **Web Scraping and Data Analysis Script**
+
+This script uses Python's BeautifulSoup library for web scraping and data analysis. It fetches data from a website, parses it, and performs data analysis or visualization tasks.
+
+```python
+#!/usr/bin/env python3
+import requests
+from bs4 import BeautifulSoup
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Define the URL to scrape
+url = "https://example.com/data"
+response = requests.get(url)
+
+# Parse HTML content
+soup = BeautifulSoup(response.text, "html.parser")
+
+# Extract and process data
+data = []
+for item in soup.find_all("div", class_="data-item"):
+    value = item.find("span", class_="value").text
+    label = item.find("span", class_="label").text
+    data.append((label, float(value)))
+
+# Create a DataFrame
+df = pd.DataFrame(data, columns=["Label", "Value"])
+
+# Plot data
+plt.bar(df["Label"], df["Value"])
+plt.xlabel("Labels")
+plt.ylabel("Values")
+plt.title("Data Visualization")
+plt.xticks(rotation=45)
+plt.tight_layout()
+
+# Save or display the plot
+plt.savefig("data_plot.png")
+```
+
+These advanced examples demonstrate the flexibility and power of combining **Bash and Python** for automation on a Linux system. 
+
+<br />
+
+### Critical Files Monitoring 
+
+Monitoring critical files for changes and sending email notifications when edits occur can be a valuable security and auditing measure. Here's a Bash and Python script combination to achieve this:
+
+**Bash Script (`file_monitor.sh`)**:
+
+This Bash script will periodically check the critical files for changes using their checksums (MD5 in this example). If a change is detected, it will trigger a Python script to send an email notification.
+
+```bash
+#!/bin/bash
+
+# Define the critical files to monitor
+file1="/path/to/critical_file1.txt"
+file2="/path/to/critical_file2.txt"
+
+# Store the initial checksums
+md5sum1=$(md5sum "$file1")
+md5sum2=$(md5sum "$file2")
+
+while true; do
+    # Calculate the current checksums
+    current_md5sum1=$(md5sum "$file1")
+    current_md5sum2=$(md5sum "$file2")
+
+    # Compare checksums to detect changes
+    if [[ "$md5sum1" != "$current_md5sum1" ]]; then
+        python3 send_notification.py "Change detected in $file1 by $(whoami)"
+        md5sum1="$current_md5sum1"
+    fi
+
+    if [[ "$md5sum2" != "$current_md5sum2" ]]; then
+        python3 send_notification.py "Change detected in $file2 by $(whoami)"
+        md5sum2="$current_md5sum2"
+    fi
+
+    # Adjust the sleep interval (e.g., 5 minutes)
+    sleep 300
+done
+```
+
+**Python Script (`send_notification.py`)**:
+
+This Python script sends email notifications when changes are detected. It uses the `smtplib` library to send emails via SMTP. You'll need to configure your SMTP server and credentials.
+
+```python
+#!/usr/bin/env python3
+import smtplib
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
+
+# Email configuration
+sender_email = "your_email@gmail.com"
+receiver_email = "recipient_email@example.com"
+password = "your_email_password"
+smtp_server = "smtp.gmail.com"
+smtp_port = 587
+
+# Create the email message
+subject = "File Change Alert"
+body = "A change was detected in one of the critical files."
+msg = MIMEMultipart()
+msg['From'] = sender_email
+msg['To'] = receiver_email
+msg['Subject'] = subject
+msg.attach(MIMEText(body, 'plain'))
+
+# Send the email
+try:
+    server = smtplib.SMTP(smtp_server, smtp_port)
+    server.starttls()
+    server.login(sender_email, password)
+    server.sendmail(sender_email, receiver_email, msg.as_string())
+    server.quit()
+    print("Email sent successfully.")
+except Exception as e:
+    print("Email sending failed:", str(e))
+```
+
+<br />
+
+> **Note**
+
+1. Replace the paths to your critical files in the Bash script.
+2. Configure the email settings (sender_email, receiver_email, password, SMTP server, and SMTP port) in the Python script.
+3. For security reasons, it's recommended to use an application-specific password if you're using Gmail or a similar email service.
+4. You may need to allow less secure apps to access your Gmail account if you're using Gmail for sending emails.
+
+This combination of Bash and Python scripts will monitor the specified files and send an email notification whenever a change is detected, including the user who made the edit.
+
+<br />
+
+`In summary`, By combining the power of **Bash and Python**, you can automate a wide range of tasks on your Linux system, making your administration and workflow more efficient. 
+
+Remember to continuously improve and refine your automation scripts based on your evolving needs.
+
+<br />
+
+## Resources
+
+- 👉 [Deploy Projects](https://deploypro.dev/) using your preferred provider: `AWS`, `GCP`, `Azure`
+- 👉 Get [Deployment Support](https://deploypro.dev/support/) from the team behind this service
+- 👉 Join the [Community](https://discord.gg/qQhjQZhnur) and chat with the team behind `DeployPRO`
