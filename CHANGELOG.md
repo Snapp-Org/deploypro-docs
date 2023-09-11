@@ -1,5 +1,16 @@
 # Change Log
 
+## [1.0.1] 2023-08-29
+### Changes
+
+- [AWS vs Fly](https://www.docs.deploypro.dev/glossary/aws-vs-fly)
+- [Render vs. Fly.io](https://www.docs.deploypro.dev/glossary/render-vs-fly)
+- [Render vs. Hostinger](https://www.docs.deploypro.dev/glossary/render-vs-hostinger)
+- Bash, added [Bash Samples](https://www.docs.deploypro.dev/glossary/shell-bash#bash-samples)
+- [SSD Storage](https://www.docs.deploypro.dev/glossary/terms/ssd-storage)
+- [HDD Storage](https://www.docs.deploypro.dev/glossary/terms/hdd-storage)
+- [SSL/TSL](https://www.docs.deploypro.dev/glossary/terms/ssl-tsl)
+
 ## [1.0.0] 2023-08-29
 ### Changes
 
