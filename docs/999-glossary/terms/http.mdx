@@ -1,0 +1,83 @@
+---
+title            : HTTP Protocol
+sidebar_label    : HTTP
+---
+
+# HTTP Protocol
+
+HTTP (Hypertext Transfer Protocol) is a fundamental protocol used for transferring data over the World Wide Web. 
+It is an application layer protocol that defines how requests and responses should be formatted and transmitted between a web browser (client) and a web server. 
+
+> **Here are key aspects of HTTP**:
+
+## **Plain Text**: 
+
+HTTP transmits data in plain text, meaning that the data is not encrypted during transmission. This makes it vulnerable to eavesdropping and interception by malicious actors.
+
+<br />
+
+## **Stateless** 
+
+HTTP is stateless, which means that each request/response pair is independent, and the server does not maintain any knowledge of previous interactions with the client. To maintain state, cookies and session management techniques are often used.
+
+<br />
+
+## **Client-Server Model**
+
+HTTP follows a client-server model. The client (typically a web browser) sends requests to the server, and the server responds with data or resources requested by the client.
+
+<br />
+
+## **Request Methods** 
+
+HTTP defines several request methods, including GET (retrieve data), POST (submit data), PUT (update data), DELETE (remove data), and others. Each method has a specific purpose and is used by clients to interact with web servers.
+
+<br />
+
+## **Uniform Resource Identifiers (URIs)** 
+
+HTTP uses URIs (Uniform Resource Identifiers) to specify the location of resources on the web. URIs include URLs (Uniform Resource Locators) and URNs (Uniform Resource Names).
+
+<br />
+
+## **Headers** 
+
+HTTP requests and responses include headers that provide additional information about the request or response. Headers can convey details such as content type, content length, and caching directives.
+
+<br />
+
+## **Status Codes** 
+
+HTTP responses include status codes that indicate the outcome of the request. Common status codes include 200 (OK), 404 (Not Found), 500 (Internal Server Error), and others.
+
+<br />
+
+## **Caching**
+
+HTTP allows for caching of resources, both on the client and server side. Caching can improve performance by reducing the need to re-fetch resources that have not changed.
+
+<br />
+
+## **HTTP/1.1 and HTTP/2**
+
+HTTP/1.1 is the most widely used version of HTTP. HTTP/2 is a more recent version that introduces improvements in performance, including multiplexing and header compression.
+
+<br />
+
+## **Security Considerations**
+
+Because HTTP transmits data in plain text, it is not secure for transmitting sensitive information, such as login credentials or payment details. HTTPS, the secure version of HTTP, should be used when security is a concern.
+
+<br />
+
+`In summary`, HTTP is the foundation of web communication, allowing users to access websites and retrieve web pages, images, videos, and other resources. 
+
+While HTTP itself does not provide security features like encryption and authentication, it forms the basis for HTTPS (Hypertext Transfer Protocol Secure), which incorporates these security measures to protect sensitive data during transmission.
+
+<br />
+
+## Resources
+
+- 👉 [Deploy Projects](https://deploypro.dev/) using your preferred provider: `AWS`, `DigitalOcean`, `Azure`, and GCP (soon)
+- 👉 Get [Deployment Support](https://deploypro.dev/support/) from the team behind this service
+- 👉 Join the [Community](https://discord.gg/qQhjQZhnur) and chat with the team behind `DeployPRO`
