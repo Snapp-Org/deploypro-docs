@@ -1,5 +1,5 @@
 ---
-sidebar_position : 2
+sidebar_position : 3
 title            : Bash - Bourne Again Shell
 sidebar_label    : Shell - Bash
 ---
@@ -54,7 +54,104 @@ Bash scripts are typically executed from the command line or by running them as 
 
 <br />
 
+## Bash Samples
+
+Learning Bash scripting is a valuable skill for working with the command line in Unix-like operating systems. 
+Here are ten popular and useful Bash script examples to help you get started:
+
+### **Hello World**
+
+```bash
+#!/bin/bash
+echo "Hello, World!"
+```
+
+### **Variables** 
+
+```bash
+#!/bin/bash
+greeting="Hello"
+echo "$greeting, World!"
+```
+
+### **User Input**
+
+```bash
+#!/bin/bash
+echo "What's your name?"
+read name
+echo "Hello, $name!"
+```
+
+### **Conditional Statements**
+
+```bash
+#!/bin/bash
+age=20
+if [ "$age" -ge 18 ]; then
+    echo "You are an adult."
+else
+    echo "You are not an adult."
+fi
+```
+
+### **Loops (while loop)**
+
+```bash
+#!/bin/bash
+count=1
+while [ $count -le 5 ]; do
+    echo "Count: $count"
+    ((count++))
+done
+```
+
+### **Functions**
+
+```bash
+#!/bin/bash
+greet() {
+    echo "Hello, $1!"
+}
+greet "Alice"
+```
+
+### **File Operations** (List files in a directory)
+
+```bash
+#!/bin/bash
+directory="/path/to/directory"
+for file in "$directory"/*; do
+    echo "$file"
+done
+```
+
+### **File Operations** (Read file line by line)
+
+```bash
+#!/bin/bash
+file="/path/to/file.txt"
+while IFS= read -r line; do
+    echo "$line"
+done < "$file"
+```
+
+### **Command Line Arguments**
+
+```bash
+#!/bin/bash
+echo "Script name: $0"
+echo "First argument: $1"
+echo "Second argument: $2"
+```
+
+These examples cover some of the fundamental concepts of Bash scripting, including variables, user input, conditionals, loops, functions, file operations, and command line arguments. 
+You can use these as building blocks to create more complex Bash scripts tailored to your needs.
+
+<br />
+
 In summary, **Bash** is a command-line shell and scripting language that provides a powerful interface for interacting with a Unix-like operating system. 
+
 It's widely used by both casual users and system administrators to perform various tasks, from running simple commands to creating complex automation scripts.
 
 <br />
