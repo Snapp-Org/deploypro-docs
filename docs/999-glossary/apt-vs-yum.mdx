@@ -1,0 +1,64 @@
+---
+sidebar_position : 1
+title            : Apt vs. Yum
+sidebar_label    : Apt vs. Yum
+---
+
+# Apt vs. Yum
+
+`apt-get` and `yum` are both package management tools used in different Linux distributions to install, update, and manage software packages. 
+However, they are associated with different package management systems used by various Linux distributions. 
+
+> Here's a comparison of `apt-get` (used with Debian and Ubuntu) and `yum` (used with Red Hat, CentOS, and Fedora):
+
+## **Package Management Systems**
+
+- `apt-get` is used with the Debian package management system, which uses `.deb` packages.
+- `yum` (or its successor `dnf`) is used with the Red Hat package management system, which uses `.rpm` packages.
+
+## **Distributions**
+
+- `apt-get` is primarily used in Debian-based distributions such as Debian itself and Ubuntu.
+- `yum` (or `dnf`) is used in Red Hat-based distributions like Red Hat Enterprise Linux (RHEL), CentOS, and Fedora.
+
+## **Command Differences**
+
+While the basic functionality of both tools is similar (installing, updating, and removing packages), the commands themselves differ. For example:
+
+- To install a package with `apt-get`, you would use `sudo apt-get install package_name`.
+- To install a package with `yum`, you would use `sudo yum install package_name`.
+
+## **Package Repositories**
+
+- `apt-get` uses repositories defined in `/etc/apt/sources.list` and `/etc/apt/sources.list.d/` on Debian-based systems.
+- `yum` uses repository configuration files located in `/etc/yum.repos.d/` on Red Hat-based systems.
+
+## **Package Dependencies**
+
+- Both package managers handle package dependencies, ensuring that required packages are installed alongside the one you want to install.
+
+## **Distribution-Specific**
+
+These package managers are tailored to their respective distributions and may have some differences in behavior and available 
+packages due to the different package ecosystems and policies of Debian-based and Red Hat-based systems.
+
+## **Recent Changes**
+
+In some Red Hat-based distributions, `yum` has been replaced by `dnf` (Dandified YUM), which offers similar functionality with improvements in speed and dependency resolution.
+
+<br />
+
+`In summary`, the choice between `apt-get` and `yum` (or `dnf`) depends on the Linux distribution you are using. 
+
+If you're on a Debian-based system like Ubuntu, you'll use `apt-get`. 
+
+If you're on a Red Hat-based system like CentOS or Fedora, you'll use `yum` or `dnf`. 
+
+These package managers help streamline software installation and management on their respective distributions.
+
+<br />
+
+## ✅ Resources
+
+- 👉 [Deploy Projects](https://deploypro.dev/) using your own cloud provider
+- 👉 Get [Deployment Support](https://deploypro.dev/support/) from `experts` 
