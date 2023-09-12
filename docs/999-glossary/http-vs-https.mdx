@@ -8,37 +8,66 @@ sidebar_label    : HTTP vs. HTTPS
 
 HTTP (Hypertext Transfer Protocol) and HTTPS (Hypertext Transfer Protocol Secure) are both protocols used for transmitting data between a web browser (client) and a web server. However, they differ significantly in terms of security and how data is transmitted. Here's a comparison of HTTP and HTTPS:
 
-**HTTP (Hypertext Transfer Protocol):**
+## **HTTP (Hypertext Transfer Protocol)**
 
-1. **Unsecured**: HTTP is an unsecured protocol, which means data exchanged between the client and server is sent in plain text. This makes it vulnerable to eavesdropping and interception by malicious actors.
+### **Unsecured** 
 
-2. **No Encryption**: HTTP does not use encryption to protect data during transmission. As a result, sensitive information, such as login credentials, credit card numbers, and personal data, can be intercepted and read by attackers.
+HTTP is an unsecured protocol, which means data exchanged between the client and server is sent in plain text. This makes it vulnerable to eavesdropping and interception by malicious actors.
 
-3. **No Authentication**: HTTP does not provide authentication mechanisms to verify the identity of the website's server. This makes it susceptible to man-in-the-middle attacks, where a malicious server can impersonate a legitimate one.
+### **No Encryption** 
 
-4. **Fast Performance**: Because HTTP does not involve the overhead of encryption and authentication, it tends to be faster in terms of data transfer compared to HTTPS.
+HTTP does not use encryption to protect data during transmission. As a result, sensitive information, such as login credentials, credit card numbers, and personal data, can be intercepted and read by attackers.
 
-5. **No Trust Indicators**: Browsers do not display trust indicators like padlock icons or "Secure" labels for HTTP websites. Users have no assurance of the site's authenticity or security.
+### **No Authentication** 
 
-**HTTPS (Hypertext Transfer Protocol Secure):**
+HTTP does not provide authentication mechanisms to verify the identity of the website's server. This makes it susceptible to man-in-the-middle attacks, where a malicious server can impersonate a legitimate one.
 
-1. **Secured**: HTTPS is a secure protocol that encrypts data exchanged between the client and server. This encryption protects the confidentiality of data and prevents eavesdropping.
+### **Fast Performance** 
 
-2. **Data Encryption**: HTTPS uses encryption protocols such as SSL (Secure Sockets Layer) or TLS (Transport Layer Security) to encrypt data during transmission. This ensures that data is scrambled and can only be decrypted by the intended recipient.
+Because HTTP does not involve the overhead of encryption and authentication, it tends to be faster in terms of data transfer compared to HTTPS.
 
-3. **Authentication**: HTTPS provides authentication mechanisms using digital certificates issued by trusted Certificate Authorities (CAs). These certificates confirm the legitimacy of the website's server and protect against impersonation.
+### **No Trust Indicators** 
 
-4. **Data Integrity**: HTTPS guarantees data integrity by using cryptographic hash functions to verify that data has not been tampered with during transit.
-
-5. **Trust Indicators**: Browsers display trust indicators like padlock icons, "Secure" labels, or the website's domain name in green to indicate that the connection is secure and authenticated. These indicators build user trust.
-
-6. **Privacy**: HTTPS protects user privacy by preventing unauthorized parties from intercepting and viewing the data exchanged between the user and the website. Sensitive information remains confidential.
-
-7. **SEO Benefits**: Search engines prioritize HTTPS websites in search rankings, potentially improving a site's visibility and SEO performance.
+Browsers do not display trust indicators like padlock icons or "Secure" labels for HTTP websites. Users have no assurance of the site's authenticity or security.
 
 <br />
 
-`In summary`, the primary difference between HTTP and HTTPS is security. HTTPS is the secure version of HTTP, offering data encryption, authentication, and data integrity, while HTTP transmits data in plain text without these security features. In today's online landscape, HTTPS is strongly recommended, especially for websites that handle sensitive information, as it provides essential security and builds user trust.
+## **HTTPS (Hypertext Transfer Protocol Secure)**
+
+### **Secured** 
+
+HTTPS is a secure protocol that encrypts data exchanged between the client and server. This encryption protects the confidentiality of data and prevents eavesdropping.
+
+### **Data Encryption** 
+
+HTTPS uses encryption protocols such as SSL (Secure Sockets Layer) or TLS (Transport Layer Security) to encrypt data during transmission. This ensures that data is scrambled and can only be decrypted by the intended recipient.
+
+### **Authentication** 
+
+HTTPS provides authentication mechanisms using digital certificates issued by trusted Certificate Authorities (CAs). These certificates confirm the legitimacy of the website's server and protect against impersonation.
+
+### **Data Integrity** 
+
+HTTPS guarantees data integrity by using cryptographic hash functions to verify that data has not been tampered with during transit.
+
+### **Trust Indicators** 
+
+Browsers display trust indicators like padlock icons, "Secure" labels, or the website's domain name in green to indicate that the connection is secure and authenticated. These indicators build user trust.
+
+### **Privacy** 
+
+HTTPS protects user privacy by preventing unauthorized parties from intercepting and viewing the data exchanged between the user and the website. Sensitive information remains confidential.
+
+### **SEO Benefits** 
+
+Search engines prioritize HTTPS websites in search rankings, potentially improving a site's visibility and SEO performance.
+
+<br />
+
+`In summary`, the primary difference between HTTP and HTTPS is security. **HTTPS is the secure version of HTTP**, offering data encryption, authentication, and data integrity, 
+while HTTP transmits data in plain text without these security features. 
+
+In today's online landscape, HTTPS is strongly recommended, especially for websites that handle sensitive information, as it provides essential security and builds user trust.
 
 <br />
 
