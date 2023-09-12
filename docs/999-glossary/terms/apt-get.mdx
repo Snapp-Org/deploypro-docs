@@ -1,0 +1,66 @@
+---
+title            : Apt-Get (package management)
+sidebar_label    : Apt-Get
+---
+
+# Apt-Get (package management)
+
+**apt-get** is a command-line tool for package management on Debian-based Linux distributions, including Ubuntu. 
+It is used to install, update, upgrade, and remove software packages. The name `apt-get stands` for **Advanced Package Tool** and it is one of the most commonly used package management utilities on these systems.
+
+> Here are some common `apt-get` commands
+
+## **Update Package Lists** 
+
+`sudo apt-get update` - This command updates the local package database, so it knows about the latest versions of packages available in the repositories.
+
+## **Upgrade Installed Packages** 
+
+`sudo apt-get upgrade` - This command upgrades the installed packages to their latest available versions. It doesn't install new packages or remove old ones.
+
+## **Install a Package** 
+
+`sudo apt-get install package_name` - Use this command to install a new package. Replace `package_name` with the name of the package you want to install.
+
+## **Remove a Package** 
+
+`sudo apt-get remove package_name` - This command removes a package from your system, but it leaves its configuration files intact.
+
+## **Remove a Package and Its Configuration Files** 
+
+`sudo apt-get purge package_name` - This command removes a package along with its configuration files.
+
+## **Search for Packages** 
+
+`apt-get search keyword` - This command searches for packages containing the specified keyword in their name or description.
+
+## **Show Package Information** 
+
+`apt-get show package_name` - This command displays detailed information about a specific package, including its description, dependencies, and version.
+
+## **Clean Up** 
+
+`sudo apt-get autoremove` - This command removes packages that were automatically installed as dependencies but are no longer needed by any installed package. It can help free up disk space.
+
+## **Fix Broken Dependencies** 
+
+`sudo apt-get -f install` - This command attempts to fix broken package dependencies.
+
+<br/>
+
+Please note that you typically need superuser (root) privileges to run most `apt-get` commands, so you'll often see `sudo` used before the commands to elevate your permissions.
+
+Keep in mind that `apt-get` has been largely replaced by `apt` on more recent Debian-based systems (Ubuntu included). `apt` provides similar functionality but with a friendlier 
+interface and some additional features.
+
+<br />
+
+`In summary`, 
+
+<br />
+
+## Resources
+
+- 👉 [Deploy Projects](https://deploypro.dev/) using your preferred provider: `AWS`, `DigitalOcean`, `Azure`, and GCP (soon)
+- 👉 Get [Deployment Support](https://deploypro.dev/support/) from the team behind this service
+- 👉 Join the [Community](https://discord.gg/qQhjQZhnur) and chat with the team behind `DeployPRO`
