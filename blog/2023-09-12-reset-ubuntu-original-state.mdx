@@ -1,0 +1,75 @@
+---
+slug    : reset-ubuntu-original-state
+authors : [sm0ke]
+tags    : [ubuntu, system-programming]
+---
+
+# Reset Ubuntu to its Original State
+
+If you want to reset your Ubuntu system to its original state, essentially performing a fresh installation without reinstalling the entire operating system, you can use a few different approaches. 
+
+![Securing Ubuntu for Production - by DeployPRO](https://github-production-user-asset-6210df.s3.amazonaws.com/51070104/267246505-b220dfef-8e3d-4c55-804c-188e19835b4f.png)
+
+<!--truncate-->
+
+> Here are two **common methods to reset Ubuntu**:
+
+## **Reinstall Ubuntu**
+
+This method involves reinstalling the Ubuntu operating system while preserving your personal data and settings. 
+Essentially, it's like performing a clean installation over your existing system. 
+
+> **Here's how to do it**:
+
+1. Back up your important data. While this process should preserve your data, it's always a good idea to have a backup.
+
+2. Create a bootable USB drive with the Ubuntu installation media. You can download the ISO file from the official Ubuntu website and use tools like Rufus (on Windows) or Etcher (on Linux) to create a bootable USB drive.
+
+3. Boot your computer from the USB drive.
+
+4. During the installation process, when you reach the "Installation Type" screen, select the option that says "Erase Ubuntu XX.XX and reinstall." This option will remove the system files but preserve your personal files and settings.
+
+5. Follow the on-screen instructions to complete the installation.
+
+<br />
+
+## **Manual Cleanup**
+
+If you want to perform a more thorough cleanup and return your Ubuntu installation to a near-original state, you can manually remove unnecessary software packages and configurations. 
+
+> **Here's how**:
+
+1. Open a terminal.
+
+2. Uninstall unnecessary packages: You can use the `apt` package manager to remove packages that you no longer need. For example, you can use the following command to remove all packages that are no longer required:
+
+```bash
+$ sudo apt autoremove
+```
+
+3. Remove system-wide configuration files: Some applications may leave configuration files even after they are uninstalled. You can remove them manually. For example, to remove configuration files for a package called "example," you can use:
+
+```bash
+$ sudo apt purge example
+```
+
+4. Reset user-specific settings: Some changes you made to your user's profile or settings may persist. 
+   You can reset your user's settings to the defaults by creating a new user account and transferring your data to it.
+
+5. Manually delete personal files and folders that you no longer need.
+
+<br />
+
+`As an ending note`, remember that both methods involve some risk, and it's essential to back up your data before proceeding. 
+
+The first method (**Reinstall Ubuntu**) is less error-prone and recommended for most users who want to refresh their Ubuntu installation without starting from scratch.
+
+The second method (**Manual Cleanup**) is more hands-on and should be used with caution, as manually removing packages and configurations can lead to unintended consequences if not done carefully.
+
+<br />
+
+## Resources
+
+- 👉 [Deploy Projects](https://deploypro.dev/) using your preferred provider: `AWS`, `GCP`, `Azure`
+- 👉 Get [Deployment Support](https://deploypro.dev/support/) from the team behind this service
+- 👉 Join the [Community](https://discord.gg/qQhjQZhnur) and chat with the team behind `DeployPRO`
