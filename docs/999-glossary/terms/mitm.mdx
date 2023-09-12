@@ -1,0 +1,69 @@
+---
+title            : Man-in-the-Middle (MitM) Attack
+sidebar_label    : MitM
+---
+
+# Man-in-the-Middle (MitM) Attack
+
+A "Man-in-the-Middle" (MitM) attack is a type of cyberattack in which an attacker intercepts and potentially alters or eavesdrops on communication between two parties without their knowledge or consent. 
+The attacker secretly intercepts the communication traffic and may manipulate or capture the data being exchanged between the legitimate parties.
+
+> **Here's how a Man-in-the-Middle attack typically works**:
+
+## **Interception** 
+
+The attacker positions themselves between the two legitimate parties who are trying to communicate. 
+This can be done physically, such as by tampering with network cables, or electronically, by exploiting vulnerabilities in the network infrastructure or software.
+
+## **Traffic Capture** 
+
+The attacker captures the data being transmitted between the parties. This data can include sensitive information, such as login credentials, personal messages, financial data, or any other type of communication.
+
+## **Eavesdropping** 
+
+In addition to capturing the data, the attacker may eavesdrop on the communication, gaining access to the content of the messages or files being exchanged.
+
+## **Modification** 
+
+In some cases, the attacker may modify the data being transmitted before relaying it to the intended recipient. This can be used to insert malicious code or manipulate the content of the communication.
+
+## **Relay** 
+
+The attacker often relays the communication to its intended destination to maintain the appearance of a legitimate connection. The two legitimate parties may not be aware that their communication is being intercepted.
+
+<br />
+
+## MitM Scenarios 
+
+### **Public Wi-Fi Networks** 
+
+Attackers may target open or poorly secured Wi-Fi networks in coffee shops, airports, or hotels to intercept traffic from users connected to the network.
+
+### **Network Spoofing** 
+
+Attackers may set up rogue access points or impersonate legitimate network devices to intercept traffic passing through them.
+
+### **Phishing** 
+
+In phishing MitM attacks, attackers may trick users into connecting to a malicious website that looks legitimate, capturing login credentials and other sensitive information.
+
+### **SSL Stripping** 
+
+Attackers may attempt to downgrade a secure HTTPS connection to HTTP, making it easier to intercept and manipulate data.
+
+### **Email Hijacking** 
+
+MitM attacks can be used to intercept and manipulate email communications, potentially redirecting sensitive information or even conducting financial fraud.
+
+<br />
+
+`In summary`, to protect against **Man-in-the-Middle Attacks**, it's important to use secure communication protocols, such as HTTPS for web browsing and SFTP for file transfers, whenever possible. 
+Additionally, using strong encryption and authentication methods, keeping software and devices up-to-date, and being cautious when connecting to public networks can help mitigate the risk of MitM attacks.
+
+<br />
+
+## Resources
+
+- 👉 [Deploy Projects](https://deploypro.dev/) using your preferred provider: `AWS`, `DigitalOcean`, `Azure`, and GCP (soon)
+- 👉 Get [Deployment Support](https://deploypro.dev/support/) from the team behind this service
+- 👉 Join the [Community](https://discord.gg/qQhjQZhnur) and chat with the team behind `DeployPRO`
