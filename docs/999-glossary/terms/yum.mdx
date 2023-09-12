@@ -1,0 +1,81 @@
+---
+title            : Yum (Yellowdog Updater, Modified)
+sidebar_label    : Yum
+---
+
+# Yum (Yellowdog Updater, Modified)
+
+`yum` (Yellowdog Updater, Modified) is a package manager used primarily in Red Hat-based Linux distributions such as Red Hat Enterprise Linux (RHEL), CentOS, and Fedora. 
+It helps users and system administrators to install, update, and manage software packages on their systems. 
+
+> Here are some **key points about yum**:
+
+## **Package Management** 
+
+`yum` is used to perform package-related operations like installing, updating, and removing software packages. 
+It handles package dependencies, making it easier to maintain a system with a large number of packages.
+
+## **Repositories** 
+
+`yum` relies on software repositories where packages are hosted. 
+These repositories can be provided by the distribution itself, third-party sources, or locally created repositories. 
+
+Configuration files for repositories are usually located in the `/etc/yum.repos.d/` directory.
+
+## **Package Installation** 
+
+To install a package with `yum`, you typically use the `install` command, followed by the package name. For example:
+
+```bash
+$ sudo yum install package_name
+```
+
+## **Package Updates** 
+
+To update all packages on your system, you can use the `update` command:
+
+```bash 
+$ sudo yum update
+```
+
+## **Package Removal** 
+
+To remove a package, you use the `remove` command:
+
+```
+$ sudo yum remove package_name
+```
+
+## **Search for Packages** 
+
+You can search for available packages using `yum search keyword`. This helps you find packages by name or description.
+
+## **List Installed Packages** 
+
+You can list all installed packages with `yum list installed`. This provides a comprehensive list of packages installed on your system.
+
+## **Clean Package Cache** 
+
+Over time, `yum` caches packages to speed up future operations. You can clean the cache with `yum clean all`.
+
+## **Dependencies Resolution** 
+
+`yum` automatically resolves and installs dependencies required by the packages you want to install, ensuring that your software functions correctly.
+
+## **Replacement by DNF** 
+
+In some newer Red Hat-based distributions, `yum` has been largely replaced by `dnf` (Dandified YUM). 
+`dnf` offers similar functionality with improvements in speed and dependency resolution. It is recommended to use `dnf` on these systems.
+
+<br />
+
+`In summary`, **yum** is a powerful and flexible package management tool designed for Red Hat-based Linux distributions. 
+It simplifies the process of installing and managing software packages, making it easier to keep your system up to date and secure.
+
+<br />
+
+## Resources
+
+- 👉 [Deploy Projects](https://deploypro.dev/) using your preferred provider: `AWS`, `DigitalOcean`, `Azure`, and GCP (soon)
+- 👉 Get [Deployment Support](https://deploypro.dev/support/) from the team behind this service
+- 👉 Join the [Community](https://discord.gg/qQhjQZhnur) and chat with the team behind `DeployPRO`
