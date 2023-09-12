@@ -13,12 +13,12 @@ This article provides a short **comparison between Docker and Docker Compose** a
 Docker is a platform for developing, shipping, and running applications in containers. 
 Containers package applications and their dependencies, ensuring consistent behavior across different environments.
 
-> The main **use-cases**: 
+### The main **use-cases**: 
 
 - `Docker` is used to build, distribute, and run individual containers.
 - It focuses on managing individual containers as isolated units.
 
-> **Key Features**
+### **Key Features**
 
 - Image Management: Docker manages container images, including building, pushing, and pulling images from registries.
 - Container Creation: Docker creates and runs containers from images, each with its isolated environment.
@@ -31,7 +31,7 @@ Containers package applications and their dependencies, ensuring consistent beha
 
 `Docker Compose` is a tool for defining and running multi-container applications using a YAML file. It simplifies the management of multiple related containers.
 
-> **Use Case**
+### **Use Case**
 
 - `Application Definition`: Docker Compose allows you to define a multi-container application's configuration in a single YAML file.
 - `Multiple Services`: Define and manage multiple services (containers) within a single application.
@@ -44,29 +44,30 @@ Containers package applications and their dependencies, ensuring consistent beha
 
 Docker and Docker Compose can be used together to create, manage, and run complex multi-container applications. Here's how they can complement each other:
 
-> **Containerization with Docker**
+### **Containerization with Docker**
 
 - Use Docker to build and manage individual containers for your application components.
 - Define Dockerfiles to create custom container images tailored to each component's requirements.
 
-> **Orchestration with Docker Compose**
+### **Orchestration with Docker Compose**
 
 - Use Docker Compose to define the overall structure of your multi-container application using a `docker-compose.yml` file.
 - Specify services, networks, and volumes for each component of your application.
 - Leverage Docker Compose's ability to start, stop, and manage all containers of the application together.
 
-> **Combining the Two**
+### **Combining the Two**
 
 - Docker Compose can reference existing Docker images from repositories to populate services.
 - You can also build custom images using Docker and then reference them in the Docker Compose configuration.
 
-> **Development Environments**
+### **Development Environments**
 
 - Docker Compose is particularly useful for defining complex development environments with multiple interacting services.
 
 <br />
 
-Using **Docker and Docker Compose** together allows you to harness the power of containerization for individual services while orchestrating and managing the interaction between these services using a single configuration file. 
+`In summary`, using **Docker and Docker Compose** together allows you to harness the power of containerization for individual services while orchestrating and managing the interaction 
+between these services using a single configuration file. 
 
 It simplifies the process of running multi-container applications, making development and testing more efficient.
 
