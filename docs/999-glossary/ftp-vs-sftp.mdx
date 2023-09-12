@@ -1,0 +1,80 @@
+---
+sidebar_position : 1
+title            : FTP vs. SFTP
+sidebar_label    : FTP vs. SFTP
+---
+
+# FTP vs. SFTP
+
+FTP (File Transfer Protocol) and SFTP (SSH File Transfer Protocol) are both used for transferring files between computers, but they differ significantly in terms of security and functionality. 
+
+Here's a **comparison of FTP and SFTP**:
+
+## **FTP (File Transfer Protocol)**
+
+### **Security** 
+
+FTP transfers data in plain text, including login credentials, making it vulnerable to eavesdropping and interception. It doesn't provide encryption for data or commands.
+
+### **Authentication** 
+
+FTP typically relies on simple username and password authentication, which can be susceptible to brute force attacks.
+
+### **Port** 
+
+FTP uses port 21 for command and control, and port 20 for data transfer. Passive FTP can use a range of arbitrary ports, which can complicate firewall configurations.
+
+### **Legacy** 
+
+FTP is one of the oldest file transfer protocols and has been widely used for decades. However, its lack of security features makes it less suitable for modern secure file transfers.
+
+### **Client Support** 
+
+Many operating systems and FTP client software support FTP, making it relatively easy to use.
+
+### **Use Cases** 
+
+FTP is often used for non-sensitive data transfers within trusted networks, such as internal file sharing on a local network.
+
+<br />
+
+## **SFTP (SSH File Transfer Protocol)**
+
+### **Security** 
+
+SFTP encrypts both data and commands using the secure shell (SSH) protocol, providing a high level of security for file transfers. It ensures that data, including login credentials, remains confidential.
+
+### **Authentication** 
+
+SFTP supports various authentication methods, including SSH key pairs and username/password. SSH key-based authentication adds an extra layer of security.
+
+### **Port** 
+
+SFTP typically uses port 22, the same port as SSH, for communication. This simplifies firewall configurations, as only one port needs to be open.
+
+### **Platform Independence** 
+
+SFTP is platform-independent and can be used on various operating systems, making it versatile for cross-platform file transfers.
+
+### **Compatibility** 
+
+SFTP clients and servers are widely available and supported, and many hosting providers offer SFTP access. It's a common choice for secure file transfers.
+
+### **Use Cases** 
+
+SFTP is commonly used for secure data transfers, especially in scenarios where data security is a priority, such as remote server administration, backup, and secure file sharing.
+
+<br />
+
+`In summary`, SFTP is a more secure and modern choice for file transfers compared to FTP. 
+It encrypts data and commands, provides stronger authentication options, and uses a single, well-defined port, making it easier to configure and secure. 
+
+FTP, on the other hand, is considered less secure due to its lack of encryption and is generally used for non-sensitive data transfers within trusted networks or legacy systems. 
+When security and data protection are paramount, SFTP is the preferred choice.
+
+<br />
+
+## ✅ Resources
+
+- 👉 [Deploy Projects](https://deploypro.dev/) using your own cloud provider
+- 👉 Get [Deployment Support](https://deploypro.dev/support/) from `experts` 
