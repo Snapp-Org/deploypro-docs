@@ -1,0 +1,78 @@
+---
+title            : Deploy an application using custom domain
+sidebar_label    : Custom Domain
+---
+
+# Setting up Custom Domain for a Project
+
+:::info
+
+Currently, creating a custom domain isn't possible for applications deployed using Deploypro's subdomain. To set up a custom domain, you'll need to manage your DNS settings directly with the domain registrar, not through third-party services like Cloudflare.
+
+:::
+
+Here are the steps to setup custom domain for a project:
+
+## Create Server
+Log in to your Deploypro account and follow the instructions to create a server. See the guide [here](https://www.docs.deploypro.dev/app-platform-do/create-server)
+
+![create server](https://github.com/app-generator/deploypro-docs/assets/46531367/30527108-2dca-476c-94ae-a04ab1b4cc7d)
+
+Make sure your server is running by clicking on the IPv4 Address and you will be shown like picture below
+
+![success deploy](https://github.com/app-generator/deploypro-docs/assets/46531367/046db01e-41da-4928-b65f-2b9fffc58c8b)
+
+<br/>
+
+## Setup DNS Management
+
+The next step is to configure your DNS settings. Head to your domain provider's DNS management panel and add a record for your custom domain, using the IPv4 address obtained from your Deploypro server. Check out this example of how I set up my DNS for reference:
+
+![setup dns](https://github.com/app-generator/deploypro-docs/assets/46531367/7f7c46fe-c1d8-4932-9c8d-d38f221f5980)
+
+:::note
+
+-	Hostname: This is your desired custom domain name.
+-	Record Type: Choose "A (Address)" for your IPv4 address.
+-	Address: Use the IPv4 address provided by your Deploypro server.
+
+:::
+
+Domain provider recommendation:
+- namecheap.com
+- godaddy.com
+- domain.com
+
+## Check Propagation
+Once you've updated your DNS settings, it's important to verify that your custom domain is active. Use a DNS propagation checker like link to DNS checker: https://www.whatsmydns.net/ to confirm activation across different locations.
+
+If your custom domain is activated, you should see a green check mark indicating success, similar to the picture below.
+
+![check propagation](https://github.com/app-generator/deploypro-docs/assets/46531367/0c496542-c248-430c-99f1-820ff9f03755)
+
+## Deploy Application
+Head to the Application Menu in your Deploypro account and deploy a project as usual. For this example, we'll deploy a React application (see guide here)[https://www.docs.deploypro.dev/app-platform-do/deploy-react]. Before hitting "Create Application," follow these steps:
+1.	Turn on the "Custom Domain" toggle.
+2.	Enter your custom domain name in the designated field. Make sure to input `https://` before your custom domain. For example, `https://locasee.com`
+
+![setup custom domain](https://github.com/app-generator/deploypro-docs/assets/46531367/2971f95f-c92c-4106-a368-bca7ed8b0763)
+
+Once your application is deployed and shows a "running" status, head to your custom domain using your web browser to confirm it's successfully linked. You can visit [your custom domain URL] to check.
+
+![deploy app](https://github.com/app-generator/deploypro-docs/assets/46531367/52840cc9-15c6-411f-8e47-4ee0538d2a59)
+
+Here is sample application that has been deployed with the custom domain:
+
+![success app](https://github.com/app-generator/deploypro-docs/assets/46531367/1f06305b-5748-4cf7-ac4d-24110f29901b)
+
+<br />
+
+If you encounter some issue while deploying your application, don't hesitate to [inform us](https://discord.gg/qQhjQZhnur)! 😉
+
+<br />
+
+## ✅ Resources
+
+- 👉 [Deploy Projects](https://deploypro.dev/) using your preferred provider: `AWS`, `DigitalOcean`, `Azure`, and GCP (soon)
+- 👉 Get [Deployment Support](https://deploypro.dev/support/) from the team behind this service
+- 👉 Join the [Community](https://discord.gg/qQhjQZhnur) and chat with the team behind `DeployPRO`
